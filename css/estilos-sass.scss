@@ -47,7 +47,7 @@ $azul: color #01253d;
     h1{
         font-family: 'Prata', serif;
         color: $azul;
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         font-weight: 500;
         margin-top: 3rem;
@@ -75,10 +75,16 @@ $azul: color #01253d;
 /* INDEX__SECCION DESTACADOS --------------------- */
 #index__destacados{
     grid-area: destacados;
+    background-image: url(../images/home-descripcion-background.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    overflow: auto;
+   
     h1{
         font-family: 'Prata', serif;
         color: $azul;
-        font-size: 1.5rem;
+        font-size: 2rem;
         text-align: center;
         font-weight: 500;
         margin-bottom: 2rem;
@@ -97,26 +103,28 @@ $azul: color #01253d;
         font-family: 'Raleway', sans-serif;
         font-size: 0.6rem;
         text-transform: uppercase;
-        font-weight: 550;
+        font-weight: 500;
         color: $azul;
         margin-top: 0.5rem;
         padding-left: 1rem;
         text-align: center;
+        margin-bottom: 2px;
     }
     h2{
         font-family: 'Raleway', sans-serif;
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         text-transform: capitalize;
         font-weight: 700;
         color: $azul;
         padding-left: 1rem;
         text-align: center;
+        margin-bottom: 2px;
     }
     h3{
-        font-family: 'Raleway', sans-serif;
-        font-size: 1rem;
+        font-family: 'Prata', serif;
+        font-size: 1.2rem;
         text-transform: capitalize;
-        font-weight: 700;
+        font-weight: 500;
         color: rgb(243, 165, 68);
         padding-left: 1rem;
         text-align: center;
