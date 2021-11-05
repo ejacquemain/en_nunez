@@ -1,211 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    <link rel="stylesheet" href="./css/estilos.css"> <!-- CSS -->
-    <link rel="stylesheet" href="./css/bootstrap.min.css"> <!-- BOOTSTRAP -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="./css/estilos.css"> <!-- CSS -->
+  <link rel="stylesheet" href="./css/estilos-sass.css"> <!-- SASS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css"> <!-- BOOTSTRAP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="index__contenedor"> <!-- ABRE CONTENEDOR GENERAL -->
+  <div id="index__contenedor">
+    <!-- ABRE CONTENEDOR GENERAL -->
 
-        <section class="index__seccionPrincipal"> <!-- ABRE SECCION PRINCIPAL -->
+    <section id="index__principal"> <!-- ABRE SECCION PRINCIPAL -->
 
-            <header>
+      <header>
 
-                <nav> <!-- ABRE NAVS -->
+        <nav>
+          <!-- ABRE NAVS -->
 
-                    <div class="navbar__mobile"> <!-- ABRE NAV MOBILE -->
+          <div class="navbar__mobile"> <!-- ABRE NAV MOBILE -->
+            
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark">
+              <div class="container-fluid">
+                <img class="navbar-brand" src="./images/logo-en-footer.png" alt="logo en nuñez">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                  aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                  <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 400px;">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Coffee & Bake</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Healthy</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                      <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Restó
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li><a class="dropdown-item" href="#">Veggie</a></li>
+                        <li><a class="dropdown-item" href="#">Sushi</a></li>
+                        <li><a class="dropdown-item" href="#">Parrilla</a></li>
+                        <li><a class="dropdown-item" href="#">Pizzería</a></li>
+                        <li><a class="dropdown-item" href="#">Restaurant</a></li>
+                      </ul>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link active" href="#">Wine & Beer</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </nav>
 
-                        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
-                            <div class="container-fluid">
-                              <a class="navbar-brand" href="#"></a>
-                              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon"></span>
-                              </button>
-                              <div class="collapse navbar-collapse" id="navbarScroll">
-                                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 400px;">
-                                  <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#">Coffee & Bake</a>
-                                  </li>
-                                  <li class="nav-item dropdown">
-                                    <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                      Restó
-                                    </a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                                      <li><a class="dropdown-item" href="#">Veggie</a></li>
-                                      <li><a class="dropdown-item" href="#">Sushi</a></li>
-                                      <li><a class="dropdown-item" href="#">Parrilla</a></li>
-                                      <li><a class="dropdown-item" href="#">Pizzería</a></li>
-                                      <li><a class="dropdown-item" href="#">Restaurant</a></li>
-                                    </ul>
-                                  </li>
-                                  <li class="nav-item">
-                                    <a class="nav-link active" href="#">Wine & Beer</a>
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </nav>
+          </div> <!-- CIERRA NAV MOBILE -->
 
-                    </div>  <!-- CIERRA NAV MOBILE -->
+          <div class="navbar__tabletDesktop">
+            <!-- ABRE NAVBAR TABLET Y DESKTOP -->
+            <ul>
+              <li><a href="./pages/coffeebake.html">Coffee & Bake</a></li>
+              <li><a href="./pages/healthy.html">Healthy</a></li>
+              <li><a href="">Restó</a>
+                <ul>
+                  <li> <a href="./pages/resto-veggie.html">veggie</a></li>
+                  <li> <a href="./pages/resto-sushi.html">sushi</a></li>
+                  <li> <a href="./pages/resto-parrilla.html">parrilla</a></li>
+                  <li> <a href="./pages/resto-pizza.html">pizza</a></li>
+                  <li> <a href="./pages/resto-otros.html">otros</a></li>
+                </ul>
+              </li>
+              <li><img src="./images/logo-en-footer.png" alt="logo en nuñez"></li>
+              <li><a href="./pages/winebeer.html">Wine & Beer</a></li>
+              <li><a href="./pages/acercade.html">Acerca de</a> </li>
+              <li><a href="./pages/contacto.html">Contacto</a> </li>
+            </ul>
+          </div> <!-- CIERRA NAVBAR TABLET Y DESKTOP -->
 
-                    <div class="navbar__tablet_desktop"> <!-- ABRE NAVBAR TABLET Y DESKTOP -->
-                        <ul>
-                            <li><a href="./pages/coffeebake.html">Coffee & Bake</a></li>
-                            <li><a href="./pages/healthy.html">Healthy</a></li>
-                            <li><a href="">Restó</a> 
-                                <ul>
-                                    <li> <a href="./pages/resto-veggie.html">veggie</a></li>
-                                    <li> <a href="./pages/resto-sushi.html">sushi</a></li>
-                                    <li> <a href="./pages/resto-parrilla.html">parrilla</a></li>
-                                    <li> <a href="./pages/resto-pizza.html">pizza</a></li>
-                                    <li> <a href="./pages/resto-otros.html">otros</a></li>
-                                </ul>
-                            </li>
-                            <li><img src="./images/logo-en-footer.png" alt="logo en nuñez"></li>
-                            <li><a href="./pages/winebeer.html">Wine & Beer</a></li>
-                            <li><a href="./pages/acercade.html">Acerca de</a> </li>
-                            <li><a href="./pages/contacto.html">Contacto</a> </li>
-                        </ul>
-                    </div> <!-- CIERRA NAVBAR TABLET Y DESKTOP -->
+        </nav> <!-- CIERRA NAVS -->
 
-                </nav> <!-- CIERRA NAVS -->
+      </header>
 
-            </header>
+      <div>
+        <!-- LOGO EN NUÑEZ GRANDE -->
+        <img class="index__logoEnPrincipal" src="./images/home-logo-en.png" alt="logo en nuñez">
+      </div>
 
-            <div> <!-- LOGO EN NUÑEZ GRANDE -->
-                <img src="./images/home-logo-en.png" alt="logo en nuñez">
+      <!-- TEXTO DE BIENVENIDA DEBAJO DEL LOGO -->
+      <p>Un polo gastronómico único<br>en el corazón del barrio.</p>
+
+    </section> <!-- CIERRA SECCION PRINCIPAL -->
+
+
+
+
+    <section id="index__secundaria"> <!-- ABRE SECCION SECUNDARIA -->
+
+      <div><!-- ABRE COPY -->
+        <h1><span>Viví</span> <br>nuevas experiencias</h1>
+      </div> <!-- CIERRA COPY -->
+
+
+      <div class="index__carrusel">
+        <!-- ABRE CARRUSEL -->
+
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+
+          <div class="carousel-inner">
+
+            <div class="carousel-item active">
+              <img src="./images/amigos-bar.jpg" class="d-block w-100" alt="amigos en un bar">
             </div>
 
-            <!-- TEXTO DE BIENVENIDA DEBAJO DEL LOGO -->
-            <p>Un polo gastronómico único<br>en el corazón del barrio.</p>
-
-        </section> <!-- CIERRA SECCION PRINCIPAL -->
-
-
-
-
-        <section class="index__seccionSecundaria"> <!-- ABRE SECCION SECUNDARIA -->
-
-            <div> <!-- ABRE COPY -->
-
-                <h1><span>Viví</span> nuevas experiencias</h1>
-
-            </div> <!-- CIERRA COPY -->
-
-
-            <div class="index__carrusel"> <!-- ABRE CARRUSEL -->
-
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-
-                    <div class="carousel-inner">
-
-                      <div class="carousel-item active">
-                        <img src="./images/amigos-bar.jpg" class="d-block w-100" alt="amigos en un bar">
-                      </div>
-
-                      <div class="carousel-item">
-                        <img src="./images/amigos-fuego.jpg" class="d-block w-100" alt="amigos sentados en una fogata">
-                      </div>
-
-                      <div class="carousel-item">
-                        <img src="./images/amigos-terraza.jpg" class="d-block w-100" alt="amigos en una terraza">
-                      </div>
-
-                    </div>
-
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span class="visually-hidden">Next</span>
-                    </button>
-                  </div>
-                
-            </div> <!-- CIERRA CARRUSEL -->
-
-            <div> <!-- TEXTO DEBAJO DEL CARRUSEL -->
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat rerum labore eaque numquam laboriosam provident dignissimos molestias officia ipsa qui, assumenda aperiam impedit officiis.
-                </p>
+            <div class="carousel-item">
+              <img src="./images/amigos-fuego.jpg" class="d-block w-100" alt="amigos sentados en una fogata">
             </div>
+
+            <div class="carousel-item">
+              <img src="./images/amigos-terraza.jpg" class="d-block w-100" alt="amigos en una terraza">
+            </div>
+
+          </div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div> <!-- CIERRA CARRUSEL -->
+
+      <div>
+        <!-- TEXTO DEBAJO DEL CARRUSEL -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat rerum labore eaque numquam laboriosam
+          provident dignissimos molestias officia ipsa qui, assumenda aperiam impedit officiis.
+        </p>
+      </div>
+
+    </section> <!-- CIERRA SECCION SECUNDARIA -->
+
+
+
+
+    <section id="index__destacados"> <!-- ABRE SECCION DESTACADOS DE LA SEMANA -->
+      <h1>Los <span>destacados</span> <br>de la semana</h1>
+
+      <div class="index__div--videos"> <!-- ABRE CONTENEDOR DE VIDEOS -->
         
-        </section> <!-- CIERRA SECCION SECUNDARIA -->
+        <div> <!-- DESTACADO 1 -->
+          <video src="./videos/video-cangrejo.mp4" autoplay muted loop></video>
+          <h4>restó / healthy</h4>
+          <h2>madamme croqué</h2>
+          <h3>cangrejo al wok</h3>
+        </div>
+
+        <div> <!-- DESTACADO 2 -->
+          <video src="./videos/video-mojitos.mp4" autoplay muted loop></video>
+          <h4>wine & beer</h4>
+          <h2>rey de copas</h2>
+          <h3>tardes de mojito</h3>
+        </div>
+
+        <div> <!-- DESTACADO 3 -->
+          <video src="./videos/video-sushi.mp4" autoplay muted loop></video>
+          <h4>restó / sushi</h4>
+          <h2>hijikata</h2>
+          <h3>nuevo roll de anguila</h3>
+        </div>
+
+      </div> <!-- CIERRA  CONTENEDOR DE VIDEOS -->
+
+    </section> <!-- CIERRA SECCION DESTACADOS DE LA SEMANA -->
 
 
 
+    <footer id="footer">
+      <!-- ABRE FOOTER -->
 
-        <section class="index__seccionDestacados"> <!-- ABRE SECCION DESTACADOS DE LA SEMANA -->
-            <h1>Los <span>destacados</span> de la semana</h1>
+      <div>
+        <!-- sobre nosotros -->
+        <h1>SOBRE NOSOTROS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur.<br>Minus eveniet mollitia illo accusamus<br>tenetur, libero iste
+          soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos<br>distinctio explicabo.
+        </p>
+      </div>
 
-            <div> <!-- ABRE CONTENEDOR DE VIDEOS -->
+      <div>
+        <!-- logo en nuñez -->
+        <img src="./images/logo-en-footer.png" alt="logo footer">
+      </div>
 
-                <div> <!-- DESTACADO 1 -->
-                    <video src="./videos/video-cangrejo.mp4" autoplay muted loop></video>
-                    <h4>restó / healthy</h4>
-                    <h2>madamme croqué</h2>
-                    <h3>cangrejo al wok</h3>
-                </div>
+      <div>
+        <!-- contacto -->
+        <h1>CONTACTO</h1>
+        <p>+54911 3040 8586 <br>ennunez@gmail.com
+        </p>
+      </div>
 
-                <div> <!-- DESTACADO 2 -->
-                    <video src="./videos/video-mojitos.mp4" autoplay muted loop></video>
-                    <h4>wine & beer</h4>
-                    <h2>rey de copas</h2>
-                    <h3>tardes de mojito</h3>
-                </div>
-
-                <div> <!-- DESTACADO 3 -->
-                    <video src="./videos/video-sushi.mp4" autoplay muted loop></video>
-                    <h4>restó / sushi</h4>
-                    <h2>hijikata</h2>
-                    <h3>nuevo roll de anguila</h3>
-                </div>
-
-            </div> <!-- CIERRA  CONTENEDOR DE VIDEOS -->
-
-        </section> <!-- CIERRA SECCION DESTACADOS DE LA SEMANA -->
-
-
-
-        <footer> <!-- ABRE FOOTER -->
-
-            <div> <!-- sobre nosotros -->
-                <h1>SOBRE NOSOTROS</h1>
-                <p>Lorem ipsum dolor sit amet consectetur.<br>Minus eveniet mollitia illo accusamus<br>tenetur, libero iste soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos<br>distinctio explicabo.
-                </p>
-            </div>
-
-            <div> <!-- logo en nuñez -->
-                <img src="./images/logo-en-footer.png" alt="logo footer">
-            </div>
-
-            <div> <!-- contacto -->
-                <h1>CONTACTO</h1>
-                <p>+54911 3040 8586 <br>ennunez@gmail.com
-                </p>
-            </div>
-
-        </footer> <!-- CIERRA FOOTER -->
+    </footer> <!-- CIERRA FOOTER -->
 
 
 
 
 
-    </div> <!-- CIERRA CONTENEDOR GENERAL -->
-
-    
+  </div> <!-- CIERRA CONTENEDOR GENERAL -->
 
 
-    <script src="./js/bootstrap.min.js"></script> <!-- JS BOOTSTRAP -->
+
+
+  <script src="./js/bootstrap.min.js"></script> <!-- JS BOOTSTRAP -->
 </body>
 
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "ennunez",
+  "version": "1.0.0",
+  "description": "sitio en nuñez version responsive",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "erica jacquemain",
+  "license": "ISC"
+}
