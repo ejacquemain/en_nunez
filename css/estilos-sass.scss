@@ -1,3 +1,9 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
 body{
     font-family: 'Prata', serif;
     font-family: 'Raleway', sans-serif;
@@ -11,11 +17,23 @@ $azul: color #01253d;
     .m-#{$i} {margin: 1rem * $i; }
 }
 
+/* GRID MOBILE FIRST */
+#index__contenedor{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh 80vh 160vh 70vh;
+    grid-template-areas: 
+    "principal"
+    "secundaria"
+    "destacados"
+    "footer";
+}
+
 /* INDEX__SECCION PRINCIPAL ---------------------- */
 #index__principal{
     grid-area: principal;
     background-color: white;
-    background-image: url(../images/home-background.png);
+    background-image: url(../images/index-background-mobile2.jpg);
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,10 +41,37 @@ $azul: color #01253d;
     .navbar__tabletDesktop{
         display: none;
     }
+    .navbar__mobile a{
+        font-size: 0.9rem;
+        color: $azul;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        padding-left: 1rem;
+    }
+    .navbar-toggler-icon{
+        width: 1.5rem;
+        height: 2rem;
+    }
+    .navbar-brand{
+        width: 5rem;
+        height: auto;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+    .index__p--etiqueta{
+        padding-top: 15rem;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 1rem;
+        font-weight: bold;
+        color: white;
+    }
+    .index__p--etiqueta span{
+        color: rgb(243, 165, 68);
+    }
     .index__logoEnPrincipal{
         width: 60vw;
         margin-left: 20vw;
-        margin-top: 15rem;
         align-items: center;
     }
     p{
@@ -80,7 +125,6 @@ $azul: color #01253d;
     background-repeat: no-repeat;
     background-size:contain;
     overflow: auto;
-   
     h1{
         font-family: 'Prata', serif;
         color: $azul;
@@ -91,9 +135,6 @@ $azul: color #01253d;
     }
     span{
         color: rgb(243, 165, 68);
-    }
-    div{
-        margin-bottom: 3rem;
     }
     video{
         width: 100vw;
@@ -128,8 +169,10 @@ $azul: color #01253d;
         color: rgb(243, 165, 68);
         padding-left: 1rem;
         text-align: center;
+        margin-bottom: 3rem;
     }
 }
+
 
 /* FOOTER DE TODO EL SITIO --------------------- */
 #footer{
@@ -141,18 +184,19 @@ $azul: color #01253d;
         text-transform: uppercase;
         font-weight: 600;
         color: rgb(243, 165, 68);
-        padding: 3rem 0 0 1rem;
+        padding: 5rem 0 0 2rem;
     }
     p{
         font-family: 'Raleway', sans-serif;
         font-size: 0.9rem;
         font-weight: 500;
         color: grey;
-        padding-left: 1rem;
+        padding-left: 2rem;
         margin-bottom: 4rem;
     }
     img{
-        padding-left: 1rem;
+        padding-left: 2rem;
         margin-bottom: 1rem;
+        width: 7rem;
     }
 }

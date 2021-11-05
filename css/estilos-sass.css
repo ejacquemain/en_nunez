@@ -1,3 +1,10 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 body {
   font-family: 'Prata', serif;
   font-family: 'Raleway', sans-serif;
@@ -44,11 +51,24 @@ body {
   margin: 10rem;
 }
 
+/* GRID MOBILE FIRST */
+#index__contenedor {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: 100vh 80vh 160vh 70vh;
+      grid-template-rows: 100vh 80vh 160vh 70vh;
+      grid-template-areas: "principal" "secundaria" "destacados" "footer";
+}
+
 /* INDEX__SECCION PRINCIPAL ---------------------- */
 #index__principal {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
   grid-area: principal;
   background-color: white;
-  background-image: url(../images/home-background.png);
+  background-image: url(../images/index-background-mobile2.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -59,10 +79,42 @@ body {
   display: none;
 }
 
+#index__principal .navbar__mobile a {
+  font-size: 0.9rem;
+  color: color #01253d;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+#index__principal .navbar-toggler-icon {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+#index__principal .navbar-brand {
+  width: 5rem;
+  height: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+#index__principal .index__p--etiqueta {
+  padding-top: 15rem;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+}
+
+#index__principal .index__p--etiqueta span {
+  color: #f3a544;
+}
+
 #index__principal .index__logoEnPrincipal {
   width: 60vw;
   margin-left: 20vw;
-  margin-top: 15rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -79,6 +131,8 @@ body {
 
 /* INDEX__SECCION SECUNDARIA ---------------------- */
 #index__secundaria {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
   grid-area: secundaria;
 }
 
@@ -113,6 +167,8 @@ body {
 
 /* INDEX__SECCION DESTACADOS --------------------- */
 #index__destacados {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
   grid-area: destacados;
   background-image: url(../images/home-descripcion-background.jpg);
   background-position: bottom center;
@@ -132,10 +188,6 @@ body {
 
 #index__destacados span {
   color: #f3a544;
-}
-
-#index__destacados div {
-  margin-bottom: 3rem;
 }
 
 #index__destacados video {
@@ -174,10 +226,13 @@ body {
   color: #f3a544;
   padding-left: 1rem;
   text-align: center;
+  margin-bottom: 3rem;
 }
 
 /* FOOTER DE TODO EL SITIO --------------------- */
 #footer {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
   grid-area: footer;
   background-image: radial-gradient(black, #01253d);
 }
@@ -188,7 +243,7 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   color: #f3a544;
-  padding: 3rem 0 0 1rem;
+  padding: 5rem 0 0 2rem;
 }
 
 #footer p {
@@ -196,12 +251,13 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
   color: grey;
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin-bottom: 4rem;
 }
 
 #footer img {
-  padding-left: 1rem;
+  padding-left: 2rem;
   margin-bottom: 1rem;
+  width: 7rem;
 }
 /*# sourceMappingURL=estilos-sass.css.map */
