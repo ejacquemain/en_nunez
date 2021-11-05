@@ -52,6 +52,20 @@ body {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: top center;
+}
+
+#index__principal .navbar__tabletDesktop {
+  display: none;
+}
+
+#index__principal .index__logoEnPrincipal {
+  width: 60vw;
+  margin-left: 20vw;
+  margin-top: 15rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #index__principal p {
@@ -60,19 +74,7 @@ body {
   font-size: 1rem;
   text-align: center;
   font-weight: 600;
-}
-
-.navbar__tabletDesktop {
-  display: none;
-}
-
-.index__logoEnPrincipal {
-  width: 80vw;
-  margin-left: 10vw;
-  margin-top: 150px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  margin-top: 6rem;
 }
 
 /* INDEX__SECCION SECUNDARIA ---------------------- */

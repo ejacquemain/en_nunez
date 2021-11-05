@@ -19,24 +19,24 @@ $azul: color #01253d;
     background-position: bottom center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: top center;
+    .navbar__tabletDesktop{
+        display: none;
+    }
+    .index__logoEnPrincipal{
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 15rem;
+        align-items: center;
+    }
     p{
         font-family: 'Raleway', sans-serif;
         color: white;
         font-size: 1rem;
         text-align: center;
         font-weight: 600;
+        margin-top: 6rem;
     }
-}
-
-.navbar__tabletDesktop{
-    display: none;
-}
-
-.index__logoEnPrincipal{
-    width: 80vw;
-    margin-left: 10vw;
-    margin-top: 150px;
-    align-items: center;
 }
 
 
