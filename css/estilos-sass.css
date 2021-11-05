@@ -57,8 +57,8 @@ body {
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 100vh 80vh 160vh 70vh;
-      grid-template-rows: 100vh 80vh 160vh 70vh;
+  -ms-grid-rows: 100vh 100vh 190vh 90vh;
+      grid-template-rows: 100vh 100vh 190vh 90vh;
       grid-template-areas: "principal" "secundaria" "destacados" "footer";
 }
 
@@ -100,7 +100,7 @@ body {
 }
 
 #index__principal .index__p--etiqueta {
-  padding-top: 15rem;
+  padding-top: 13rem;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 1rem;
@@ -126,7 +126,7 @@ body {
   font-size: 1rem;
   text-align: center;
   font-weight: 600;
-  margin-top: 6rem;
+  margin-top: 3rem;
 }
 
 /* INDEX__SECCION SECUNDARIA ---------------------- */
