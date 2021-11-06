@@ -51,7 +51,8 @@ body {
   margin: 10rem;
 }
 
-/* GRID MOBILE FIRST */
+/* MOBILE FIRST */
+/* GRID DEL INDEX */
 #index__contenedor {
   display: -ms-grid;
   display: grid;
@@ -115,9 +116,6 @@ body {
 #index__principal .index__logoEnPrincipal {
   width: 60vw;
   margin-left: 20vw;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #index__principal p {
@@ -231,7 +229,7 @@ body {
 
 /* FOOTER DE TODO EL SITIO --------------------- */
 #footer {
-  -ms-grid-row: 4;
+  -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
   background-image: radial-gradient(black, #01253d);
@@ -259,5 +257,59 @@ body {
   padding-left: 2rem;
   margin-bottom: 1rem;
   width: 7rem;
+}
+
+/* GRID DEL INTERIOR -------------------------- */
+#interior__header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: 20vh auto 90vh;
+      grid-template-rows: 20vh auto 90vh;
+      grid-template-areas: "header" "cuadricula" "footer";
+  overflow: visible;
+}
+
+#interior__header .navbar__tabletDesktop {
+  display: none;
+}
+
+#interior__header .navbar__mobile a {
+  font-size: 0.9rem;
+  color: color #01253d;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+#interior__header .navbar-toggler-icon {
+  width: 1.5rem;
+  height: 2rem;
+}
+
+#interior__header .navbar-brand {
+  width: 5rem;
+  height: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+#interior__header .interior__header--logoHeader {
+  width: 80vw;
+  height: auto;
+  margin-left: 10vw;
+}
+
+#interior__header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+#interior__cuadricula {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: cuadricula;
 }
 /*# sourceMappingURL=estilos-sass.css.map */

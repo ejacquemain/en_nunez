@@ -17,7 +17,9 @@ $azul: color #01253d;
     .m-#{$i} {margin: 1rem * $i; }
 }
 
-/* GRID MOBILE FIRST */
+/* MOBILE FIRST */
+
+/* GRID DEL INDEX */
 #index__contenedor{
     display: grid;
     grid-template-columns: 100vw;
@@ -72,7 +74,6 @@ $azul: color #01253d;
     .index__logoEnPrincipal{
         width: 60vw;
         margin-left: 20vw;
-        align-items: center;
     }
     p{
         font-family: 'Raleway', sans-serif;
@@ -83,8 +84,6 @@ $azul: color #01253d;
         margin-top: 3rem;
     }
 }
-
-
 
 /* INDEX__SECCION SECUNDARIA ---------------------- */
 #index__secundaria{
@@ -115,7 +114,6 @@ $azul: color #01253d;
         font-weight: 500;
     }
 }
-
 
 /* INDEX__SECCION DESTACADOS --------------------- */
 #index__destacados{
@@ -173,7 +171,6 @@ $azul: color #01253d;
     }
 }
 
-
 /* FOOTER DE TODO EL SITIO --------------------- */
 #footer{
     grid-area: footer;
@@ -200,3 +197,48 @@ $azul: color #01253d;
         width: 7rem;
     }
 }
+
+/* GRID DEL INTERIOR -------------------------- */
+#interior__header{
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 20vh auto 90vh;
+    grid-template-areas: 
+    "header"
+    "cuadricula"
+    "footer";
+    overflow: visible;
+    .navbar__tabletDesktop{
+        display: none;
+    }
+    .navbar__mobile a{
+        font-size: 0.9rem;
+        color: $azul;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 600;
+        padding-left: 1rem;
+    }
+    .navbar-toggler-icon{
+        width: 1.5rem;
+        height: 2rem;
+    }
+    .navbar-brand{
+        width: 5rem;
+        height: auto;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+    .interior__header--logoHeader{
+        width: 80vw;
+        height: auto;
+        margin-left: 10vw;
+    }
+}
+
+#interior__header{
+    grid-area: header;
+}
+
+#interior__cuadricula{
+    grid-area: cuadricula;
+} 
