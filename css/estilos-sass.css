@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -48,7 +49,7 @@
 }
 
 /* MOBILE FIRST */
-/* GRID DEL INDEX */
+/* INDEX -----------------------------------------*/
 #index__contenedor {
   display: -ms-grid;
   display: grid;
@@ -220,7 +221,7 @@
   margin-bottom: 3rem;
 }
 
-/* FOOTER DE TODO EL SITIO */
+/* FOOTER DE TODO EL SITIO ------------------------------------ */
 #footer {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -252,29 +253,40 @@
   width: 7rem;
 }
 
-/* GRID DEL INTERIOR -------------------------- */
+/* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
 #interior__contenedor {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 20vh auto 90vh;
-      grid-template-rows: 20vh auto 90vh;
+  -ms-grid-rows: 55vw auto 90vh;
+      grid-template-rows: 55vw auto 90vh;
       grid-template-areas: "header" "cuadricula" "footer";
-  overflow: visible;
 }
 
-#interior__contenedor .interior__header {
+#interior__header {
+  /* evaluar si el ID del header debería quedar fixed o no */
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
+  width: 100vw;
+  height: 200px;
+  background-color: white;
 }
 
-#interior__contenedor .navbar__tabletDesktop {
-  display: none;
+#interior__header .navbar-toggler-icon {
+  width: 1.5rem;
+  height: 2rem;
 }
 
-#interior__contenedor .navbar__mobile a {
+#interior__header .navbar-brand {
+  width: 5rem;
+  height: auto;
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
+#interior__header .navbar__mobile a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
@@ -282,27 +294,68 @@
   padding-left: 1rem;
 }
 
-#interior__contenedor .navbar-toggler-icon {
-  width: 1.5rem;
-  height: 2rem;
+#interior__header .navbar__tabletDesktop {
+  display: none;
 }
 
-#interior__contenedor .navbar-brand {
-  width: 5rem;
-  height: auto;
-  padding-left: 1rem;
-  padding-top: 1rem;
-}
-
-#interior__contenedor .interior__header--logoHeader {
-  width: 70vw;
-  height: auto;
-  margin-left: 15vw;
+#interior__header .interior__header--logoHeader {
+  height: 7vh;
+  width: auto;
+  margin-left: 2rem;
+  margin-top: 120px;
 }
 
 #interior__cuadricula {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: cuadricula;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 1rem;
+  /* CONTROLAR ESTE MARGEN */
+}
+
+#interior__cuadricula div {
+  margin-bottom: 40px;
+}
+
+#interior__cuadricula img {
+  width: 90vw;
+  height: auto;
+  border-radius: 5px;
+}
+
+#interior__cuadricula h5 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.6rem;
+  color: #01253d;
+  text-transform: uppercase;
+  margin-top: 1rem;
+}
+
+#interior__cuadricula a {
+  font-family: "Prata", serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #f3a544;
+}
+
+#interior__cuadricula h4 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 /*# sourceMappingURL=estilos-sass.css.map */

@@ -25,7 +25,7 @@ $prata: 'Prata', serif;
 
 /* MOBILE FIRST */
 
-/* GRID DEL INDEX */
+/* INDEX -----------------------------------------*/
 #index__contenedor{
     display: grid;
     grid-template-columns: 100vw;
@@ -153,7 +153,7 @@ $prata: 'Prata', serif;
     }
 }
 
-/* FOOTER DE TODO EL SITIO */
+/* FOOTER DE TODO EL SITIO ------------------------------------ */
 #footer{
     grid-area: footer;
     background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
@@ -176,28 +176,22 @@ $prata: 'Prata', serif;
     }
 }
 
-/* GRID DEL INTERIOR -------------------------- */
+/* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
 
 #interior__contenedor{
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 20vh auto 90vh;
+    grid-template-rows: 55vw auto 90vh;
     grid-template-areas: 
     "header"
     "cuadricula"
     "footer";
-    overflow: visible;
-    .interior__header{
-        grid-area: header;
-    }
-    .navbar__tabletDesktop{
-        display: none;
-    }
-    .navbar__mobile a{
-        @include font($raleway, 600, 0.9rem);
-        color: $azul;
-        padding-left: 1rem;
-    }
+}
+#interior__header{ /* evaluar si el ID del header debería quedar fixed o no */
+    grid-area: header;
+    width: 100vw;
+    height: 200px;
+    background-color: white;
     .navbar-toggler-icon{
         width: 1.5rem;
         height: 2rem;
@@ -208,13 +202,60 @@ $prata: 'Prata', serif;
         padding-left: 1rem;
         padding-top: 1rem;
     }
+    .navbar__mobile a{
+        @include font($raleway, 600, 0.9rem);
+        color: $azul;
+        padding-left: 1rem;
+    }
+    .navbar__tabletDesktop{
+        display: none;
+    }
     .interior__header--logoHeader{
-        width: 70vw;
-        height: auto;
-        margin-left: 15vw;
+        height: 7vh;
+        width: auto;
+        margin-left: 2rem;
+        margin-top: 120px;
     }
 }
-
 #interior__cuadricula{
     grid-area: cuadricula;
-} 
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem; /* CONTROLAR ESTE MARGEN */
+    div{
+        margin-bottom: 40px;
+    }
+    img{
+        width: 90vw;
+        height: auto;
+        border-radius: 5px;
+    }
+    h5{
+        @include font($raleway, 500, 0.6rem);
+        color: $azul;
+        text-transform: uppercase;
+        margin-top: 1rem;
+    }
+    a{
+        @include font($prata, 900, 1.2rem);
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $naranja;
+    }
+    h4{
+        @include font($raleway, 500, 1.1rem);
+    }
+   
+}
+   
+
+   
+    
+  
+
+
+
+
+
