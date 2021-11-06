@@ -4,13 +4,19 @@
     box-sizing: border-box;
 }
 
-body{
-    font-family: 'Prata', serif;
-    font-family: 'Raleway', sans-serif;
-}
+$naranja: #f3a544;
+$azul: #01253d;
+$cuadricula-border: 5px;
+$raleway: 'Raleway', sans-serif;
+$prata: 'Prata', serif;
 
-$naranja: color rgb(243, 165, 68);
-$azul: color #01253d;
+
+/* mixin font */
+@mixin font ($family, $weight, $size) {
+    font-family: $family;
+    font-weight: $weight;
+    font-size: $size;
+}
 
 /* bucle para margen */
 @for $i from 1 through 10{
@@ -29,164 +35,136 @@ $azul: color #01253d;
     "secundaria"
     "destacados"
     "footer";
-}
-
-/* INDEX__SECCION PRINCIPAL ---------------------- */
-#index__principal{
-    grid-area: principal;
-    background-color: white;
-    background-image: url(../images/index-background-mobile2.jpg);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top center;
-    .navbar__tabletDesktop{
-        display: none;
+    #index__principal{
+        grid-area: principal;
+        background-color: white;
+        background-image: url(../images/index-background-mobile2.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        .navbar__mobile a{
+            @include font($raleway, 600, 0.9rem);
+            color: $azul;
+            padding-left: 1rem;
+        }
+        .navbar-toggler-icon{
+            width: 1.5rem;
+            height: 2rem;
+        }
+        .navbar-brand{
+            width: 5rem;
+            height: auto;
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+        .navbar__tabletDesktop{
+            display: none;
+        }
+        .index__p--etiqueta{
+            @include font($raleway, bold, 1rem);
+            color: white;
+            text-transform: uppercase;
+            padding-top: 13rem;
+        }
+        .index__p--etiqueta span{
+            color: $naranja;
+        }
+        .index__logoEnPrincipal{
+            width: 60vw;
+            margin-left: 20vw;
+        }
+        p{
+            @include font($raleway, 600, 1rem);
+            color: white;
+            text-align: center;
+            margin-top: 3rem;
+        }
     }
-    .navbar__mobile a{
-        font-size: 0.9rem;
-        color: $azul;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600;
-        padding-left: 1rem;
+    #index__secundaria{
+        grid-area: secundaria;
+        h1{
+            @include font($prata, 500, 2rem);
+            color: $azul;
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+        }
+        span{
+            color: $naranja;
+        }
+        .index__carrusel{
+            width: 100vw;
+            height: auto;
+        }
+        p{
+            @include font($raleway, 500, 1rem);
+            color: $azul;
+            text-align: center;
+            margin-top: 3rem;
+            padding: 0 2rem 0 2rem;
+        }
     }
-    .navbar-toggler-icon{
-        width: 1.5rem;
-        height: 2rem;
-    }
-    .navbar-brand{
-        width: 5rem;
-        height: auto;
-        padding-left: 1rem;
-        padding-top: 1rem;
-    }
-    .index__p--etiqueta{
-        padding-top: 13rem;
-        font-family: 'Raleway', sans-serif;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: bold;
-        color: white;
-    }
-    .index__p--etiqueta span{
-        color: rgb(243, 165, 68);
-    }
-    .index__logoEnPrincipal{
-        width: 60vw;
-        margin-left: 20vw;
-    }
-    p{
-        font-family: 'Raleway', sans-serif;
-        color: white;
-        font-size: 1rem;
-        text-align: center;
-        font-weight: 600;
-        margin-top: 3rem;
-    }
-}
-
-/* INDEX__SECCION SECUNDARIA ---------------------- */
-#index__secundaria{
-    grid-area: secundaria;
-    h1{
-        font-family: 'Prata', serif;
-        color: $azul;
-        font-size: 2rem;
-        text-align: center;
-        font-weight: 500;
-        margin-top: 3rem;
-        margin-bottom: 2rem;
-    }
-    span{
-        color: rgb(243, 165, 68);
-    }
-    .index__carrusel{
-        width: 100vw;
-        height: auto;
-    }
-    p{
-        margin-top: 3rem;
-        padding: 0 2rem 0 2rem;
-        text-align: center;
-        font-family: 'Raleway', sans-serif;
-        font-size: 1rem;
-        color: $azul;
-        font-weight: 500;
-    }
-}
-
-/* INDEX__SECCION DESTACADOS --------------------- */
-#index__destacados{
-    grid-area: destacados;
-    background-image: url(../images/home-descripcion-background.jpg);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size:contain;
-    overflow: auto;
-    h1{
-        font-family: 'Prata', serif;
-        color: $azul;
-        font-size: 2rem;
-        text-align: center;
-        font-weight: 500;
-        margin-bottom: 2rem;
-    }
-    span{
-        color: rgb(243, 165, 68);
-    }
-    video{
-        width: 100vw;
-        height: auto;
-    }
-    h4{
-        font-family: 'Raleway', sans-serif;
-        font-size: 0.6rem;
-        text-transform: uppercase;
-        font-weight: 500;
-        color: $azul;
-        margin-top: 0.5rem;
-        padding-left: 1rem;
-        text-align: center;
-        margin-bottom: 2px;
-    }
-    h2{
-        font-family: 'Raleway', sans-serif;
-        font-size: 1.5rem;
-        text-transform: capitalize;
-        font-weight: 700;
-        color: $azul;
-        padding-left: 1rem;
-        text-align: center;
-        margin-bottom: 2px;
-    }
-    h3{
-        font-family: 'Prata', serif;
-        font-size: 1.2rem;
-        text-transform: capitalize;
-        font-weight: 500;
-        color: rgb(243, 165, 68);
-        padding-left: 1rem;
-        text-align: center;
-        margin-bottom: 3rem;
+    #index__destacados{
+        grid-area: destacados;
+        background-image: url(../images/home-descripcion-background.jpg);
+        background-position: bottom center;
+        background-repeat: no-repeat;
+        background-size:contain;
+        overflow: auto;
+        h1{
+            @include font($prata, 500, 2rem);
+            color: $azul;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        span{
+            color: $naranja;
+        }
+        video{
+            width: 100vw;
+            height: auto;
+        }
+        h4{
+            @include font($raleway, 500, 0.6rem);
+            color: $azul;
+            text-transform: uppercase;
+            text-align: center;
+            margin-top: 0.5rem;
+            padding-left: 1rem;
+            margin-bottom: 2px;
+        }
+        h2{
+            @include font($raleway, 700, 1.5rem);
+            color: $azul;
+            text-transform: capitalize;
+            text-align: center;
+            padding-left: 1rem;
+            margin-bottom: 2px;
+        }
+        h3{
+            @include font($prata, 500, 1.2rem);
+            color: $naranja;
+            text-transform: capitalize;
+            text-align: center;
+            padding-left: 1rem;
+            margin-bottom: 3rem;
+        }
     }
 }
 
-/* FOOTER DE TODO EL SITIO --------------------- */
+/* FOOTER DE TODO EL SITIO */
 #footer{
     grid-area: footer;
     background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
     h1{
-        font-family: 'Raleway', sans-serif;
-        font-size: 0.9rem;
+        @include font($raleway, 600, 0.9rem);
+        color: $naranja;
         text-transform: uppercase;
-        font-weight: 600;
-        color: rgb(243, 165, 68);
         padding: 5rem 0 0 2rem;
     }
     p{
-        font-family: 'Raleway', sans-serif;
-        font-size: 0.9rem;
-        font-weight: 500;
+        @include font($raleway, 500, 0.9rem);
         color: grey;
         padding-left: 2rem;
         margin-bottom: 4rem;
@@ -199,7 +177,8 @@ $azul: color #01253d;
 }
 
 /* GRID DEL INTERIOR -------------------------- */
-#interior__header{
+
+#interior__contenedor{
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 20vh auto 90vh;
@@ -208,14 +187,15 @@ $azul: color #01253d;
     "cuadricula"
     "footer";
     overflow: visible;
+    .interior__header{
+        grid-area: header;
+    }
     .navbar__tabletDesktop{
         display: none;
     }
     .navbar__mobile a{
-        font-size: 0.9rem;
+        @include font($raleway, 600, 0.9rem);
         color: $azul;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 600;
         padding-left: 1rem;
     }
     .navbar-toggler-icon{
@@ -229,14 +209,10 @@ $azul: color #01253d;
         padding-top: 1rem;
     }
     .interior__header--logoHeader{
-        width: 80vw;
+        width: 70vw;
         height: auto;
-        margin-left: 10vw;
+        margin-left: 15vw;
     }
-}
-
-#interior__header{
-    grid-area: header;
 }
 
 #interior__cuadricula{
