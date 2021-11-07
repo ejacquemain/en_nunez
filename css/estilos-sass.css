@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -48,9 +47,9 @@
   margin: 10rem;
 }
 
-/* MOBILE FIRST */
-/* INDEX -----------------------------------------*/
+/* INDEX  -----------------------------------------*/
 #index__contenedor {
+  /* MOBILE */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100vw;
@@ -60,19 +59,114 @@
       grid-template-areas: "principal" "secundaria" "destacados" "footer";
 }
 
-#index__contenedor #index__principal {
+@media screen and (min-width: 768px) {
+  #index__contenedor {
+    /* TABLET */
+    -ms-grid-rows: 100vh 90vh auto 40vh;
+        grid-template-rows: 100vh 90vh auto 40vh;
+  }
+}
+
+#index__principal {
+  /* MOBILE */
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: principal;
   background-color: white;
-  background-image: url(../images/index-background-mobile2.jpg);
+  background-image: url(../images/index-background-mobile.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: top center;
 }
 
-#index__contenedor #index__principal .navbar__mobile a {
+@media (min-width: 768px) {
+  #index__principal {
+    /* TABLET */
+    background-image: url(../images/index-background-768.jpg);
+  }
+}
+
+#index__principal .navbar__tabletDesktop ul {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #index__principal .navbar__tabletDesktop ul {
+    /* TABLET */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    list-style: none;
+  }
+}
+
+#index__principal .navbar__tabletDesktop li {
+  padding-top: 1.5vh;
+  position: relative;
+  list-style: none;
+}
+
+#index__principal .navbar__tabletDesktop ul ul {
+  position: absolute;
+  display: none;
+}
+
+#index__principal .navbar__tabletDesktop ul ul li {
+  display: block;
+  color: #f3a544;
+  margin-left: 0px;
+  border-bottom: white solid 1px;
+}
+
+#index__principal .navbar__tabletDesktop ul ul li a {
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+#index__principal .navbar__tabletDesktop ul li:hover ul {
+  display: block;
+}
+
+#index__principal .navbar__tabletDesktop li img {
+  height: 60px;
+  width: auto;
+}
+
+#index__principal .navbar__tabletDesktop li img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#index__principal .navbar__tabletDesktop a {
+  text-decoration: none;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+#index__principal .navbar__tabletDesktop a:hover {
+  color: #01253d;
+}
+
+@media (min-width: 768px) {
+  #index__principal .navbar__mobile {
+    /* TABLET */
+    display: none;
+  }
+}
+
+#index__principal .navbar__mobile a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
@@ -80,41 +174,55 @@
   padding-left: 1rem;
 }
 
-#index__contenedor #index__principal .navbar-toggler-icon {
+#index__principal .navbar-toggler-icon {
   width: 1.5rem;
   height: 2rem;
 }
 
-#index__contenedor #index__principal .navbar-brand {
+#index__principal .navbar-brand {
   width: 5rem;
   height: auto;
   padding-left: 1rem;
   padding-top: 1rem;
 }
 
-#index__contenedor #index__principal .navbar__tabletDesktop {
-  display: none;
-}
-
-#index__contenedor #index__principal .index__p--etiqueta {
+#index__principal .index__p--etiqueta {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1em;
   color: white;
   text-transform: uppercase;
   padding-top: 13rem;
 }
 
-#index__contenedor #index__principal .index__p--etiqueta span {
+@media (min-width: 768px) {
+  #index__principal .index__p--etiqueta {
+    /* TABLET */
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding-top: 5rem;
+  }
+}
+
+#index__principal .index__p--etiqueta span {
   color: #f3a544;
 }
 
-#index__contenedor #index__principal .index__logoEnPrincipal {
+#index__principal .index__logoEnPrincipal {
   width: 60vw;
   margin-left: 20vw;
 }
 
-#index__contenedor #index__principal p {
+@media (min-width: 768px) {
+  #index__principal .index__logoEnPrincipal {
+    /* TABLET */
+    width: 30vw;
+    margin-left: 35vw;
+  }
+}
+
+#index__principal p {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -123,13 +231,23 @@
   margin-top: 3rem;
 }
 
-#index__contenedor #index__secundaria {
+@media (min-width: 768px) {
+  #index__principal p {
+    /* TABLET */
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    font-size: 1em;
+  }
+}
+
+#index__secundaria {
+  /* MOBILE */
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: secundaria;
 }
 
-#index__contenedor #index__secundaria h1 {
+#index__secundaria h1 {
   font-family: "Prata", serif;
   font-weight: 500;
   font-size: 2rem;
@@ -139,16 +257,16 @@
   margin-bottom: 2rem;
 }
 
-#index__contenedor #index__secundaria span {
+#index__secundaria span {
   color: #f3a544;
 }
 
-#index__contenedor #index__secundaria .index__carrusel {
+#index__secundaria .index__carrusel {
   width: 100vw;
   height: auto;
 }
 
-#index__contenedor #index__secundaria p {
+#index__secundaria p {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 1rem;
@@ -158,7 +276,8 @@
   padding: 0 2rem 0 2rem;
 }
 
-#index__contenedor #index__destacados {
+#index__destacados {
+  /* MOBILE */
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: destacados;
@@ -169,7 +288,7 @@
   overflow: auto;
 }
 
-#index__contenedor #index__destacados h1 {
+#index__destacados h1 {
   font-family: "Prata", serif;
   font-weight: 500;
   font-size: 2rem;
@@ -178,16 +297,16 @@
   margin-bottom: 2rem;
 }
 
-#index__contenedor #index__destacados span {
+#index__destacados span {
   color: #f3a544;
 }
 
-#index__contenedor #index__destacados video {
+#index__destacados video {
   width: 100vw;
   height: auto;
 }
 
-#index__contenedor #index__destacados h4 {
+#index__destacados h4 {
   font-family: "Raleway", sans-serif;
   font-weight: 500;
   font-size: 0.6rem;
@@ -199,7 +318,7 @@
   margin-bottom: 2px;
 }
 
-#index__contenedor #index__destacados h2 {
+#index__destacados h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
@@ -210,7 +329,7 @@
   margin-bottom: 2px;
 }
 
-#index__contenedor #index__destacados h3 {
+#index__destacados h3 {
   font-family: "Prata", serif;
   font-weight: 500;
   font-size: 1.2rem;
@@ -255,6 +374,7 @@
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
 #interior__contenedor {
+  /* MOBILE */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100vw;
@@ -265,7 +385,7 @@
 }
 
 #interior__header {
-  /* evaluar si el ID del header debería quedar fixed o no */
+  /* MOBILE */
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
@@ -306,6 +426,7 @@
 }
 
 #interior__cuadricula {
+  /* MOBILE */
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: cuadricula;
@@ -322,7 +443,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 1rem;
-  /* CONTROLAR ESTE MARGEN */
 }
 
 #interior__cuadricula div {

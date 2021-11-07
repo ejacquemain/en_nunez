@@ -23,10 +23,10 @@ $prata: 'Prata', serif;
     .m-#{$i} {margin: 1rem * $i; }
 }
 
-/* MOBILE FIRST */
 
-/* INDEX -----------------------------------------*/
-#index__contenedor{
+/* INDEX  -----------------------------------------*/
+
+#index__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 100vh 100vh 190vh 90vh;
@@ -35,121 +35,196 @@ $prata: 'Prata', serif;
     "secundaria"
     "destacados"
     "footer";
-    #index__principal{
-        grid-area: principal;
-        background-color: white;
-        background-image: url(../images/index-background-mobile2.jpg);
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: top center;
-        .navbar__mobile a{
-            @include font($raleway, 600, 0.9rem);
-            color: $azul;
-            padding-left: 1rem;
+    @media screen and (min-width: 768px) { /* TABLET */
+        grid-template-rows: 100vh 90vh auto 40vh;
+    }
+}
+
+
+#index__principal{ /* MOBILE */
+    grid-area: principal;
+    background-color: white;
+    background-image: url(../images/index-background-mobile.jpg);
+    @media (min-width: 768px){ /* TABLET */
+        background-image: url(../images/index-background-768.jpg);
+    }
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    .navbar__tabletDesktop ul{
+        display: none;
+        @media (min-width: 768px){ /* TABLET */
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            list-style: none;
         }
-        .navbar-toggler-icon{
-            width: 1.5rem;
-            height: 2rem;
-        }
-        .navbar-brand{
-            width: 5rem;
-            height: auto;
-            padding-left: 1rem;
-            padding-top: 1rem;
-        }
-        .navbar__tabletDesktop{
+    }
+    .navbar__tabletDesktop li{
+        padding-top: 1.5vh;
+        position: relative;
+        list-style: none;
+    }
+    .navbar__tabletDesktop ul ul{
+        position: absolute;
+        display: none;
+    }
+    .navbar__tabletDesktop ul ul li{
+        display: block;
+        color: rgb(243, 165, 68);
+        margin-left: 0px;
+        border-bottom: white solid 1px;
+    }
+    .navbar__tabletDesktop ul ul li a{
+        font-weight: 500;
+        text-transform: capitalize;
+    }
+    .navbar__tabletDesktop ul li:hover ul{
+        display: block;
+    }
+    .navbar__tabletDesktop li img{
+        height: 60px;
+        width: auto;
+    }
+    .navbar__tabletDesktop li img:hover{
+        transform: scale(1.2);
+    }
+    .navbar__tabletDesktop a{
+        text-decoration: none;
+        color: white;
+        font-family: 'Raleway', sans-serif;
+        text-transform: uppercase;
+        font-size: 0.8em;
+        font-weight: bold;
+    }
+    .navbar__tabletDesktop a:hover{
+        color: $azul;
+    }
+    .navbar__mobile{
+        @media (min-width: 768px){ /* TABLET */
             display: none;
         }
-        .index__p--etiqueta{
-            @include font($raleway, bold, 1rem);
-            color: white;
-            text-transform: uppercase;
-            padding-top: 13rem;
-        }
-        .index__p--etiqueta span{
-            color: $naranja;
-        }
-        .index__logoEnPrincipal{
-            width: 60vw;
-            margin-left: 20vw;
-        }
-        p{
-            @include font($raleway, 600, 1rem);
-            color: white;
-            text-align: center;
-            margin-top: 3rem;
+    }
+    .navbar__mobile a{
+        @include font($raleway, 600, 0.9rem);
+        color: $azul;
+        padding-left: 1rem;
+    }
+    .navbar-toggler-icon{
+        width: 1.5rem;
+        height: 2rem;
+    }
+    .navbar-brand{
+        width: 5rem;
+        height: auto;
+        padding-left: 1rem;
+        padding-top: 1rem;
+    }
+    .index__p--etiqueta{
+        @include font($raleway, bold, 1em);
+        color: white;
+        text-transform: uppercase;
+        padding-top: 13rem;
+        @media (min-width: 768px){ /* TABLET */
+            @include font($raleway, bold, 1.5em);
+            padding-top: 5rem;
         }
     }
-    #index__secundaria{
-        grid-area: secundaria;
-        h1{
-            @include font($prata, 500, 2rem);
-            color: $azul;
-            text-align: center;
-            margin-top: 3rem;
-            margin-bottom: 2rem;
-        }
-        span{
-            color: $naranja;
-        }
-        .index__carrusel{
-            width: 100vw;
-            height: auto;
-        }
-        p{
-            @include font($raleway, 500, 1rem);
-            color: $azul;
-            text-align: center;
-            margin-top: 3rem;
-            padding: 0 2rem 0 2rem;
+    .index__p--etiqueta span{
+        color: $naranja;
+    }
+    .index__logoEnPrincipal{
+        width: 60vw;
+        margin-left: 20vw;
+        @media (min-width: 768px){ /* TABLET */
+            width: 30vw;
+            margin-left: 35vw;
         }
     }
-    #index__destacados{
-        grid-area: destacados;
-        background-image: url(../images/home-descripcion-background.jpg);
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size:contain;
-        overflow: auto;
-        h1{
-            @include font($prata, 500, 2rem);
-            color: $azul;
-            text-align: center;
-            margin-bottom: 2rem;
+    p{
+        @include font($raleway, 600, 1rem);
+        color: white;
+        text-align: center;
+        margin-top: 3rem;
+        @media (min-width: 768px){ /* TABLET */
+            @include font($raleway, 600, 1em);
         }
-        span{
-            color: $naranja;
-        }
-        video{
-            width: 100vw;
-            height: auto;
-        }
-        h4{
-            @include font($raleway, 500, 0.6rem);
-            color: $azul;
-            text-transform: uppercase;
-            text-align: center;
-            margin-top: 0.5rem;
-            padding-left: 1rem;
-            margin-bottom: 2px;
-        }
-        h2{
-            @include font($raleway, 700, 1.5rem);
-            color: $azul;
-            text-transform: capitalize;
-            text-align: center;
-            padding-left: 1rem;
-            margin-bottom: 2px;
-        }
-        h3{
-            @include font($prata, 500, 1.2rem);
-            color: $naranja;
-            text-transform: capitalize;
-            text-align: center;
-            padding-left: 1rem;
-            margin-bottom: 3rem;
-        }
+    }
+}
+
+
+
+#index__secundaria{ /* MOBILE */
+    grid-area: secundaria;
+    h1{
+        @include font($prata, 500, 2rem);
+        color: $azul;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    span{
+        color: $naranja;
+    }
+    .index__carrusel{
+        width: 100vw;
+        height: auto;
+    }
+    p{
+        @include font($raleway, 500, 1rem);
+        color: $azul;
+        text-align: center;
+        margin-top: 3rem;
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+#index__destacados{ /* MOBILE */
+    grid-area: destacados;
+    background-image: url(../images/home-descripcion-background.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    overflow: auto;
+    h1{
+        @include font($prata, 500, 2rem);
+        color: $azul;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    span{
+        color: $naranja;
+    }
+    video{
+        width: 100vw;
+        height: auto;
+    }
+    h4{
+        @include font($raleway, 500, 0.6rem);
+        color: $azul;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 0.5rem;
+        padding-left: 1rem;
+        margin-bottom: 2px;
+    }
+    h2{
+        @include font($raleway, 700, 1.5rem);
+        color: $azul;
+        text-transform: capitalize;
+        text-align: center;
+        padding-left: 1rem;
+        margin-bottom: 2px;
+    }
+    h3{
+        @include font($prata, 500, 1.2rem);
+        color: $naranja;
+        text-transform: capitalize;
+        text-align: center;
+        padding-left: 1rem;
+        margin-bottom: 3rem;
     }
 }
 
@@ -177,8 +252,7 @@ $prata: 'Prata', serif;
 }
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
-
-#interior__contenedor{
+#interior__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 55vw auto 90vh;
@@ -187,7 +261,8 @@ $prata: 'Prata', serif;
     "cuadricula"
     "footer";
 }
-#interior__header{ /* evaluar si el ID del header debería quedar fixed o no */
+
+#interior__header{ /* MOBILE */
     grid-area: header;
     width: 100vw;
     height: 200px;
@@ -217,13 +292,14 @@ $prata: 'Prata', serif;
         margin-top: 120px;
     }
 }
-#interior__cuadricula{
+
+#interior__cuadricula{ /* MOBILE */
     grid-area: cuadricula;
     display: flex;
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 1rem; /* CONTROLAR ESTE MARGEN */
+    margin-top: 1rem; 
     div{
         margin-bottom: 40px;
     }
@@ -247,15 +323,4 @@ $prata: 'Prata', serif;
     h4{
         @include font($raleway, 500, 1.1rem);
     }
-   
 }
-   
-
-   
-    
-  
-
-
-
-
-
