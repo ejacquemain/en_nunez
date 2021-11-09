@@ -390,15 +390,20 @@ $prata: 'Prata', serif;
     .navbar__tabletDesktop a:hover{ /* TABLET */
         color: $naranja;
     }
-    .interior__header--logoHeader{ 
+    .interior__header--logoHeader{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+    .interior__header--logoHeader img{ 
         height: 7vh;
         width: auto;
-        margin-left: 2rem;
+        
         margin-top: 120px;
         @media (min-width: 768px){ /* TABLET */
-            height: auto;
-            width: 40vw;
-            margin-left: 30vw;
+            height: 6rem;
+            width: auto;
+            
             margin-top: 40px;
             margin-bottom: 40px;
         }
@@ -553,3 +558,52 @@ $prata: 'Prata', serif;
         color: $naranja;
     }
 }
+
+
+
+/* PAGINA FORMULARIO DE CONTACTO ------------------- */
+#formularioContacto{
+    fieldset{
+        @include font($raleway, 600, 1em);
+        color: $azul;
+        width: 60vw;
+        margin-left: 20vw;
+        margin-bottom: 5vh;
+    }
+    label{
+        @include font($raleway, 600, 1em);
+        color: $azul;
+    }
+    div{
+        margin-bottom: 20px;
+    }
+    input{
+        border: solid 1px $naranja;
+        font-size: 0.9em;
+    }
+    .formulario__div--datosPersonales div{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .formulario__div--datosPersonales input{
+        width: 50vw;
+        margin-left: 10px;
+    }
+    .formulario__div--radios input{
+        border: solid 1px $naranja;
+        margin-left: 5px;
+    }
+    textarea{
+        width: 60vw;
+        border: solid 1px $naranja;
+        overflow: auto;
+    }
+    checkbox{
+        border: solid 1px $naranja;
+        overflow: auto;
+    }
+
+} 
+
+
