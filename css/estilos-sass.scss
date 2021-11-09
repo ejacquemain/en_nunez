@@ -51,7 +51,7 @@ $prata: 'Prata', serif;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    .navbar__tabletDesktop ul{
+    .navbar__tabletDesktop > ul{
         display: none;
         @media (min-width: 768px){ /* TABLET */
             display: flex;
@@ -66,22 +66,18 @@ $prata: 'Prata', serif;
         position: relative;
         list-style: none;
     }
-    .navbar__tabletDesktop ul ul{
-        position: absolute;
-        display: none;
-    }
-    .navbar__tabletDesktop ul ul li{
-        display: block;
-        color: rgb(243, 165, 68);
-        margin-left: 0px;
-        border-bottom: white solid 1px;
-    }
-    .navbar__tabletDesktop ul ul li a{
-        font-weight: 500;
-        text-transform: capitalize;
-    }
     .navbar__tabletDesktop ul li:hover ul{
         display: block;
+    }
+    .navbar__tabletDesktop a{
+        @include font($raleway, 700, 0.8rem);
+        color: white;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    .navbar__tabletDesktop a:hover{
+        color: $azul;
+        font-weight: 800;
     }
     .navbar__tabletDesktop li img{
         height: 60px;
@@ -90,26 +86,23 @@ $prata: 'Prata', serif;
     .navbar__tabletDesktop li img:hover{
         transform: scale(1.2);
     }
-    .navbar__tabletDesktop a{
-        text-decoration: none;
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        text-transform: uppercase;
-        font-size: 0.8em;
-        font-weight: 700;
+    .navbar__tabletDesktop ul ul{ /* REVISAR: APARECE MARGEN DE MAS EN SUB-MENU */
+        position: absolute;
+        display: none;
     }
-    .navbar__tabletDesktop a:hover{
-        color: $azul;
+    .navbar__tabletDesktop ul ul li{
+        display: block; 
+        color: $naranja;
+        padding: 3px;
+    }
+    .navbar__tabletDesktop ul ul li a{
+        font-weight: 700;
+        text-transform: uppercase;
     }
     .navbar__mobile{
         @media (min-width: 768px){ /* TABLET */
             display: none;
         }
-    }
-    .navbar__mobile a{
-        @include font($raleway, 600, 0.9rem);
-        color: $azul;
-        padding-left: 1rem;
     }
     .navbar-toggler-icon{
         width: 1.5rem;
@@ -121,14 +114,23 @@ $prata: 'Prata', serif;
         padding-left: 1rem;
         padding-top: 1rem;
     }
+    .navbar__mobile a{
+        @include font($raleway, 600, 0.9rem);
+        color: $azul;
+        padding-left: 1rem;
+    }
     .index__p--etiqueta{
         @include font($raleway, bold, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 13rem;
+        padding-top: 8rem;
         @media (min-width: 768px){ /* TABLET */
             @include font($raleway, 600, 1.3em);
             padding-top: 5rem;
+        }
+        @media (min-width: 1024px){ /* DESKTOP */
+            @include font($raleway, 600, 1em);
+            padding-top: 1rem;
         }
     }
     .index__p--etiqueta span{
@@ -140,6 +142,10 @@ $prata: 'Prata', serif;
         @media (min-width: 768px){ /* TABLET */
             width: 30vw;
             margin-left: 35vw;
+        }
+        @media (min-width: 1024px){ /* DESKTOP */
+            width: 25vw;
+            margin-left: 37.5vw;
         }
     }
     p{
@@ -155,6 +161,7 @@ $prata: 'Prata', serif;
 
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
+    background-color: whitesmoke;
     h1{
         @include font($prata, 500, 2rem);
         color: $azul;
@@ -165,7 +172,15 @@ $prata: 'Prata', serif;
     span{
         color: $naranja;
     }
-    .index__carrusel{
+    video{
+        width: 90vw;
+        margin-left: 5vw;
+        @media (min-width: 768px){ /* TABLET */
+            width: 70vw;
+            margin-left: 15vw;
+        }
+    }
+    .index__carrusel{ /* SAQUÉ ESTE CARRUSEL DEL INDEX */
         width: 90vw;
         height: auto;
         margin-left: 5vw;
@@ -179,7 +194,8 @@ $prata: 'Prata', serif;
         @include font($raleway, 500, 1rem);
         color: $azul;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 1.5rem;
+        margin-bottom: 1rem;
         padding: 0 2rem 0 2rem;
         @media (min-width: 768px){ /* TABLET */
             padding-left: 25vw;
@@ -188,7 +204,7 @@ $prata: 'Prata', serif;
     }
 }
 
-#index__destacados{ /* MOBILE */
+#index__loNuevo{ /* MOBILE */
     grid-area: destacados;
     background-image: url(../images/home-descripcion-background.jpg);
     background-position: bottom center;
@@ -205,39 +221,33 @@ $prata: 'Prata', serif;
     span{
         color: $naranja;
     }
-    video{
-        width: 80vw;
+    img{
+        width: 70vw;
         height: auto;
-        margin-left: 10vw;
+        margin-left: 15vw;
         border-radius: 5px;
         @media (min-width: 768px){ /* TABLET */
-            width: 60vw;
-            margin-left: 20vw;
+            width: 50vw;
+            margin-left: 25vw;
+        }
+        @media (min-width: 1024px){ /* DESKTOP */
+            width: 40vw;
+            margin-left: 30vw;
         }
     }
     h4{
-        @include font($raleway, 500, 0.6rem);
+        @include font($raleway, 600, 0.6rem);
         color: $azul;
         text-transform: uppercase;
         text-align: center;
         margin-top: 0.5rem;
-        padding-left: 1rem;
         margin-bottom: 2px;
     }
     h2{
-        @include font($raleway, 700, 1.5rem);
-        color: $azul;
-        text-transform: capitalize;
-        text-align: center;
-        padding-left: 1rem;
-        margin-bottom: 2px;
-    }
-    h3{
-        @include font($prata, 500, 1.2rem);
+        @include font($raleway, 600, 1.3rem);
         color: $naranja;
         text-transform: capitalize;
         text-align: center;
-        padding-left: 1rem;
         margin-bottom: 3rem;
     }
 }
