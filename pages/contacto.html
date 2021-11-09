@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca de Nosotros</title>
+    <meta name="description" content="Guía gastronómica del barrio porteño de Nuñez. Buenos Aires, Argentina"> <!-- SEO -->
+    <meta name="keywords"  content="Nuñez, Contacto"> <!-- SEO -->
+    <title>En Nuñez / Contacto</title>
     <link rel="stylesheet" href="../css/estilos.css"> <!-- ESTILOS CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css"> <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="../css/estilos-sass.css"> <!-- ESTILOS SASS -->
@@ -15,35 +17,95 @@
         rel="stylesheet">
 </head>
 
-<body class="container-fluid p-0">
+<body>
 
     <div id="grillaInterior">
 
-        <nav id="navegacion">
-            <!-- NAVEGACION -->
+        <nav> <!-- ABRE NAVS (MOBILE + TABLET/DESKTOP) -->
 
-            <ul>
-
-                <li><a href="coffeebakehouse.html">Coffee & Bake</a></li>
-                <li><a href="healthy.html">Healthy</a></li>
-                <li><a href="">Restó</a>
-                    <ul>
-                        <li> <a href="resto-veggie.html">veggie</a></li>
-                        <li> <a href="resto-sushi.html">sushi</a></li>
-                        <li> <a href="resto-parrilla.html">parrilla</a></li>
-                        <li> <a href="resto-pizza.html">pizza</a></li>
-                        <li> <a href="resto-otros.html">otros</a></li>
+            <div class="navbar__mobile"> <!-- ABRE NAV MOBILE -->
+    
+              <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+                <div class="container-fluid">
+                  <img class="navbar-brand" src="../images/logo-en-black.png" alt="logo en nuñez">
+    
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+    
+                  <div class="collapse navbar-collapse" id="navbarScroll">
+    
+                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 400px;">
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="coffeebake.html">Coffee & Bake</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="healthy-organics.html">Healthy</a>
+                      </li>
+    
+                      <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                          data-bs-toggle="dropdown" aria-expanded="false">
+                          Restó
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                          <li><a class="dropdown-item" href="resto-veggie.html">Veggie</a></li>
+                          <li><a class="dropdown-item" href="resto-sushi.html">Sushi</a></li>
+                          <li><a class="dropdown-item" href="resto-parrilla.html">Parrilla</a></li>
+                          <li><a class="dropdown-item" href="resto-pizza.html">Pizza</a></li>
+                          <li><a class="dropdown-item" href="resto-restaurant.html">Restaurant</a></li>
+                        </ul>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="wine-beerhouse.html">Bares</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="promos.html">Promos</a>
+                      </li>
+    
+                      <li class="nav-item">
+                        <a class="nav-link active" href="contacto.html">Contacto</a>
+                      </li>
+    
                     </ul>
+    
+                  </div>
+                </div>
+              </nav>
+    
+            </div> <!-- CIERRA NAV MOBILE -->
+    
+            <div class="navbar__tabletDesktop"> <!-- ABRE NAVBAR TABLET Y DESKTOP -->
+              
+              <ul>
+                <li><a href="coffeebake.html">Coffee & Bake</a></li>
+                <li><a href="healthy-organics.html">Healthy</a></li>
+                <li><a href="">Restó</a>
+                  <ul>
+                    <li> <a href="resto-veggie.html">veggie</a></li>
+                    <li> <a href="resto-sushi.html">sushi</a></li>
+                    <li> <a href="resto-parrilla.html">parrilla</a></li>
+                    <li> <a href="resto-pizza.html">pizza</a></li>
+                    <li> <a href="resto-restaurant.html">restaurant</a></li>
+                  </ul>
                 </li>
-                <li> <a href="../index.html"> <img src="../images/logo-en-nav.png" alt="logo en nuñez"> </a> </li>
-                <li><a href="winebeerhouse.html">Wine & Beer</a></li>
-                <li><a href="acercade.html">Acerca de</a> </li>
+                <li> <a href="../index.html"> <img src="../images/logo-en-black.png" alt="logo en nuñez"></a> </li>
+                <li><a href="wine-beerhouse.html">Bares</a></li>
+                <li><a href="promos.html">Promos</a> </li>
                 <li><a href="contacto.html">Contacto</a> </li>
-
-            </ul>
-
-        </nav>
-
+              </ul>
+            </div> <!-- CIERRA NAVBAR TABLET Y DESKTOP -->
+    
+        </nav> <!-- CIERRA NAVS -->
 
 
 
