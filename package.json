@@ -1,7 +1,7 @@
 {
   "name": "ennunez",
   "version": "1.0.0",
-  "description": "sitio en nuñez version responsive",
+  "description": "guia gastronómica del barrio porteño de nuñez",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
