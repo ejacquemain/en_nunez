@@ -2,151 +2,159 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Guía gastronómica del barrio porteño de Nuñez. Buenos Aires, Argentina"> <!-- SEO -->
-    <meta name="keywords"  content="Nuñez, Promociones, Gastronomía, Ofertas, Descuentos"> <!-- SEO -->
-    <title>En Nuñez / Promos</title>
-    <link rel="stylesheet" href="../css/estilos.css"> <!-- LINK A ESTILOS CSS -->
-    <link rel="stylesheet" href="../css/bootstrap.min.css"> <!-- LINK A CSS DE BOOTSTRAP -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- LINK A GOOGLE FONTS -->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guía gastronómica del barrio porteño de Nuñez. Buenos Aires, Argentina"> <!-- SEO -->
+  <meta name="keywords"  content="Nuñez, Promos, Promociones, Ofertas"> <!-- SEO -->
+  <title>En Nuñez / Promos</title>
+  <link rel="stylesheet" href="../css/estilos-sass.css"> <!-- SASS -->
+  <link rel="stylesheet" href="../css/bootstrap.min.css"> <!-- BOOTSTRAP -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prata&family=Raleway:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
-    <div id="grillaInterior">
+  <div id="interior__contenedor"> <!-- ABRE CONTENEDOR GENERAL -->
 
-        <nav> <!-- ABRE NAVS (MOBILE + TABLET/DESKTOP) -->
+    <header id="interior__header"> <!-- ABRE ENCABEZADO -->
 
-            <div class="navbar__mobile"> <!-- ABRE NAV MOBILE -->
-    
-              <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
-                <div class="container-fluid">
-                  <img class="navbar-brand" src="../images/logo-en-black.png" alt="logo en nuñez">
-    
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-    
-                  <div class="collapse navbar-collapse" id="navbarScroll">
-    
-                    <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 400px;">
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" href="coffeebake.html">Coffee & Bake</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" href="healthy-organics.html">Healthy</a>
-                      </li>
-    
-                      <li class="nav-item dropdown">
-                        <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
-                          data-bs-toggle="dropdown" aria-expanded="false">
-                          Restó
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                          <li><a class="dropdown-item" href="resto-veggie.html">Veggie</a></li>
-                          <li><a class="dropdown-item" href="resto-sushi.html">Sushi</a></li>
-                          <li><a class="dropdown-item" href="resto-parrilla.html">Parrilla</a></li>
-                          <li><a class="dropdown-item" href="resto-pizza.html">Pizza</a></li>
-                          <li><a class="dropdown-item" href="resto-restaurant.html">Restaurant</a></li>
-                        </ul>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" href="wine-beerhouse.html">Bares</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" href="promos.html">Promos</a>
-                      </li>
-    
-                      <li class="nav-item">
-                        <a class="nav-link active" href="contacto.html">Contacto</a>
-                      </li>
-    
+      <nav> <!-- ABRE NAVS (MOBILE + TABLET/DESKTOP) -->
+
+        <div class="navbar__mobile"> <!-- ABRE NAV MOBILE -->
+
+          <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light">
+            <div class="container-fluid">
+              <img class="navbar-brand" src="../images/logo-en-black.png" alt="logo en nuñez">
+
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarScroll">
+
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 400px;">
+
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="coffeebake.html">Coffee & Bake</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="healthy-organics.html">Healthy</a>
+                  </li>
+
+                  <li class="nav-item dropdown">
+                    <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false">
+                      Restó
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                      <li><a class="dropdown-item" href="resto-veggie.html">Veggie</a></li>
+                      <li><a class="dropdown-item" href="resto-sushi.html">Sushi</a></li>
+                      <li><a class="dropdown-item" href="resto-parrilla.html">Parrilla</a></li>
+                      <li><a class="dropdown-item" href="resto-pizza.html">Pizza</a></li>
+                      <li><a class="dropdown-item" href="resto-restaurant.html">Restaurant</a></li>
                     </ul>
-    
-                  </div>
-                </div>
-              </nav>
-    
-            </div> <!-- CIERRA NAV MOBILE -->
-    
-            <div class="navbar__tabletDesktop"> <!-- ABRE NAVBAR TABLET Y DESKTOP -->
-              
-              <ul>
-                <li><a href="coffeebake.html">Coffee & Bake</a></li>
-                <li><a href="healthy-organics.html">Healthy</a></li>
-                <li><a href="">Restó</a>
-                  <ul>
-                    <li> <a href="resto-veggie.html">veggie</a></li>
-                    <li> <a href="resto-sushi.html">sushi</a></li>
-                    <li> <a href="resto-parrilla.html">parrilla</a></li>
-                    <li> <a href="resto-pizza.html">pizza</a></li>
-                    <li> <a href="resto-restaurant.html">restaurant</a></li>
-                  </ul>
-                </li>
-                <li> <a href="../index.html"> <img src="../images/logo-en-black.png" alt="logo en nuñez"></a> </li>
-                <li><a href="wine-beerhouse.html">Bares</a></li>
-                <li><a href="promos.html">Promos</a> </li>
-                <li><a href="contacto.html">Contacto</a> </li>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="wine-beerhouse.html">Bares</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="promos.html">Promos</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link active" href="contacto.html">Contacto</a>
+                  </li>
+
+                </ul>
+
+              </div>
+            </div>
+          </nav>
+
+        </div> <!-- CIERRA NAV MOBILE -->
+
+        <div class="navbar__tabletDesktop"> <!-- ABRE NAV TABLET Y DESKTOP -->
+          
+          <ul>
+            <li><a href="coffeebake.html">Coffee & Bake</a></li>
+            <li><a href="healthy-organics.html">Healthy</a></li>
+            <li><a href="">Restó</a>
+              <ul class="dropdown-menu bg-light" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="resto-veggie.html">Veggie</a></li>
+                <li><a class="dropdown-item" href="resto-sushi.html">Sushi</a></li>
+                <li><a class="dropdown-item" href="resto-parrilla.html">Parrilla</a></li>
+                <li><a class="dropdown-item" href="resto-pizza.html">Pizza</a></li>
+                <li><a class="dropdown-item" href="resto-restaurant.html">Restaurant</a></li>
               </ul>
-            </div> <!-- CIERRA NAVBAR TABLET Y DESKTOP -->
-    
-          </nav> <!-- CIERRA NAVS -->
+            </li>
+            <li> <a href="../index.html"> <img src="../images/logo-en-black.png" alt="logo en nuñez"></a> </li>
+            <li><a href="wine-beerhouse.html">Bares</a></li>
+            <li><a href="promos.html">Promos</a> </li>
+            <li><a href="contacto.html">Contacto</a> </li>
+          </ul>
+        </div> <!-- CIERRA NAV TABLET Y DESKTOP -->
+
+      </nav> <!-- CIERRA NAVS -->
+
+      <div class="interior__header--logoHeader">
+        <img src="../images/logo-promos.png" alt="Logo Coffee & Bakehouse">
+      </div>
+
+    </header> <!-- CIERRA ENCABEZADO -->
+
+
+
+    <section id="interior__promos"> <!-- ABRE SECCION CUADRICULA -->
+      <div>
+        
+
+      </div>
+
+      
+    </section> <!-- CIERRA SECCION CUADRICULA -->
 
 
 
 
-        <header id="header">  <!-- HEADER -->
-            <div>
-                <img src="../images/logo-promos.png" alt="logo promos">
-            </div>
-        </header>
+    <footer id="footer"> <!-- ABRE FOOTER -->
+
+      <div>
+        <h4>SOBRE NOSOTROS</h4>
+        <p>Lorem ipsum dolor sit amet consectetur.<br>Minus eveniet mollitia illo accusamus<br>tenetur, libero
+          iste
+          soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos<br>distinctio explicabo.
+        </p>
+      </div>
+
+      <div>
+        <img src="../images/logo-en-white.png" alt="logo footer">
+      </div>
+
+      <div>
+        <h4>CONTACTO</h4>
+        <p>+54911 3040 8586 <br>ennunez@gmail.com
+        </p>
+      </div>
+
+    </footer> <!-- CIERRA FOOTER -->
+
+  </div> <!-- CIERRA CONTENEDOR GENERAL -->
 
 
 
-        <footer id="footer"> <!-- ABRE FOOTER -->
-
-            <div class="divFlexFooter">
-
-                <div>
-                    <h1>SOBRE NOSOTROS</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur. <br>Minus eveniet mollitia illo accusamus<br>tenetur, libero iste soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos <br>distinctio explicabo.
-                    </p>
-                </div>
-
-                <div>
-                    <img src="../images/logo-en-footer.png" alt="logo footer">
-                </div>
-
-                <div>
-                    <ul>CONTACTO
-                        <li>+54911 3040 8586</li>
-                        <li>ennunez@gmail.com</li>
-                    </ul>
-                </div>
-
-            </div>
-
-        </footer> <!-- CIERRA FOOTER -->
-
-
-    </div>
-
-
-    <script src="../js/bootstrap.min.js"></script> <!-- LINK A JAVASCRIPT BOOTSTRAP -->
+  <script src="../js/bootstrap.min.js"></script> <!-- JS BOOTSTRAP -->
 </body>
 
 </html>

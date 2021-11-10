@@ -16,7 +16,7 @@
     rel="stylesheet">
 </head>
 
-<body>
+<body class="formulario__body">
 
   <div id="interior__contenedor"> <!-- ABRE CONTENEDOR GENERAL -->
 
@@ -91,12 +91,12 @@
             <li><a href="coffeebake.html">Coffee & Bake</a></li>
             <li><a href="healthy-organics.html">Healthy</a></li>
             <li><a href="">Restó</a>
-              <ul>
-                <li> <a href="resto-veggie.html">veggie</a></li>
-                <li> <a href="resto-sushi.html">sushi</a></li>
-                <li> <a href="resto-parrilla.html">parrilla</a></li>
-                <li> <a href="resto-pizza.html">pizza</a></li>
-                <li> <a href="resto-restaurant.html">restaurant</a></li>
+              <ul class="dropdown-menu bg-light" aria-labelledby="navbarScrollingDropdown">
+                <li><a class="dropdown-item" href="resto-veggie.html">Veggie</a></li>
+                <li><a class="dropdown-item" href="resto-sushi.html">Sushi</a></li>
+                <li><a class="dropdown-item" href="resto-parrilla.html">Parrilla</a></li>
+                <li><a class="dropdown-item" href="resto-pizza.html">Pizza</a></li>
+                <li><a class="dropdown-item" href="resto-restaurant.html">Restaurant</a></li>
               </ul>
             </li>
             <li> <a href="../index.html"> <img src="../images/logo-en-black.png" alt="logo en nuñez"></a> </li>
@@ -109,8 +109,7 @@
       </nav> <!-- CIERRA NAVS -->
 
       <div class="interior__header--logoHeader">
-        <img src="../images/logo-contacto.png"
-          alt="Logo contacto">
+        <img src="../images/logo-contacto.png" alt="Logo contacto">
       </div>
 
     </header> <!-- CIERRA SECCION ENCABEZADO -->
@@ -119,9 +118,8 @@
 
     <section id="formularioContacto"> <!-- ABRE SECCION FORMULARIO DE CONTACTO -->
 
-      <form action="">
-        <!-- ABRE FORMULARIO -->
-
+      <form action=""> <!-- ABRE FORMULARIO -->
+        
         <fieldset>
 
           <div class="formulario__div--datosPersonales"> <!-- ABRE DATOS PERSONALES -->
@@ -145,43 +143,45 @@
 
             
           <div class="formulario__div--radios"> <!-- ABRE OPCIONES CON RADIO -->
+            <div>
+              <h2>Soy anunciante</h2>
+              <input type="radio" name="tipo" value="anunciante">
+            </div>
 
-              <div>Soy anunciante
-                <input type="radio" name="tipo" value="anunciante">
-              </div>
-
-              <div>Soy visitante
-                <input type="radio" name="tipo" value="visitante">
-              </div>
-
+            <div>
+              <h2>Soy visitante</h2>
+              <input type="radio" name="tipo" value="visitante">
+            </div>
           </div> <!-- CIERRA OPCIONES CON RADIO -->
             
         
-          <div>Motivo de la consulta
-
+          <div class="formulario__div--select">
+            <h2>Motivo de la consulta</h2>
             <select name="Motivo de la consulta">
               <option value="unapublicacion">Una publicación</option>
               <option value="quieropublicar">Quiero publicar</option>
               <option value="otro">Otro</option>
             </select>
-
           </div>
 
 
-          <div>Dejanos tu consulta</div>
-          <textarea name="consulta" rows="10" maxlength="1500"></textarea>
+          <div class="formulario__div--textarea">
+            <h2>Dejanos tu consulta</h2>
+            <textarea name="consulta" rows="10" maxlength="1500"></textarea>
+          </div>
             
 
-          <div>¿Querés recibir nuestras novedades?
+          <div class="formulario__div--checkbox">
+            <h2>¿Querés recibir nuestras novedades?</h2>
             <input type="checkbox" name="acepta" value="1">
           </div>
 
 
-          <!-- ABRE BOTONES -->
+          <div class="formulario__div--buttons">
           <input type="submit" value="Enviá tu consulta">
           <input type="reset" value="Limpiar formulario">
           <input type="button" value="Sin accion">
-          <!-- CIERRA BOTONES -->
+        </div>
             
 
         </fieldset>
@@ -197,8 +197,7 @@
     <footer id="footer"> <!-- ABRE FOOTER -->
 
       <div>
-        <!-- sobre nosotros -->
-        <h1>SOBRE NOSOTROS</h1>
+        <h4>SOBRE NOSOTROS</h4>
         <p>Lorem ipsum dolor sit amet consectetur.<br>Minus eveniet mollitia illo accusamus<br>tenetur, libero
           iste
           soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos<br>distinctio explicabo.
@@ -206,13 +205,11 @@
       </div>
 
       <div>
-        <!-- logo en nuñez -->
         <img src="../images/logo-en-white.png" alt="logo footer">
       </div>
 
       <div>
-        <!-- contacto -->
-        <h1>CONTACTO</h1>
+        <h4>CONTACTO</h4>
         <p>+54911 3040 8586 <br>ennunez@gmail.com
         </p>
       </div>

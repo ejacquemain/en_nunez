@@ -59,9 +59,7 @@
 
                     <li class="nav-item dropdown">
                       <a class="nav-link active dropdown-toggle" href="" id="navbarScrollingDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Restó
-                      </a>
+                        data-bs-toggle="dropdown" aria-expanded="false"> Restó</a>
                       <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
                         <li><a class="dropdown-item" href="./pages/resto-veggie.html">Veggie</a></li>
                         <li><a class="dropdown-item" href="./pages/resto-sushi.html">Sushi</a></li>
@@ -83,7 +81,6 @@
 
                 </div>
               </div>
-            </nav>
 
           </div> <!-- CIERRA NAV MOBILE -->
 
@@ -93,12 +90,12 @@
               <li><a href="./pages/coffeebake.html">Coffee & Bake</a></li>
               <li><a href="./pages/healthy-organics.html">Healthy</a></li>
               <li><a href="">Restó</a>
-                <ul>
-                  <li> <a href="./pages/resto-veggie.html">veggie</a></li>
-                  <li> <a href="./pages/resto-sushi.html">sushi</a></li>
-                  <li> <a href="./pages/resto-parrilla.html">parrilla</a></li>
-                  <li> <a href="./pages/resto-pizza.html">pizza</a></li>
-                  <li> <a href="./pages/resto-restaurant.html">restaurant</a></li>
+                <ul class="dropdown-menu bg-secondary" aria-labelledby="navbarScrollingDropdown">
+                  <li><a class="dropdown-item" href="./pages/resto-veggie.html">Veggie</a></li>
+                  <li><a class="dropdown-item" href="./pages/resto-sushi.html">Sushi</a></li>
+                  <li><a class="dropdown-item" href="./pages/resto-parrilla.html">Parrilla</a></li>
+                  <li><a class="dropdown-item" href="./pages/resto-pizza.html">Pizza</a></li>
+                  <li><a class="dropdown-item" href="./pages/resto-restaurant.html">Restaurant</a></li>
                 </ul>
               </li>
               <li><img src="./images/logo-en-white.png" alt="logo en nuñez"></li>
@@ -112,16 +109,17 @@
 
       </header>
 
-      <!-- COPY "GUIA/GASTRONÓMICA" -->
-      <p class="index__p--etiqueta"><span>Guía/</span>gastronómica</p>
+      <div>
+        <h1><span>Guía/</span>gastronómica</h1> 
+      </div>
+      
   
       
       <div> <!-- LOGO SOBRE IMAGEN DE FONDO" -->
         <img class="index__logoEnPrincipal" src="./images/logo-en-white.png" alt="logo en nuñez">
       </div>
 
-      <!-- TEXTO DE BIENVENIDA DEBAJO DEL LOGO -->
-      <p>Un polo gastronómico único<br>en el corazón del barrio.</p>
+      <h2>Un polo gastronómico único<br>en el corazón del barrio.</h2>
 
     </section> <!-- CIERRA SECCION PRINCIPAL -->
 
@@ -130,17 +128,16 @@
 
     <section id="index__secundaria"> <!-- ABRE SECCION SECUNDARIA -->
 
-      <div> <!-- ABRE COPY -->
-        <h1><span>El lugar</span> que buscás</h1>
-      </div> <!-- CIERRA COPY -->
+      <div> 
+        <h2><span>El lugar</span> que buscás</h2>
+      </div> 
 
       <div>
         <video src="./videos/video-amigos-cerveza.mp4" autoplay muted loop></video>
-      </div> <!-- CIERRA VIDEO -->
+      </div> 
 
       <div>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus placeat rerum labore eaque numquam laboriosam
-          provident dignissimos molestias officia ipsa qui, assumenda aperiam impedit officiis.
+        <p>Para juntarte con amigos. Para cenar en pareja. Para pasarla bien con quien quieras. Nuñez nunca para.
         </p>
       </div>
 
@@ -151,57 +148,50 @@
 
     <section id="index__loNuevo"> <!-- ABRE SECCION LO NUEVO -->
 
-      <h1>Lo <span>nuevo</span></h1>
+      <h2>Lo <span>nuevo</span></h2>
         
-      <div> <!-- NUEVO 1 -->
+      <div> <!-- ITEM 1 -->
         <img src="./images/coffee-09.png" alt="lo nuevo madamme croque">
-        <h4>coffee & bake</h4>
-        <h2>madamme croqué</h2>
+        <h5>coffee & bake</h5>
+        <h3>madamme croqué</h3>
       </div>
 
-      <div> <!-- NUEVO 2 -->
+      <div> <!-- ITEM 2 -->
         <img src="./images/wine-09.png" alt="lo nuevo rey de copas">
-        <h4>wine & beer</h4>
-        <h2>rey de copas</h2>
+        <h5>wine & beer</h5>
+        <h3>rey de copas</h3> 
       </div>
 
-      <div> <!-- NUEVO 3 -->
+      <div> <!-- ITEM 3 -->
         <img src="./images/coffee-gorrion-5.jpg" alt="lo nuevo rita">
-        <h4>coffee & bake</h4>
-        <h2>Rita</h2>
+        <h5>coffee & bake</h5>
+        <h3>Rita</h3>
       </div>
-
-     
 
     </section> <!-- CIERRA SECCION LO NUEVO -->
 
 
 
-    <footer id="footer">
-      <!-- ABRE FOOTER -->
+    <footer id="footer"> <!-- ABRE FOOTER -->
 
       <div>
-        <!-- sobre nosotros -->
-        <h1>SOBRE NOSOTROS</h1>
+        <h4>SOBRE NOSOTROS</h4>
         <p>Lorem ipsum dolor sit amet consectetur.<br>Minus eveniet mollitia illo accusamus<br>tenetur, libero iste
           soluta quasi architecto,<br>maiores! Perspiciatis rem autem eos<br>distinctio explicabo.
         </p>
       </div>
 
       <div>
-        <!-- logo en nuñez -->
         <img src="./images/logo-en-white.png" alt="logo footer">
       </div>
 
       <div>
-        <!-- contacto -->
-        <h1>CONTACTO</h1>
+        <h4>CONTACTO</h4>
         <p>+54911 3040 8586 <br>ennunez@gmail.com
         </p>
       </div>
 
     </footer> <!-- CIERRA FOOTER -->
-
 
 
   </div> <!-- CIERRA CONTENEDOR GENERAL -->

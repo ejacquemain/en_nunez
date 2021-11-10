@@ -1,4 +1,3 @@
-@charset "UTF-8";
 * {
   padding: 0px;
   margin: 0px;
@@ -88,12 +87,12 @@
   }
 }
 
-#index__principal .navbar__tabletDesktop > ul {
+#index__principal .navbar__tabletDesktop ul {
   display: none;
 }
 
 @media (min-width: 768px) {
-  #index__principal .navbar__tabletDesktop > ul {
+  #index__principal .navbar__tabletDesktop ul {
     /* TABLET */
     display: -webkit-box;
     display: -ms-flexbox;
@@ -145,7 +144,7 @@
 }
 
 #index__principal .navbar__tabletDesktop ul ul {
-  /* REVISAR: APARECE MARGEN DE MAS EN SUB-MENU */
+  /* REVISAR: TIENE UN MARGEN IZQUIERDO QUE NO VA */
   position: absolute;
   display: none;
 }
@@ -153,7 +152,7 @@
 #index__principal .navbar__tabletDesktop ul ul li {
   display: block;
   color: #f3a544;
-  padding: 3px;
+  padding: 2px;
 }
 
 #index__principal .navbar__tabletDesktop ul ul li a {
@@ -188,7 +187,8 @@
   padding-left: 1rem;
 }
 
-#index__principal .index__p--etiqueta {
+#index__principal h1 {
+  /* MOBILE */
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   font-size: 1em;
@@ -198,7 +198,7 @@
 }
 
 @media (min-width: 768px) {
-  #index__principal .index__p--etiqueta {
+  #index__principal h1 {
     /* TABLET */
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -208,7 +208,7 @@
 }
 
 @media (min-width: 1024px) {
-  #index__principal .index__p--etiqueta {
+  #index__principal h1 {
     /* DESKTOP */
     font-family: "Raleway", sans-serif;
     font-weight: 600;
@@ -217,11 +217,12 @@
   }
 }
 
-#index__principal .index__p--etiqueta span {
+#index__principal h1 span {
   color: #f3a544;
 }
 
 #index__principal .index__logoEnPrincipal {
+  /* MOBILE */
   width: 60vw;
   margin-left: 20vw;
 }
@@ -242,7 +243,7 @@
   }
 }
 
-#index__principal p {
+#index__principal h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -252,7 +253,7 @@
 }
 
 @media (min-width: 768px) {
-  #index__principal p {
+  #index__principal h2 {
     /* TABLET */
     font-family: "Raleway", sans-serif;
     font-weight: 500;
@@ -268,7 +269,7 @@
   background-color: whitesmoke;
 }
 
-#index__secundaria h1 {
+#index__secundaria h2 {
   font-family: "Prata", serif;
   font-weight: 500;
   font-size: 2rem;
@@ -292,22 +293,6 @@
     /* TABLET */
     width: 70vw;
     margin-left: 15vw;
-  }
-}
-
-#index__secundaria .index__carrusel {
-  /* SAQUÉ ESTE CARRUSEL DEL INDEX */
-  width: 90vw;
-  height: auto;
-  margin-left: 5vw;
-}
-
-@media (min-width: 768px) {
-  #index__secundaria .index__carrusel {
-    /* TABLET */
-    width: 60vw;
-    height: auto;
-    margin-left: 20vw;
   }
 }
 
@@ -342,7 +327,7 @@
   overflow: auto;
 }
 
-#index__loNuevo h1 {
+#index__loNuevo h2 {
   font-family: "Prata", serif;
   font-weight: 500;
   font-size: 2rem;
@@ -357,6 +342,7 @@
 }
 
 #index__loNuevo img {
+  /* MOBILE */
   width: 70vw;
   height: auto;
   margin-left: 15vw;
@@ -379,7 +365,7 @@
   }
 }
 
-#index__loNuevo h4 {
+#index__loNuevo h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
@@ -390,7 +376,7 @@
   margin-bottom: 2px;
 }
 
-#index__loNuevo h2 {
+#index__loNuevo h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
@@ -409,7 +395,7 @@
   background-image: radial-gradient(black, #01253d);
 }
 
-#footer h1 {
+#footer h4 {
   /* MOBILE */
   font-family: "Raleway", sans-serif;
   font-weight: 600;
@@ -421,7 +407,7 @@
 }
 
 @media (min-width: 768px) {
-  #footer h1 {
+  #footer h4 {
     /* TABLET */
     padding-top: 3rem;
     padding-left: 0rem;
@@ -493,16 +479,16 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 300px auto 90vh;
-      grid-template-rows: 300px auto 90vh;
+  -ms-grid-rows: 250px auto 90vh;
+      grid-template-rows: 250px auto 90vh;
       grid-template-areas: "header" "cuadricula" "footer";
 }
 
 @media (min-width: 768px) {
   #interior__contenedor {
     /* TABLET */
-    -ms-grid-rows: 300px auto 40vh;
-        grid-template-rows: 300px auto 40vh;
+    -ms-grid-rows: 320px auto 40vh;
+        grid-template-rows: 320px auto 40vh;
   }
 }
 
@@ -512,7 +498,7 @@
   -ms-grid-column: 1;
   grid-area: header;
   width: 100vw;
-  height: 200px;
+  height: 220px;
   background-color: white;
 }
 
@@ -584,7 +570,8 @@
 #interior__header .navbar__tabletDesktop ul ul li {
   /* TABLET */
   display: block;
-  border-bottom: white solid 1px;
+  color: #f3a544;
+  padding: 2px;
 }
 
 #interior__header .navbar__tabletDesktop ul ul li a {
@@ -677,6 +664,8 @@
 
 #interior__cuadricula div {
   margin-bottom: 40px;
+  background-color: white;
+  border-radius: 5px;
 }
 
 @media (min-width: 768px) {
@@ -697,14 +686,14 @@
 @media (min-width: 768px) {
   #interior__cuadricula img {
     /* TABLET */
-    width: 400px;
+    width: 360px;
     height: auto;
   }
 }
 
-#interior__cuadricula img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+#interior__cuadricula div:hover {
+  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
+          box-shadow: 6px 6px 13px #ebe9e9;
 }
 
 #interior__cuadricula h5 {
@@ -713,7 +702,7 @@
   font-size: 0.6rem;
   color: #01253d;
   text-transform: uppercase;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 #interior__cuadricula a {
@@ -907,30 +896,27 @@
 }
 
 /* PAGINA FORMULARIO DE CONTACTO ------------------- */
+.formulario__body {
+  background-color: whitesmoke;
+}
+
 #formularioContacto fieldset {
+  /* MOBILE */
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1em;
   color: #01253d;
-  width: 60vw;
-  margin-left: 20vw;
+  width: 80vw;
+  margin-left: 10vw;
   margin-bottom: 5vh;
 }
 
-#formularioContacto label {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-  font-size: 1em;
-  color: #01253d;
-}
-
-#formularioContacto div {
-  margin-bottom: 20px;
-}
-
-#formularioContacto input {
-  border: solid 1px #f3a544;
-  font-size: 0.9em;
+@media (min-width: 768px) {
+  #formularioContacto fieldset {
+    /* TABLET */
+    width: 60vw;
+    margin-left: 20vw;
+  }
 }
 
 #formularioContacto .formulario__div--datosPersonales div {
@@ -944,11 +930,42 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#formularioContacto .formulario__div--datosPersonales label {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  color: #01253d;
 }
 
 #formularioContacto .formulario__div--datosPersonales input {
+  border: solid 1px #f3a544;
+  font-size: 0.9em;
   width: 50vw;
   margin-left: 10px;
+  overflow: auto;
+}
+
+#formularioContacto .formulario__div--radios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+#formularioContacto .formulario__div--radios h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
 }
 
 #formularioContacto .formulario__div--radios input {
@@ -956,14 +973,99 @@
   margin-left: 5px;
 }
 
+#formularioContacto .formulario__div--select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#formularioContacto .formulario__div--select h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+#formularioContacto .formulario__div--select select {
+  border: solid 1px #f3a544;
+  margin-left: 15px;
+}
+
+#formularioContacto .formulario__div--textarea {
+  /* MOBILE */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 768px) {
+  #formularioContacto .formulario__div--textarea {
+    /* TABLET */
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+#formularioContacto .formulario__div--textarea h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  margin-top: 2em;
+}
+
 #formularioContacto textarea {
-  width: 60vw;
+  /* MOBILE */
+  width: 80vw;
   border: solid 1px #f3a544;
   overflow: auto;
 }
 
-#formularioContacto checkbox {
+@media (min-width: 768px) {
+  #formularioContacto textarea {
+    /* TABLET */
+    width: 60vw;
+  }
+}
+
+#formularioContacto .formulario__div--checkbox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+}
+
+#formularioContacto .formulario__div--checkbox h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  margin-right: 8px;
+}
+
+#formularioContacto .formulario__div--checkbox input {
   border: solid 1px #f3a544;
-  overflow: auto;
+}
+
+#formularioContacto .formulario__div--buttons input {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.9em;
+  margin-top: 20px;
+  background-color: #f3a544;
+  color: white;
+  padding: 8px;
+  border: #f3a544;
 }
 /*# sourceMappingURL=estilos-sass.css.map */

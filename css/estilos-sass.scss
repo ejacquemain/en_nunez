@@ -51,7 +51,7 @@ $prata: 'Prata', serif;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    .navbar__tabletDesktop > ul{
+    .navbar__tabletDesktop ul{
         display: none;
         @media (min-width: 768px){ /* TABLET */
             display: flex;
@@ -86,14 +86,14 @@ $prata: 'Prata', serif;
     .navbar__tabletDesktop li img:hover{
         transform: scale(1.2);
     }
-    .navbar__tabletDesktop ul ul{ /* REVISAR: APARECE MARGEN DE MAS EN SUB-MENU */
+    .navbar__tabletDesktop ul ul{ /* REVISAR: TIENE UN MARGEN IZQUIERDO QUE NO VA */
         position: absolute;
         display: none;
     }
     .navbar__tabletDesktop ul ul li{
         display: block; 
         color: $naranja;
-        padding: 3px;
+        padding: 2px;
     }
     .navbar__tabletDesktop ul ul li a{
         font-weight: 700;
@@ -119,7 +119,7 @@ $prata: 'Prata', serif;
         color: $azul;
         padding-left: 1rem;
     }
-    .index__p--etiqueta{
+    h1 {/* MOBILE */
         @include font($raleway, bold, 1em);
         color: white;
         text-transform: uppercase;
@@ -133,10 +133,10 @@ $prata: 'Prata', serif;
             padding-top: 1rem;
         }
     }
-    .index__p--etiqueta span{
+    h1 span{
         color: $naranja;
     }
-    .index__logoEnPrincipal{
+    .index__logoEnPrincipal{/* MOBILE */
         width: 60vw;
         margin-left: 20vw;
         @media (min-width: 768px){ /* TABLET */
@@ -148,7 +148,7 @@ $prata: 'Prata', serif;
             margin-left: 37.5vw;
         }
     }
-    p{
+    h2{
         @include font($raleway, 600, 1rem);
         color: white;
         text-align: center;
@@ -162,7 +162,7 @@ $prata: 'Prata', serif;
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
     background-color: whitesmoke;
-    h1{
+    h2{
         @include font($prata, 500, 2rem);
         color: $azul;
         text-align: center;
@@ -178,16 +178,6 @@ $prata: 'Prata', serif;
         @media (min-width: 768px){ /* TABLET */
             width: 70vw;
             margin-left: 15vw;
-        }
-    }
-    .index__carrusel{ /* SAQUÉ ESTE CARRUSEL DEL INDEX */
-        width: 90vw;
-        height: auto;
-        margin-left: 5vw;
-        @media (min-width: 768px){ /* TABLET */
-            width: 60vw;
-            height: auto;
-            margin-left: 20vw;
         }
     }
     p{
@@ -211,7 +201,7 @@ $prata: 'Prata', serif;
     background-repeat: no-repeat;
     background-size:contain;
     overflow: auto;
-    h1{
+    h2{
         @include font($prata, 500, 2rem);
         color: $azul;
         text-align: center;
@@ -221,7 +211,7 @@ $prata: 'Prata', serif;
     span{
         color: $naranja;
     }
-    img{
+    img{/* MOBILE */
         width: 70vw;
         height: auto;
         margin-left: 15vw;
@@ -235,7 +225,7 @@ $prata: 'Prata', serif;
             margin-left: 30vw;
         }
     }
-    h4{
+    h5{
         @include font($raleway, 600, 0.6rem);
         color: $azul;
         text-transform: uppercase;
@@ -243,7 +233,7 @@ $prata: 'Prata', serif;
         margin-top: 0.5rem;
         margin-bottom: 2px;
     }
-    h2{
+    h3{
         @include font($raleway, 600, 1.3rem);
         color: $naranja;
         text-transform: capitalize;
@@ -258,7 +248,7 @@ $prata: 'Prata', serif;
 #footer{ /* MOBILE */
     grid-area: footer;
     background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
-    h1{ /* MOBILE */
+    h4{ /* MOBILE */
         @include font($raleway, 600, 0.9rem);
         color: $naranja;
         text-transform: uppercase;
@@ -306,20 +296,20 @@ $prata: 'Prata', serif;
 #interior__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 300px auto 90vh;
+    grid-template-rows: 250px auto 90vh;
     grid-template-areas: 
     "header"
     "cuadricula"
     "footer";
     @media (min-width: 768px) { /* TABLET */
-        grid-template-rows: 300px auto 40vh;
+        grid-template-rows: 320px auto 40vh;
     }
 }
 
 #interior__header{ /* MOBILE */
     grid-area: header;
     width: 100vw;
-    height: 200px;
+    height: 220px;
     background-color: white;
     .navbar__mobile {
         @media (min-width: 768px) { /* TABLET */
@@ -363,7 +353,8 @@ $prata: 'Prata', serif;
     }
     .navbar__tabletDesktop ul ul li{ /* TABLET */
         display: block;
-        border-bottom: white solid 1px;
+        color: $naranja;
+        padding: 2px;
     }
     .navbar__tabletDesktop ul ul li a{ /* TABLET */
         font-weight: 600;
@@ -398,12 +389,10 @@ $prata: 'Prata', serif;
     .interior__header--logoHeader img{ 
         height: 7vh;
         width: auto;
-        
         margin-top: 120px;
         @media (min-width: 768px){ /* TABLET */
             height: 6rem;
             width: auto;
-            
             margin-top: 40px;
             margin-bottom: 40px;
         }
@@ -420,6 +409,8 @@ $prata: 'Prata', serif;
     margin-bottom: 3rem;
     div{
         margin-bottom: 40px;
+        background-color: white;
+        border-radius: 5px;
         @media (min-width: 768px){ /* TABLET */
             width: 360px;
             margin-inline: 40px;
@@ -431,18 +422,18 @@ $prata: 'Prata', serif;
         height: auto;
         border-radius: 5px;
         @media (min-width: 768px){ /* TABLET */
-            width: 400px;
+            width: 360px;
             height: auto;
         }
     }
-    img:hover{
-        transform: scale(1.1);
+    div:hover{
+        box-shadow: 6px 6px 13px rgb(235, 233, 233);
     }
     h5{
         @include font($raleway, 500, 0.6rem);
         color: $azul;
         text-transform: uppercase;
-        margin-top: 1rem;
+        margin-top: 1.5rem;
     }
     a{
         @include font($prata, 900, 1.2rem);
@@ -562,48 +553,102 @@ $prata: 'Prata', serif;
 
 
 /* PAGINA FORMULARIO DE CONTACTO ------------------- */
+.formulario__body{
+    background-color: whitesmoke;
+}
+
 #formularioContacto{
-    fieldset{
+    fieldset{ /* MOBILE */
         @include font($raleway, 600, 1em);
         color: $azul;
-        width: 60vw;
-        margin-left: 20vw;
+        width: 80vw;
+        margin-left: 10vw;
         margin-bottom: 5vh;
-    }
-    label{
-        @include font($raleway, 600, 1em);
-        color: $azul;
-    }
-    div{
-        margin-bottom: 20px;
-    }
-    input{
-        border: solid 1px $naranja;
-        font-size: 0.9em;
+        @media (min-width: 768px){ /* TABLET */
+            width: 60vw;
+            margin-left: 20vw;
+        }
     }
     .formulario__div--datosPersonales div{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .formulario__div--datosPersonales label{
+        @include font($raleway, 500, 1em);
+        color: $azul;
     }
     .formulario__div--datosPersonales input{
+        border: solid 1px $naranja;
+        font-size: 0.9em;
         width: 50vw;
         margin-left: 10px;
+        overflow: auto;
     }
-    .formulario__div--radios input{
+    .formulario__div--radios{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .formulario__div--radios h2{
+        @include font($raleway, 500, 1em);
+    }
+    .formulario__div--radios input {
         border: solid 1px $naranja;
         margin-left: 5px;
     }
-    textarea{
-        width: 60vw;
+    .formulario__div--select {
+        display: flex;
+        flex-direction: row;
+    }
+    .formulario__div--select h2{
+        @include font($raleway, 500, 1em);
+    }
+    .formulario__div--select select {
+        border: solid 1px $naranja;
+        margin-left: 15px
+    }
+    .formulario__div--textarea { /* MOBILE */
+        display: flex;
+        flex-direction: row;
+        @media (min-width: 768px){ /* TABLET */
+            flex-direction: column;
+        }
+    }
+    .formulario__div--textarea h2{
+        @include font($raleway, 500, 1em);
+        margin-top: 2em;
+    }
+    textarea{ /* MOBILE */
+        width: 80vw;
         border: solid 1px $naranja;
         overflow: auto;
+        @media (min-width: 768px){ /* TABLET */
+            width: 60vw;
+        }
     }
-    checkbox{
+    .formulario__div--checkbox {
+        display: flex;
+        flex-direction: row;
+        margin-top: 20px
+    }
+    .formulario__div--checkbox h2 {
+        @include font($raleway, 500, 1em);
+        margin-right: 8px;
+    }
+    .formulario__div--checkbox input {
         border: solid 1px $naranja;
-        overflow: auto;
     }
-
+    .formulario__div--buttons input {
+        @include font($raleway, 500, 0.9em);
+        margin-top: 20px;
+        background-color: $naranja;
+        color: white;
+        padding: 8px;
+        border: $naranja;
+    }
 } 
 
 
