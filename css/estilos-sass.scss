@@ -698,8 +698,6 @@ $prata: 'Prata', serif;
 
 #interior__promos{
     grid-area: promos;
-    display: flex;
-    flex-direction: column;
     justify-self: center;
     .promo1 {
         display: flex;
@@ -721,7 +719,6 @@ $prata: 'Prata', serif;
         h1 {
             @include font($prata, 400, 2rem);
             color: white;
-
             margin-top: 10px;
             margin-bottom: 10px;
         }
@@ -744,7 +741,55 @@ $prata: 'Prata', serif;
             text-transform: uppercase;
             text-decoration: none;
         }
-        
+    }
+    .promosAgrupadas{
+        display: flex;
+        flex-direction: row;
+        width: 95vw;
+        overflow: auto;
+        margin-bottom: 50px;
+        >div{
+            width: 300px;
+            height: auto;
+            border-radius: 5px;
+            background-color: white;
+            margin-right: 5vw;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        div:hover{
+            box-shadow: 6px 6px 13px rgb(235, 233, 233); 
+        }
+        h3{
+            @include font($raleway, 700, 1rem);
+            color: $naranja;
+            text-transform: uppercase;
+            padding-top: 3rem;
+            padding-left: 1.5rem;
+        }
+        h1 {
+            @include font($prata, 400, 2rem);
+            color: $azul;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            padding-left: 1.5rem;
+        }
+        img{
+            width: 300px;
+            height: auto;
+            margin-bottom: 10px
+        }
+        a{
+            @include font($prata, 700, 1.2rem);
+            color: $azul;
+            text-decoration: none;
+        }
+        a:hover{
+            color: $naranja;
+        }
+
     }
 }
 
+
+  

@@ -1151,14 +1151,8 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: promos;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #interior__promos .promo1 {
@@ -1221,5 +1215,71 @@
   margin-top: 30px;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+#interior__promos .promosAgrupadas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 95vw;
+  overflow: auto;
+  margin-bottom: 50px;
+}
+
+#interior__promos .promosAgrupadas > div {
+  width: 300px;
+  height: auto;
+  border-radius: 5px;
+  background-color: white;
+  margin-right: 5vw;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+#interior__promos .promosAgrupadas div:hover {
+  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
+          box-shadow: 6px 6px 13px #ebe9e9;
+}
+
+#interior__promos .promosAgrupadas h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #f3a544;
+  text-transform: uppercase;
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+}
+
+#interior__promos .promosAgrupadas h1 {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #01253d;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding-left: 1.5rem;
+}
+
+#interior__promos .promosAgrupadas img {
+  width: 300px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+#interior__promos .promosAgrupadas a {
+  font-family: "Prata", serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #01253d;
+  text-decoration: none;
+}
+
+#interior__promos .promosAgrupadas a:hover {
+  color: #f3a544;
 }
 /*# sourceMappingURL=estilos-sass.css.map */
