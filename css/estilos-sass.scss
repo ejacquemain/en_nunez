@@ -33,7 +33,7 @@ $prata: 'Prata', serif;
     grid-template-areas: 
     "principal"
     "secundaria"
-    "destacados"
+    "lonuevo"
     "footer";
     @media screen and (min-width: 768px) { /* TABLET */
         grid-template-rows: 100vh auto auto 40vh;
@@ -86,7 +86,7 @@ $prata: 'Prata', serif;
     .navbar__tabletDesktop li img:hover{
         transform: scale(1.2);
     }
-    .navbar__tabletDesktop ul ul{ /* REVISAR: TIENE UN MARGEN IZQUIERDO QUE NO VA */
+    .navbar__tabletDesktop ul ul{ 
         position: absolute;
         display: none;
     }
@@ -119,18 +119,23 @@ $prata: 'Prata', serif;
         color: $azul;
         padding-left: 1rem;
     }
+    >div {
+        display: flex;
+        flex-direction: column;
+        align-items: center
+    }
     h1 {/* MOBILE */
         @include font($raleway, bold, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 8rem;
+        padding-top: 13rem;
         @media (min-width: 768px){ /* TABLET */
             @include font($raleway, 600, 1.3em);
-            padding-top: 5rem;
+            padding-top: 10rem;
         }
         @media (min-width: 1024px){ /* DESKTOP */
             @include font($raleway, 600, 1em);
-            padding-top: 1rem;
+            padding-top: 6rem;
         }
     }
     h1 span{
@@ -138,14 +143,11 @@ $prata: 'Prata', serif;
     }
     .index__logoEnPrincipal{/* MOBILE */
         width: 60vw;
-        margin-left: 20vw;
         @media (min-width: 768px){ /* TABLET */
             width: 30vw;
-            margin-left: 35vw;
         }
         @media (min-width: 1024px){ /* DESKTOP */
             width: 25vw;
-            margin-left: 37.5vw;
         }
     }
     h2{
@@ -181,11 +183,13 @@ $prata: 'Prata', serif;
         }
     }
     p{
-        @include font($raleway, 500, 1rem);
+        @include font($prata, 500, 1.2rem);
         color: $azul;
+        line-height: 1.9rem;
+        text-transform: uppercase;
         text-align: center;
-        margin-top: 1.5rem;
-        margin-bottom: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         padding: 0 2rem 0 2rem;
         @media (min-width: 768px){ /* TABLET */
             padding-left: 25vw;
@@ -195,12 +199,7 @@ $prata: 'Prata', serif;
 }
 
 #index__loNuevo{ /* MOBILE */
-    grid-area: destacados;
-    background-image: url(../images/home-descripcion-background.jpg);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size:contain;
-    overflow: auto;
+    grid-area: lonuevo;
     h2{
         @include font($prata, 500, 2rem);
         color: $azul;
@@ -211,34 +210,58 @@ $prata: 'Prata', serif;
     span{
         color: $naranja;
     }
-    img{/* MOBILE */
-        width: 70vw;
-        height: auto;
-        margin-left: 15vw;
-        border-radius: 5px;
-        @media (min-width: 768px){ /* TABLET */
-            width: 50vw;
-            margin-left: 25vw;
+    .index__loNuevo--contenedor{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        margin-bottom: 50px;
+        margin-left: 5vw;
+        width: 100vw;
+        div{
+            width: 45vw;
+            height: auto;
+            background-color: white;
+            border-radius: 5px;
+            margin-right: 10vw;
+            @media (min-width: 768px) {/* TABLET */
+                width: 30vw;
+                height: auto;
+                margin-right: 6vw;}
+            @media (min-width: 1024px){ /* DESKTOP */
+                width: 23vw;
+                margin-right: 4vw;
+            }
+            img{/* MOBILE */
+                width: 45vw;
+                height: auto;
+                border-radius: 5px;
+                @media (min-width: 768px){ /* TABLET */
+                    width: 30vw;
+                }
+                @media (min-width: 1024px){ /* DESKTOP */
+                    width: 23vw;
+                }
+            }
+            h5{
+                @include font($raleway, 600, 0.6rem);
+                color: $azul;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 0.5rem;
+                margin-bottom: 2px;
+            }
+            h3{
+                @include font($raleway, 600, 1.3rem);
+                color: $naranja;
+                text-transform: capitalize;
+                text-align: center;
+                margin-bottom: 3rem;
+            }
         }
-        @media (min-width: 1024px){ /* DESKTOP */
-            width: 40vw;
-            margin-left: 30vw;
+        div:hover{
+            box-shadow: 6px 6px 13px rgb(218, 216, 216);
         }
-    }
-    h5{
-        @include font($raleway, 600, 0.6rem);
-        color: $azul;
-        text-transform: uppercase;
-        text-align: center;
-        margin-top: 0.5rem;
-        margin-bottom: 2px;
-    }
-    h3{
-        @include font($raleway, 600, 1.3rem);
-        color: $naranja;
-        text-transform: capitalize;
-        text-align: center;
-        margin-bottom: 3rem;
     }
 }
 

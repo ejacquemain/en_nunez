@@ -56,7 +56,7 @@
       grid-template-columns: 100vw;
   -ms-grid-rows: 100vh auto auto 90vh;
       grid-template-rows: 100vh auto auto 90vh;
-      grid-template-areas: "principal" "secundaria" "destacados" "footer";
+      grid-template-areas: "principal" "secundaria" "lonuevo" "footer";
 }
 
 @media screen and (min-width: 768px) {
@@ -144,7 +144,6 @@
 }
 
 #index__principal .navbar__tabletDesktop ul ul {
-  /* REVISAR: TIENE UN MARGEN IZQUIERDO QUE NO VA */
   position: absolute;
   display: none;
 }
@@ -187,6 +186,19 @@
   padding-left: 1rem;
 }
 
+#index__principal > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 #index__principal h1 {
   /* MOBILE */
   font-family: "Raleway", sans-serif;
@@ -194,7 +206,7 @@
   font-size: 1em;
   color: white;
   text-transform: uppercase;
-  padding-top: 8rem;
+  padding-top: 13rem;
 }
 
 @media (min-width: 768px) {
@@ -203,7 +215,7 @@
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 1.3em;
-    padding-top: 5rem;
+    padding-top: 10rem;
   }
 }
 
@@ -213,7 +225,7 @@
     font-family: "Raleway", sans-serif;
     font-weight: 600;
     font-size: 1em;
-    padding-top: 1rem;
+    padding-top: 6rem;
   }
 }
 
@@ -224,14 +236,12 @@
 #index__principal .index__logoEnPrincipal {
   /* MOBILE */
   width: 60vw;
-  margin-left: 20vw;
 }
 
 @media (min-width: 768px) {
   #index__principal .index__logoEnPrincipal {
     /* TABLET */
     width: 30vw;
-    margin-left: 35vw;
   }
 }
 
@@ -239,7 +249,6 @@
   #index__principal .index__logoEnPrincipal {
     /* DESKTOP */
     width: 25vw;
-    margin-left: 37.5vw;
   }
 }
 
@@ -297,13 +306,15 @@
 }
 
 #index__secundaria p {
-  font-family: "Raleway", sans-serif;
+  font-family: "Prata", serif;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #01253d;
+  line-height: 1.9rem;
+  text-transform: uppercase;
   text-align: center;
-  margin-top: 1.5rem;
-  margin-bottom: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   padding: 0 2rem 0 2rem;
 }
 
@@ -319,12 +330,7 @@
   /* MOBILE */
   -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: destacados;
-  background-image: url(../images/home-descripcion-background.jpg);
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  overflow: auto;
+  grid-area: lonuevo;
 }
 
 #index__loNuevo h2 {
@@ -341,31 +347,69 @@
   color: #f3a544;
 }
 
-#index__loNuevo img {
-  /* MOBILE */
-  width: 70vw;
+#index__loNuevo .index__loNuevo--contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  margin-bottom: 50px;
+  margin-left: 5vw;
+  width: 100vw;
+}
+
+#index__loNuevo .index__loNuevo--contenedor div {
+  width: 45vw;
   height: auto;
-  margin-left: 15vw;
+  background-color: white;
   border-radius: 5px;
+  margin-right: 10vw;
 }
 
 @media (min-width: 768px) {
-  #index__loNuevo img {
+  #index__loNuevo .index__loNuevo--contenedor div {
     /* TABLET */
-    width: 50vw;
-    margin-left: 25vw;
+    width: 30vw;
+    height: auto;
+    margin-right: 6vw;
   }
 }
 
 @media (min-width: 1024px) {
-  #index__loNuevo img {
+  #index__loNuevo .index__loNuevo--contenedor div {
     /* DESKTOP */
-    width: 40vw;
-    margin-left: 30vw;
+    width: 23vw;
+    margin-right: 4vw;
   }
 }
 
-#index__loNuevo h5 {
+#index__loNuevo .index__loNuevo--contenedor div img {
+  /* MOBILE */
+  width: 45vw;
+  height: auto;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  #index__loNuevo .index__loNuevo--contenedor div img {
+    /* TABLET */
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  #index__loNuevo .index__loNuevo--contenedor div img {
+    /* DESKTOP */
+    width: 23vw;
+  }
+}
+
+#index__loNuevo .index__loNuevo--contenedor div h5 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
@@ -376,7 +420,7 @@
   margin-bottom: 2px;
 }
 
-#index__loNuevo h3 {
+#index__loNuevo .index__loNuevo--contenedor div h3 {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
@@ -384,6 +428,11 @@
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 3rem;
+}
+
+#index__loNuevo .index__loNuevo--contenedor div:hover {
+  -webkit-box-shadow: 6px 6px 13px #dad8d8;
+          box-shadow: 6px 6px 13px #dad8d8;
 }
 
 /* FOOTER DE TODO EL SITIO ------------------------------------ */
