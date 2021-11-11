@@ -263,6 +263,9 @@ $prata: 'Prata', serif;
         }
         div:hover{
             box-shadow: 6px 6px 13px rgb(218, 216, 216);
+            h3{
+                color: $naranja;
+            }
         }
     }
 }

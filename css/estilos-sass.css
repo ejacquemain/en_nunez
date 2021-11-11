@@ -437,6 +437,10 @@
           box-shadow: 6px 6px 13px #dad8d8;
 }
 
+#index__loNuevo .index__loNuevo--contenedor div:hover h3 {
+  color: #f3a544;
+}
+
 /* FOOTER DE TODO EL SITIO ------------------------------------ */
 #footer {
   /* MOBILE */
