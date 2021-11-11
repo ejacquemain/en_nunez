@@ -215,19 +215,20 @@ $prata: 'Prata', serif;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow: auto;
-        margin-bottom: 50px;
+        margin-bottom: 20px;
         margin-left: 5vw;
         width: 100vw;
+        height: auto;
         div{
             width: 45vw;
             height: auto;
             background-color: white;
             border-radius: 5px;
-            margin-right: 10vw;
+            margin-right: 6vw;
+            margin-bottom: 20px;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
-                height: auto;
-                margin-right: 6vw;}
+                height: auto;}
             @media (min-width: 1024px){ /* DESKTOP */
                 width: 23vw;
                 margin-right: 4vw;
@@ -252,10 +253,11 @@ $prata: 'Prata', serif;
                 margin-bottom: 2px;
             }
             h3{
-                @include font($raleway, 600, 1.3rem);
-                color: $naranja;
+                @include font($prata, 600, 1.3rem);
+                color: $azul;
                 text-transform: capitalize;
                 text-align: center;
+                margin-top: 10px;
                 margin-bottom: 3rem;
             }
         }

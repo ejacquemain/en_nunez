@@ -358,9 +358,10 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: auto;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   margin-left: 5vw;
   width: 100vw;
+  height: auto;
 }
 
 #index__loNuevo .index__loNuevo--contenedor div {
@@ -368,7 +369,8 @@
   height: auto;
   background-color: white;
   border-radius: 5px;
-  margin-right: 10vw;
+  margin-right: 6vw;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -376,7 +378,6 @@
     /* TABLET */
     width: 30vw;
     height: auto;
-    margin-right: 6vw;
   }
 }
 
@@ -421,12 +422,13 @@
 }
 
 #index__loNuevo .index__loNuevo--contenedor div h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Prata", serif;
   font-weight: 600;
   font-size: 1.3rem;
-  color: #f3a544;
+  color: #01253d;
   text-transform: capitalize;
   text-align: center;
+  margin-top: 10px;
   margin-bottom: 3rem;
 }
 
