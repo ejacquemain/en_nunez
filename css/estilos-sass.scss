@@ -508,7 +508,7 @@ $playfair: 'Playfair Display', serif;
     grid-area: header;
 }
 
-#carrusel{ /* MOBILE */
+#individual__principal{ /* MOBILE */
     grid-area: principal;
     margin-bottom: 100px;
     display: flex;
@@ -594,6 +594,31 @@ $playfair: 'Playfair Display', serif;
     }
     .accordion-button:current {
         color: $naranja;
+    }
+    .rrss{ /* ICONOS DE REDES SOCIALES */
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+        
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-inline: 5px;
+        }
+        img{
+            width: 35px;
+            height: 35px;
+        }
+        img:hover{
+            transform: scale(1.2);
+        }
+        h6{
+            @include font($lato, 400, 0.65rem);
+            color: $naranja;
+            text-align: center;
+            margin-top: 10px;
+        }
     }
 }
 
@@ -771,7 +796,7 @@ $playfair: 'Playfair Display', serif;
         overflow: auto;
         margin-bottom: 50px;
         >div{
-            width: 300px;
+            width: 250px;
             height: auto;
             border-radius: 5px;
             background-color: white;
@@ -789,7 +814,7 @@ $playfair: 'Playfair Display', serif;
             padding-top: 3rem;
             padding-left: 1.5rem;
         }
-        h1 {
+        h1{
             @include font($playfair, 400, 2rem);
             color: $azul;
             margin-top: 10px;
@@ -797,7 +822,7 @@ $playfair: 'Playfair Display', serif;
             padding-left: 1.5rem;
         }
         img{
-            width: 300px;
+            width: 250px;
             height: auto;
             margin-bottom: 10px
         }
@@ -809,7 +834,6 @@ $playfair: 'Playfair Display', serif;
         a:hover{
             color: $naranja;
         }
-
     }
 }
 

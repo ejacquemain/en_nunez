@@ -811,7 +811,7 @@
   grid-area: header;
 }
 
-#carrusel {
+#individual__principal {
   /* MOBILE */
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -830,29 +830,29 @@
       flex-wrap: wrap;
 }
 
-#carrusel div {
+#individual__principal div {
   width: 85vw;
 }
 
 @media (min-width: 768px) {
-  #carrusel div {
+  #individual__principal div {
     /* TABLET */
     width: 60vw;
   }
 }
 
 @media (min-width: 1024px) {
-  #carrusel div {
+  #individual__principal div {
     /* DESKTOP */
     width: 50vw;
   }
 }
 
-#carrusel a {
+#individual__principal a {
   text-decoration: none;
 }
 
-#carrusel h5 {
+#individual__principal h5 {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
@@ -860,7 +860,7 @@
   text-transform: uppercase;
 }
 
-#carrusel h1 {
+#individual__principal h1 {
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 2.5rem;
@@ -896,7 +896,7 @@
   }
 }
 
-#carrusel h4 {
+#individual__principal h4 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -905,7 +905,7 @@
   margin-top: 20px;
 }
 
-#carrusel h3 {
+#individual__principal h3 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -914,7 +914,7 @@
   margin-bottom: 5px;
 }
 
-#carrusel h2 {
+#individual__principal h2 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.8rem;
@@ -924,7 +924,7 @@
   margin-bottom: 5px;
 }
 
-#carrusel .accordion-body {
+#individual__principal .accordion-body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -936,7 +936,7 @@
           column-gap: 100px;
 }
 
-#carrusel .accordion-body h1 {
+#individual__principal .accordion-body h1 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 1rem;
@@ -944,7 +944,7 @@
   font-style: normal;
 }
 
-#carrusel .accordion-body h2 {
+#individual__principal .accordion-body h2 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -952,19 +952,64 @@
   text-transform: none;
 }
 
-#carrusel .accordion-button {
+#individual__principal .accordion-button {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1rem;
   color: #01253d;
 }
 
-#carrusel .accordion-button:hover {
+#individual__principal .accordion-button:hover {
   color: #f3a544;
 }
 
-#carrusel .accordion-button:current {
+#individual__principal .accordion-button:current {
   color: #f3a544;
+}
+
+#individual__principal .rrss {
+  /* ICONOS DE REDES SOCIALES */
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+#individual__principal .rrss div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-inline: 5px;
+}
+
+#individual__principal .rrss img {
+  width: 35px;
+  height: 35px;
+}
+
+#individual__principal .rrss img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+#individual__principal .rrss h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  color: #f3a544;
+  text-align: center;
+  margin-top: 10px;
 }
 
 /* PAGINA FORMULARIO DE CONTACTO ------------------- */
@@ -1252,7 +1297,7 @@
 }
 
 #interior__promos .promosAgrupadas > div {
-  width: 300px;
+  width: 250px;
   height: auto;
   border-radius: 5px;
   background-color: white;
@@ -1287,7 +1332,7 @@
 }
 
 #interior__promos .promosAgrupadas img {
-  width: 300px;
+  width: 250px;
   height: auto;
   margin-bottom: 10px;
 }
