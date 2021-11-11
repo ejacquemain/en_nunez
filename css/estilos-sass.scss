@@ -4,11 +4,12 @@
     box-sizing: border-box;
 }
 
+
 $naranja: #f3a544;
 $azul: #01253d;
 $cuadricula-border: 5px;
-$raleway: 'Raleway', sans-serif;
-$prata: 'Prata', serif;
+$lato: 'Lato', sans-serif;
+$playfair: 'Playfair Display', serif;
 
 
 /* mixin font */
@@ -70,13 +71,13 @@ $prata: 'Prata', serif;
         display: block;
     }
     .navbar__tabletDesktop a{
-        @include font($raleway, 700, 0.8rem);
+        @include font($lato, 700, 0.8rem);
         color: white;
         text-decoration: none;
         text-transform: uppercase;
     }
     .navbar__tabletDesktop a:hover{
-        color: $azul;
+        color: $naranja;
         font-weight: 800;
     }
     .navbar__tabletDesktop li img{
@@ -115,7 +116,7 @@ $prata: 'Prata', serif;
         padding-top: 1rem;
     }
     .navbar__mobile a{
-        @include font($raleway, 600, 0.9rem);
+        @include font($lato, 600, 0.9rem);
         color: $azul;
         padding-left: 1rem;
     }
@@ -125,54 +126,60 @@ $prata: 'Prata', serif;
         align-items: center
     }
     h1 {/* MOBILE */
-        @include font($raleway, bold, 1em);
+        @include font($playfair, bold, 1em);
         color: white;
         text-transform: uppercase;
         padding-top: 13rem;
         @media (min-width: 768px){ /* TABLET */
-            @include font($raleway, 600, 1.3em);
+            @include font($playfair, 600, 1.3em);
             padding-top: 10rem;
         }
         @media (min-width: 1024px){ /* DESKTOP */
-            @include font($raleway, 600, 1em);
-            padding-top: 6rem;
+            @include font($playfair, 600, 2rem);
+            font-style: normal;
+            text-transform: initial;
+            padding-top: 8rem;
         }
     }
     h1 span{
         color: $naranja;
+        font-style: italic;
     }
     .index__logoEnPrincipal{/* MOBILE */
         width: 60vw;
         @media (min-width: 768px){ /* TABLET */
             width: 30vw;
+            margin-top: 1rem;
         }
         @media (min-width: 1024px){ /* DESKTOP */
             width: 25vw;
+            margin-top: 1rem;
         }
     }
     h2{
-        @include font($raleway, 600, 1rem);
+        @include font($lato, 600, 1rem);
         color: white;
         text-align: center;
         margin-top: 3rem;
         @media (min-width: 768px){ /* TABLET */
-            @include font($raleway, 500, 1.3em);
+            @include font($lato, 500, 1.3rem);
+            line-height: 1.9rem;
         }
     }
 }
 
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
-    background-color: whitesmoke;
     h2{
-        @include font($prata, 500, 2rem);
+        @include font($playfair, 600, 1.8rem);
         color: $azul;
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 2rem;
-    }
-    span{
-        color: $naranja;
+        span{
+            color: $naranja;
+            font-style: italic;
+        }
     }
     video{
         width: 90vw;
@@ -183,17 +190,16 @@ $prata: 'Prata', serif;
         }
     }
     p{
-        @include font($prata, 500, 1.2rem);
+        @include font($lato, 300, 1.4rem);
         color: $azul;
-        line-height: 1.9rem;
-        text-transform: uppercase;
+        text-transform: initial;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
-        padding: 0 2rem 0 2rem;
-        @media (min-width: 768px){ /* TABLET */
-            padding-left: 25vw;
-            padding-right: 25vw;
+        span{
+            font-family: $playfair;
+            font-weight: 600;
+            font-style: italic;
         }
     }
 }
@@ -201,7 +207,7 @@ $prata: 'Prata', serif;
 #index__loNuevo{ /* MOBILE */
     grid-area: lonuevo;
     h2{
-        @include font($prata, 500, 2rem);
+        @include font($playfair, 500, 2rem);
         color: $azul;
         text-align: center;
         margin-top: 3rem;
@@ -216,7 +222,6 @@ $prata: 'Prata', serif;
         flex-wrap: nowrap;
         overflow: auto;
         margin-bottom: 20px;
-        margin-left: 5vw;
         width: 100vw;
         height: auto;
         div{
@@ -224,7 +229,7 @@ $prata: 'Prata', serif;
             height: auto;
             background-color: white;
             border-radius: 5px;
-            margin-right: 6vw;
+            margin-left: 6vw;
             margin-bottom: 20px;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
@@ -245,7 +250,7 @@ $prata: 'Prata', serif;
                 }
             }
             h5{
-                @include font($raleway, 600, 0.6rem);
+                @include font($lato, 600, 0.6rem);
                 color: $azul;
                 text-transform: uppercase;
                 text-align: center;
@@ -253,7 +258,7 @@ $prata: 'Prata', serif;
                 margin-bottom: 2px;
             }
             h3{
-                @include font($prata, 600, 1.3rem);
+                @include font($playfair, 600, 1.3rem);
                 color: $azul;
                 text-transform: capitalize;
                 text-align: center;
@@ -277,7 +282,7 @@ $prata: 'Prata', serif;
     grid-area: footer;
     background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
     h4{ /* MOBILE */
-        @include font($raleway, 600, 0.9rem);
+        @include font($lato, 600, 0.9rem);
         color: $naranja;
         text-transform: uppercase;
         padding-left: 2rem;
@@ -289,7 +294,7 @@ $prata: 'Prata', serif;
         }
     }
     p{ /* MOBILE */
-        @include font($raleway, 500, 1rem);
+        @include font($lato, 500, 1rem);
         color: grey;
         padding-left: 2rem;
         margin-bottom: 4rem;
@@ -318,6 +323,7 @@ $prata: 'Prata', serif;
         justify-content: space-evenly;
     }
 }
+
 
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
@@ -355,7 +361,7 @@ $prata: 'Prata', serif;
         padding-top: 1rem;
     }
     .navbar__mobile a{
-        @include font($raleway, 600, 0.9rem);
+        @include font($lato, 600, 0.9rem);
         color: $azul;
         padding-left: 1rem;
     }
@@ -445,6 +451,12 @@ $prata: 'Prata', serif;
             margin-block: 40px;
         }
     }
+    div:hover{
+        box-shadow: 6px 6px 13px rgb(235, 233, 233);
+        h1{
+            color: $azul;
+        }
+    }
     img{
         width: 90vw;
         height: auto;
@@ -454,27 +466,26 @@ $prata: 'Prata', serif;
             height: auto;
         }
     }
-    div:hover{
-        box-shadow: 6px 6px 13px rgb(235, 233, 233);
-    }
-    h5{
-        @include font($raleway, 500, 0.6rem);
+    h3{
+        @include font($lato, 300, 0.6rem);
         color: $azul;
         text-transform: uppercase;
-        margin-top: 1.5rem;
+        padding-top: 1rem;
+        padding-left: 1rem;
     }
-    a{
-        @include font($prata, 900, 1.2rem);
+    h1{
+        @include font($playfair, 500, 1.6rem);
         text-decoration: none;
-        text-transform: uppercase;
+        font-style: italic;
+        text-transform: capitalize;
         color: $naranja;
+        padding-left: 1rem;
     }
-    a:hover{
-        color: $azul;
+    h2{
+        @include font($lato, 300, 1rem);
+        padding-left: 1rem;
     }
-    h4{
-        @include font($raleway, 500, 1.1rem);
-    }
+    
 }
 
 
@@ -517,13 +528,14 @@ $prata: 'Prata', serif;
         text-decoration: none;
     }
     h5{
-        @include font($raleway, 600, 0.6rem);
+        @include font($lato, 600, 0.6rem);
         color: $naranja;
         text-transform: uppercase;
     }
     h1{
-        @include font($prata, 800, 2.5rem);
+        @include font($playfair, 700, 2.5rem);
         color: $azul;
+        font-style: italic;
         animation-name: colorFont;
         animation-duration: 3s;
     }
@@ -539,23 +551,22 @@ $prata: 'Prata', serif;
         }
     }
     h4{
-        @include font($raleway, 500, 1rem);
+        @include font($lato, 300, 1rem);
         line-height: 1.5rem;
-        text-transform: capitalize;
         color: $azul;
         margin-top: 20px;
 
     }
     h3{
-        @include font($raleway, 700, 1.3rem);
-        text-transform: capitalize;
+        @include font($lato, 700, 1rem);
+        text-transform: uppercase;
         color: $naranja;
-        margin-top: 20px;
         margin-bottom: 5px;
     }
     h2{
-        @include font($prata, 600, 1.8rem);
+        @include font($playfair, 600, 1.8rem);
         text-transform: capitalize;
+        font-style: italic;
         margin-top: 1.5rem;
         margin-bottom: 5px;
     }
@@ -563,11 +574,19 @@ $prata: 'Prata', serif;
         display: flex;
         flex-direction: row;
         column-gap: 100px;
-        @include font($raleway, medium, 1rem);
-        color: $azul;
+        h1{
+            @include font($playfair, 500, 1rem);
+            color: $azul;
+            font-style: normal;
+        }
+        h2{
+            @include font($lato, 300, 1rem);
+            font-style: normal;
+            text-transform: none;
+        }
     }
     .accordion-button {
-        @include font($prata, 600, 1rem);
+        @include font($playfair, 600, 1rem);
         color: $azul;
     }
     .accordion-button:hover {
@@ -587,7 +606,7 @@ $prata: 'Prata', serif;
 
 #formularioContacto{
     fieldset{ /* MOBILE */
-        @include font($raleway, 600, 1em);
+        @include font($lato, 600, 1em);
         color: $azul;
         width: 80vw;
         margin-left: 10vw;
@@ -604,7 +623,7 @@ $prata: 'Prata', serif;
         margin-bottom: 20px;
     }
     .formulario__div--datosPersonales label{
-        @include font($raleway, 500, 1em);
+        @include font($lato, 500, 1em);
         color: $azul;
     }
     .formulario__div--datosPersonales input{
@@ -621,7 +640,7 @@ $prata: 'Prata', serif;
         margin-bottom: 20px;
     }
     .formulario__div--radios h2{
-        @include font($raleway, 500, 1em);
+        @include font($lato, 500, 1em);
     }
     .formulario__div--radios input {
         border: solid 1px $naranja;
@@ -632,7 +651,7 @@ $prata: 'Prata', serif;
         flex-direction: row;
     }
     .formulario__div--select h2{
-        @include font($raleway, 500, 1em);
+        @include font($lato, 500, 1em);
     }
     .formulario__div--select select {
         border: solid 1px $naranja;
@@ -646,7 +665,7 @@ $prata: 'Prata', serif;
         }
     }
     .formulario__div--textarea h2{
-        @include font($raleway, 500, 1em);
+        @include font($lato, 500, 1em);
         margin-top: 2em;
     }
     textarea{ /* MOBILE */
@@ -663,14 +682,14 @@ $prata: 'Prata', serif;
         margin-top: 20px
     }
     .formulario__div--checkbox h2 {
-        @include font($raleway, 500, 1em);
+        @include font($lato, 500, 1em);
         margin-right: 8px;
     }
     .formulario__div--checkbox input {
         border: solid 1px $naranja;
     }
     .formulario__div--buttons input {
-        @include font($raleway, 500, 0.9em);
+        @include font($lato, 500, 0.9em);
         margin-top: 20px;
         background-color: $naranja;
         color: white;
@@ -715,18 +734,18 @@ $prata: 'Prata', serif;
         width: 95vw;
         height: 350px;
         h3{
-            @include font($raleway, 700, 1rem);
+            @include font($lato, 700, 1rem);
             color: $naranja;
             text-transform: uppercase
         }
         h1 {
-            @include font($prata, 400, 2rem);
+            @include font($playfair, 400, 2rem);
             color: white;
             margin-top: 10px;
             margin-bottom: 10px;
         }
         h2{
-            @include font($raleway, 400, 0.9rem);
+            @include font($lato, 400, 0.9rem);
             color: white;
             line-height: 1.5rem;
         }
@@ -738,7 +757,7 @@ $prata: 'Prata', serif;
             margin-top: 25px;
         }
         a { 
-            @include font($raleway, 700, 13px);
+            @include font($lato, 700, 13px);
             color: white;
             margin-top: 30px;
             text-transform: uppercase;
@@ -764,14 +783,14 @@ $prata: 'Prata', serif;
             box-shadow: 6px 6px 13px rgb(235, 233, 233); 
         }
         h3{
-            @include font($raleway, 700, 1rem);
+            @include font($lato, 700, 1rem);
             color: $naranja;
             text-transform: uppercase;
             padding-top: 3rem;
             padding-left: 1.5rem;
         }
         h1 {
-            @include font($prata, 400, 2rem);
+            @include font($playfair, 400, 2rem);
             color: $azul;
             margin-top: 10px;
             margin-bottom: 10px;
@@ -783,7 +802,7 @@ $prata: 'Prata', serif;
             margin-bottom: 10px
         }
         a{
-            @include font($prata, 700, 1.2rem);
+            @include font($playfair, 700, 1.2rem);
             color: $azul;
             text-decoration: none;
         }

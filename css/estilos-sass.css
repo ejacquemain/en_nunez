@@ -120,7 +120,7 @@
 }
 
 #index__principal .navbar__tabletDesktop a {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 0.8rem;
   color: white;
@@ -129,7 +129,7 @@
 }
 
 #index__principal .navbar__tabletDesktop a:hover {
-  color: #01253d;
+  color: #f3a544;
   font-weight: 800;
 }
 
@@ -179,7 +179,7 @@
 }
 
 #index__principal .navbar__mobile a {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: #01253d;
@@ -201,7 +201,7 @@
 
 #index__principal h1 {
   /* MOBILE */
-  font-family: "Raleway", sans-serif;
+  font-family: "Playfair Display", serif;
   font-weight: bold;
   font-size: 1em;
   color: white;
@@ -212,7 +212,7 @@
 @media (min-width: 768px) {
   #index__principal h1 {
     /* TABLET */
-    font-family: "Raleway", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 600;
     font-size: 1.3em;
     padding-top: 10rem;
@@ -222,15 +222,18 @@
 @media (min-width: 1024px) {
   #index__principal h1 {
     /* DESKTOP */
-    font-family: "Raleway", sans-serif;
+    font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 1em;
-    padding-top: 6rem;
+    font-size: 2rem;
+    font-style: normal;
+    text-transform: initial;
+    padding-top: 8rem;
   }
 }
 
 #index__principal h1 span {
   color: #f3a544;
+  font-style: italic;
 }
 
 #index__principal .index__logoEnPrincipal {
@@ -242,6 +245,7 @@
   #index__principal .index__logoEnPrincipal {
     /* TABLET */
     width: 30vw;
+    margin-top: 1rem;
   }
 }
 
@@ -249,11 +253,12 @@
   #index__principal .index__logoEnPrincipal {
     /* DESKTOP */
     width: 25vw;
+    margin-top: 1rem;
   }
 }
 
 #index__principal h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1rem;
   color: white;
@@ -264,9 +269,10 @@
 @media (min-width: 768px) {
   #index__principal h2 {
     /* TABLET */
-    font-family: "Raleway", sans-serif;
+    font-family: "Lato", sans-serif;
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.3rem;
+    line-height: 1.9rem;
   }
 }
 
@@ -275,21 +281,21 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: secundaria;
-  background-color: whitesmoke;
 }
 
 #index__secundaria h2 {
-  font-family: "Prata", serif;
-  font-weight: 500;
-  font-size: 2rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.8rem;
   color: #01253d;
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
-#index__secundaria span {
+#index__secundaria h2 span {
   color: #f3a544;
+  font-style: italic;
 }
 
 #index__secundaria video {
@@ -306,24 +312,20 @@
 }
 
 #index__secundaria p {
-  font-family: "Prata", serif;
-  font-weight: 500;
-  font-size: 1.2rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.4rem;
   color: #01253d;
-  line-height: 1.9rem;
-  text-transform: uppercase;
+  text-transform: initial;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-bottom: 2rem;
-  padding: 0 2rem 0 2rem;
 }
 
-@media (min-width: 768px) {
-  #index__secundaria p {
-    /* TABLET */
-    padding-left: 25vw;
-    padding-right: 25vw;
-  }
+#index__secundaria p span {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-style: italic;
 }
 
 #index__loNuevo {
@@ -334,7 +336,7 @@
 }
 
 #index__loNuevo h2 {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 2rem;
   color: #01253d;
@@ -359,7 +361,6 @@
       flex-wrap: nowrap;
   overflow: auto;
   margin-bottom: 20px;
-  margin-left: 5vw;
   width: 100vw;
   height: auto;
 }
@@ -369,7 +370,7 @@
   height: auto;
   background-color: white;
   border-radius: 5px;
-  margin-right: 6vw;
+  margin-left: 6vw;
   margin-bottom: 20px;
 }
 
@@ -411,7 +412,7 @@
 }
 
 #index__loNuevo .index__loNuevo--contenedor div h5 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
   color: #01253d;
@@ -422,7 +423,7 @@
 }
 
 #index__loNuevo .index__loNuevo--contenedor div h3 {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.3rem;
   color: #01253d;
@@ -452,7 +453,7 @@
 
 #footer h4 {
   /* MOBILE */
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: #f3a544;
@@ -472,7 +473,7 @@
 
 #footer p {
   /* MOBILE */
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1rem;
   color: grey;
@@ -577,7 +578,7 @@
 }
 
 #interior__header .navbar__mobile a {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.9rem;
   color: #01253d;
@@ -732,6 +733,15 @@
   }
 }
 
+#interior__cuadricula div:hover {
+  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
+          box-shadow: 6px 6px 13px #ebe9e9;
+}
+
+#interior__cuadricula div:hover h1 {
+  color: #01253d;
+}
+
 #interior__cuadricula img {
   width: 90vw;
   height: auto;
@@ -746,37 +756,32 @@
   }
 }
 
-#interior__cuadricula div:hover {
-  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
-          box-shadow: 6px 6px 13px #ebe9e9;
-}
-
-#interior__cuadricula h5 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
+#interior__cuadricula h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   font-size: 0.6rem;
   color: #01253d;
   text-transform: uppercase;
-  margin-top: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
 }
 
-#interior__cuadricula a {
-  font-family: "Prata", serif;
-  font-weight: 900;
-  font-size: 1.2rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: #f3a544;
-}
-
-#interior__cuadricula a:hover {
-  color: #01253d;
-}
-
-#interior__cuadricula h4 {
-  font-family: "Raleway", sans-serif;
+#interior__cuadricula h1 {
+  font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-style: italic;
+  text-transform: capitalize;
+  color: #f3a544;
+  padding-left: 1rem;
+}
+
+#interior__cuadricula h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding-left: 1rem;
 }
 
 /* PAGINAS INDIVIDUALES ------------------ */
@@ -848,7 +853,7 @@
 }
 
 #carrusel h5 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
   color: #f3a544;
@@ -856,10 +861,11 @@
 }
 
 #carrusel h1 {
-  font-family: "Prata", serif;
-  font-weight: 800;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
   font-size: 2.5rem;
   color: #01253d;
+  font-style: italic;
   -webkit-animation-name: colorFont;
           animation-name: colorFont;
   -webkit-animation-duration: 3s;
@@ -891,30 +897,29 @@
 }
 
 #carrusel h4 {
-  font-family: "Raleway", sans-serif;
-  font-weight: 500;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
   font-size: 1rem;
   line-height: 1.5rem;
-  text-transform: capitalize;
   color: #01253d;
   margin-top: 20px;
 }
 
 #carrusel h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
-  font-size: 1.3rem;
-  text-transform: capitalize;
+  font-size: 1rem;
+  text-transform: uppercase;
   color: #f3a544;
-  margin-top: 20px;
   margin-bottom: 5px;
 }
 
 #carrusel h2 {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.8rem;
   text-transform: capitalize;
+  font-style: italic;
   margin-top: 1.5rem;
   margin-bottom: 5px;
 }
@@ -929,14 +934,26 @@
           flex-direction: row;
   -webkit-column-gap: 100px;
           column-gap: 100px;
-  font-family: "Raleway", sans-serif;
-  font-weight: medium;
+}
+
+#carrusel .accordion-body h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
   font-size: 1rem;
   color: #01253d;
+  font-style: normal;
+}
+
+#carrusel .accordion-body h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  font-style: normal;
+  text-transform: none;
 }
 
 #carrusel .accordion-button {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1rem;
   color: #01253d;
@@ -957,7 +974,7 @@
 
 #formularioContacto fieldset {
   /* MOBILE */
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1em;
   color: #01253d;
@@ -989,7 +1006,7 @@
 }
 
 #formularioContacto .formulario__div--datosPersonales label {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
   color: #01253d;
@@ -1018,7 +1035,7 @@
 }
 
 #formularioContacto .formulario__div--radios h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
 }
@@ -1039,7 +1056,7 @@
 }
 
 #formularioContacto .formulario__div--select h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
 }
@@ -1071,7 +1088,7 @@
 }
 
 #formularioContacto .formulario__div--textarea h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
   margin-top: 2em;
@@ -1103,7 +1120,7 @@
 }
 
 #formularioContacto .formulario__div--checkbox h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
   margin-right: 8px;
@@ -1114,7 +1131,7 @@
 }
 
 #formularioContacto .formulario__div--buttons input {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 0.9em;
   margin-top: 20px;
@@ -1179,7 +1196,7 @@
 }
 
 #interior__promos .promo1 h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #f3a544;
@@ -1187,7 +1204,7 @@
 }
 
 #interior__promos .promo1 h1 {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 2rem;
   color: white;
@@ -1196,7 +1213,7 @@
 }
 
 #interior__promos .promo1 h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
   color: white;
@@ -1212,7 +1229,7 @@
 }
 
 #interior__promos .promo1 a {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 13px;
   color: white;
@@ -1250,7 +1267,7 @@
 }
 
 #interior__promos .promosAgrupadas h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1rem;
   color: #f3a544;
@@ -1260,7 +1277,7 @@
 }
 
 #interior__promos .promosAgrupadas h1 {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 2rem;
   color: #01253d;
@@ -1276,7 +1293,7 @@
 }
 
 #interior__promos .promosAgrupadas a {
-  font-family: "Prata", serif;
+  font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 1.2rem;
   color: #01253d;
