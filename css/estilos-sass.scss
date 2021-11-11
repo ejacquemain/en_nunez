@@ -677,3 +677,74 @@ $prata: 'Prata', serif;
 } 
 
 
+
+/* PAGINA PROMOS ------------------- */
+#promos__contenedor{ /* MOBILE */
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 250px auto 90vh;
+    grid-template-areas: 
+    "header"
+    "promos"
+    "footer";
+    @media (min-width: 768px) { /* TABLET */
+        grid-template-rows: 320px auto 40vh;
+    }
+}
+
+#interior__header{ /* repite ID del interior porque son las mismas NAVS */
+    grid-area: header;
+}
+
+#interior__promos{
+    grid-area: promos;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    .promo1 {
+        display: flex;
+        flex-direction: column;
+        background-image: url(../images/promos-1.jpg);
+        background-repeat: none;
+        background-size: cover;
+        background-position: center;
+        padding-top: 3rem;
+        padding-left: 1.5rem;
+        margin-bottom: 40px;
+        width: 95vw;
+        height: 350px;
+        h3{
+            @include font($raleway, 700, 1rem);
+            color: $naranja;
+            text-transform: uppercase
+        }
+        h1 {
+            @include font($prata, 400, 2rem);
+            color: white;
+
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        h2{
+            @include font($raleway, 400, 0.9rem);
+            color: white;
+            line-height: 1.5rem;
+        }
+        div{
+            width: 200px;
+            height: 30px;
+            border: solid 1px $naranja;
+            text-align: center;
+            margin-top: 25px;
+        }
+        a { 
+            @include font($raleway, 700, 13px);
+            color: white;
+            margin-top: 30px;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+        
+    }
+}
+

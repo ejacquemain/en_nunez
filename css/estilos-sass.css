@@ -1119,4 +1119,107 @@
   padding: 8px;
   border: #f3a544;
 }
+
+/* PAGINA PROMOS ------------------- */
+#promos__contenedor {
+  /* MOBILE */
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100vw;
+      grid-template-columns: 100vw;
+  -ms-grid-rows: 250px auto 90vh;
+      grid-template-rows: 250px auto 90vh;
+      grid-template-areas: "header" "promos" "footer";
+}
+
+@media (min-width: 768px) {
+  #promos__contenedor {
+    /* TABLET */
+    -ms-grid-rows: 320px auto 40vh;
+        grid-template-rows: 320px auto 40vh;
+  }
+}
+
+#interior__header {
+  /* repite ID del interior porque son las mismas NAVS */
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+}
+
+#interior__promos {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: promos;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+}
+
+#interior__promos .promo1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-image: url(../images/promos-1.jpg);
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  padding-top: 3rem;
+  padding-left: 1.5rem;
+  margin-bottom: 40px;
+  width: 95vw;
+  height: 350px;
+}
+
+#interior__promos .promo1 h3 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #f3a544;
+  text-transform: uppercase;
+}
+
+#interior__promos .promo1 h1 {
+  font-family: "Prata", serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#interior__promos .promo1 h2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: white;
+  line-height: 1.5rem;
+}
+
+#interior__promos .promo1 div {
+  width: 200px;
+  height: 30px;
+  border: solid 1px #f3a544;
+  text-align: center;
+  margin-top: 25px;
+}
+
+#interior__promos .promo1 a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: white;
+  margin-top: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 /*# sourceMappingURL=estilos-sass.css.map */
