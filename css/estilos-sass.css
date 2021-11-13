@@ -52,19 +52,11 @@
   /* MOBILE */
   display: -ms-grid;
   display: grid;
+      grid-template-areas: "principal" "secundaria" "lonuevo" "recomendacionesDeLosChefs" "mapa" "footer";
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 100vh auto auto 90vh;
-      grid-template-rows: 100vh auto auto 90vh;
-      grid-template-areas: "principal" "secundaria" "lonuevo" "footer";
-}
-
-@media screen and (min-width: 768px) {
-  #index__contenedor {
-    /* TABLET */
-    -ms-grid-rows: 100vh auto auto 40vh;
-        grid-template-rows: 100vh auto auto 40vh;
-  }
+  -ms-grid-rows: 100vh auto auto auto auto auto;
+      grid-template-rows: 100vh auto auto auto auto auto;
 }
 
 #index__principal {
@@ -202,11 +194,11 @@
 #index__principal h1 {
   /* MOBILE */
   font-family: "Playfair Display", serif;
-  font-weight: bold;
+  font-weight: 800;
   font-size: 1em;
   color: white;
   text-transform: uppercase;
-  padding-top: 13rem;
+  padding-top: 15rem;
 }
 
 @media (min-width: 768px) {
@@ -233,7 +225,6 @@
 
 #index__principal h1 span {
   color: #f3a544;
-  font-style: italic;
 }
 
 #index__principal .index__logoEnPrincipal {
@@ -259,11 +250,12 @@
 
 #index__principal h2 {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 1rem;
+  font-weight: 500;
+  font-size: 1.1rem;
   color: white;
   text-align: center;
   margin-top: 3rem;
+  line-height: 1.6rem;
 }
 
 @media (min-width: 768px) {
@@ -283,9 +275,9 @@
   grid-area: secundaria;
 }
 
-#index__secundaria h2 {
+#index__secundaria h1 {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.8rem;
   color: #01253d;
   text-align: center;
@@ -293,9 +285,9 @@
   margin-bottom: 2rem;
 }
 
-#index__secundaria h2 span {
-  color: #f3a544;
+#index__secundaria h1 span {
   font-style: italic;
+  font-weight: 600;
 }
 
 #index__secundaria video {
@@ -311,10 +303,10 @@
   }
 }
 
-#index__secundaria p {
+#index__secundaria h2 {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 1.4rem;
+  font-weight: 400;
+  font-size: 1.2rem;
   color: #01253d;
   text-transform: initial;
   text-align: center;
@@ -322,7 +314,7 @@
   margin-bottom: 2rem;
 }
 
-#index__secundaria p span {
+#index__secundaria h2 span {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-style: italic;
@@ -335,10 +327,10 @@
   grid-area: lonuevo;
 }
 
-#index__loNuevo h2 {
+#index__loNuevo h1 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
-  font-size: 2rem;
+  font-size: 1.9rem;
   color: #01253d;
   text-align: center;
   margin-top: 3rem;
@@ -346,7 +338,7 @@
 }
 
 #index__loNuevo span {
-  color: #f3a544;
+  font-style: italic;
 }
 
 #index__loNuevo .index__loNuevo--contenedor {
@@ -386,7 +378,7 @@
   #index__loNuevo .index__loNuevo--contenedor div {
     /* DESKTOP */
     width: 23vw;
-    margin-right: 4vw;
+    margin-right: 3vw;
   }
 }
 
@@ -442,79 +434,66 @@
   color: #f3a544;
 }
 
+#index__recomendacionesDeLosChefs {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: recomendacionesDeLosChefs;
+}
+
+#index__recomendacionesDeLosChefs h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-size: 1.9rem;
+  color: #01253d;
+  text-align: center;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+#index__recomendacionesDeLosChefs span {
+  font-style: italic;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  overflow: auto;
+}
+
+#index__mapa {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: mapa;
+  background-image: url(../images/mapa-nunez.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 30vh;
+}
+
 /* FOOTER DE TODO EL SITIO ------------------------------------ */
 #footer {
-  /* MOBILE */
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
   background-image: radial-gradient(black, #01253d);
 }
 
-#footer h4 {
+#footer .footer__div--contenedor {
   /* MOBILE */
-  font-family: "Lato", sans-serif;
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: #f3a544;
-  text-transform: uppercase;
-  padding-left: 2rem;
-  padding-top: 5rem;
+  width: 100vw;
+  padding-bottom: 5rem;
 }
 
 @media (min-width: 768px) {
-  #footer h4 {
-    /* TABLET */
-    padding-top: 3rem;
-    padding-left: 0rem;
-    padding-bottom: 0rem;
-  }
-}
-
-#footer p {
-  /* MOBILE */
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
-  color: grey;
-  padding-left: 2rem;
-  margin-bottom: 4rem;
-}
-
-@media (min-width: 768px) {
-  #footer p {
-    /* TABLET */
-    padding-left: 0rem;
-    margin-bottom: 0rem;
-  }
-}
-
-#footer img {
-  /* MOBILE */
-  padding-left: 2rem;
-  margin-bottom: 0.7rem;
-  width: 7rem;
-}
-
-@media (min-width: 768px) {
-  #footer img {
-    /* TABLET */
-    padding-left: 0rem;
-    padding-top: 3rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-  }
-}
-
-#footer img:hover {
-  /* MOBILE Y TABLET */
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-}
-
-@media (min-width: 768px) {
-  #footer {
-    /* TABLET EN FLEX */
+  #footer .footer__div--contenedor {
+    /* TABLET/DESKTOP */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -525,7 +504,63 @@
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
+    padding-top: 1rem;
   }
+}
+
+#footer .footer__div--contenedor div {
+  /* MOBILE */
+  width: 85vw;
+  margin-top: 3rem;
+  padding-left: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  #footer .footer__div--contenedor div {
+    /* TABLET/DESKTOP */
+    width: 30vw;
+    margin-top: 2rem;
+    padding-left: 0rem;
+  }
+}
+
+#footer .footer__div--contenedor h1 {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #f3a544;
+  text-transform: uppercase;
+}
+
+#footer .footer__div--contenedor h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  color: grey;
+}
+
+#footer .footer__div--contenedor h2 span {
+  font-weight: 800;
+}
+
+#footer .footer__div--contenedor h2 img {
+  width: 20px;
+}
+
+@media (min-width: 768px) {
+  #footer .footer__div--contenedor .footer__div--logo {
+    text-align: center;
+  }
+}
+
+#footer .footer__div--contenedor img {
+  width: 6rem;
+}
+
+#footer .footer__div--contenedor img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */

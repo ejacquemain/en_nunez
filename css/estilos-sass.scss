@@ -29,16 +29,15 @@ $playfair: 'Playfair Display', serif;
 
 #index__contenedor{ /* MOBILE */
     display: grid;
-    grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto auto 90vh;
     grid-template-areas: 
     "principal"
     "secundaria"
     "lonuevo"
+    "recomendacionesDeLosChefs"
+    "mapa"
     "footer";
-    @media screen and (min-width: 768px) { /* TABLET */
-        grid-template-rows: 100vh auto auto 40vh;
-    }
+    grid-template-columns: 100vw;
+    grid-template-rows: 100vh auto auto auto auto auto;
 }
 
 #index__principal{ /* MOBILE */
@@ -126,10 +125,10 @@ $playfair: 'Playfair Display', serif;
         align-items: center
     }
     h1 {/* MOBILE */
-        @include font($playfair, bold, 1em);
+        @include font($playfair, 800, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 13rem;
+        padding-top: 15rem;
         @media (min-width: 768px){ /* TABLET */
             @include font($playfair, 600, 1.3em);
             padding-top: 10rem;
@@ -143,7 +142,6 @@ $playfair: 'Playfair Display', serif;
     }
     h1 span{
         color: $naranja;
-        font-style: italic;
     }
     .index__logoEnPrincipal{/* MOBILE */
         width: 60vw;
@@ -157,10 +155,11 @@ $playfair: 'Playfair Display', serif;
         }
     }
     h2{
-        @include font($lato, 600, 1rem);
+        @include font($lato, 500, 1.1rem);
         color: white;
         text-align: center;
         margin-top: 3rem;
+        line-height: 1.6rem;
         @media (min-width: 768px){ /* TABLET */
             @include font($lato, 500, 1.3rem);
             line-height: 1.9rem;
@@ -170,15 +169,15 @@ $playfair: 'Playfair Display', serif;
 
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
-    h2{
-        @include font($playfair, 600, 1.8rem);
+    h1{
+        @include font($playfair, 500, 1.8rem);
         color: $azul;
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 2rem;
         span{
-            color: $naranja;
             font-style: italic;
+            font-weight: 600;
         }
     }
     video{
@@ -189,8 +188,8 @@ $playfair: 'Playfair Display', serif;
             margin-left: 15vw;
         }
     }
-    p{
-        @include font($lato, 300, 1.4rem);
+    h2{
+        @include font($lato, 400, 1.2rem);
         color: $azul;
         text-transform: initial;
         text-align: center;
@@ -206,15 +205,15 @@ $playfair: 'Playfair Display', serif;
 
 #index__loNuevo{ /* MOBILE */
     grid-area: lonuevo;
-    h2{
-        @include font($playfair, 500, 2rem);
+    h1{
+        @include font($playfair, 500, 1.9rem);
         color: $azul;
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 2rem;
     }
     span{
-        color: $naranja;
+        font-style: italic;
     }
     .index__loNuevo--contenedor{
         display: flex;
@@ -236,7 +235,7 @@ $playfair: 'Playfair Display', serif;
                 height: auto;}
             @media (min-width: 1024px){ /* DESKTOP */
                 width: 23vw;
-                margin-right: 4vw;
+                margin-right: 3vw;
             }
             img{/* MOBILE */
                 width: 45vw;
@@ -275,53 +274,93 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
+#index__recomendacionesDeLosChefs{
+    grid-area: recomendacionesDeLosChefs;
+    h1{
+        @include font($playfair, 500, 1.9rem);
+        color: $azul;
+        text-align: center;
+        margin-top: 3rem;
+        margin-bottom: 2rem;
+    }
+    span{
+        font-style: italic;
+    }
+    .index__recomendacionesDeLosChefs--contenedor{
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+    }
+
+}
+
+#index__mapa{
+    grid-area: mapa;
+    background-image: url(../images/mapa-nunez.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 30vh;
+}
+
+
+
 
 
 /* FOOTER DE TODO EL SITIO ------------------------------------ */
-#footer{ /* MOBILE */
+#footer{ 
     grid-area: footer;
     background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
-    h4{ /* MOBILE */
-        @include font($lato, 600, 0.9rem);
-        color: $naranja;
-        text-transform: uppercase;
-        padding-left: 2rem;
-        padding-top: 5rem;
-        @media (min-width: 768px){ /* TABLET */
-            padding-top: 3rem;
-            padding-left: 0rem;
-            padding-bottom: 0rem;
+    .footer__div--contenedor{ /* MOBILE */
+        width: 100vw;
+        padding-bottom: 5rem;
+        @media (min-width: 768px){ /* TABLET/DESKTOP */
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top: 1rem;
+        }
+        div{ /* MOBILE */
+            width: 85vw;
+            margin-top: 3rem;
+            padding-left: 2.5rem;
+            @media (min-width: 768px){ /* TABLET/DESKTOP */
+                width: 30vw;
+                margin-top: 2rem;
+                padding-left: 0rem;
+            }
+        }
+        h1{ 
+            @include font($lato, 600, 0.9rem);
+            color: $naranja;
+            text-transform: uppercase;
+        }
+        h2{ 
+            @include font($lato, 500, 0.9rem);
+            line-height: 1.5rem;
+            color: grey;
+            span{
+                font-weight: 800;
+            }
+            img{
+                width: 20px;
+            }
+        }
+        .footer__div--logo{
+            @media (min-width: 768px){
+                text-align: center;
+            }
+        }
+        img{ 
+            width: 6rem;
+        }
+        img:hover{ 
+            transform: scale(1.2);
         }
     }
-    p{ /* MOBILE */
-        @include font($lato, 500, 1rem);
-        color: grey;
-        padding-left: 2rem;
-        margin-bottom: 4rem;
-        @media (min-width: 768px){ /* TABLET */
-            padding-left: 0rem;
-            margin-bottom: 0rem;
-        }
-    }
-    img{ /* MOBILE */
-        padding-left: 2rem;
-        margin-bottom: 0.7rem;
-        width: 7rem;
-        @media (min-width: 768px){ /* TABLET */
-            padding-left: 0rem;
-            padding-top: 3rem;
-            margin-left: 2rem;
-            margin-right: 2rem;
-        }
-    }
-    img:hover{ /* MOBILE Y TABLET */
-        transform: scale(1.2);
-    }
-    @media (min-width: 768px){ /* TABLET EN FLEX */
-        display: flex;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
+    
+  
 }
 
 
