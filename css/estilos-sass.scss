@@ -128,44 +128,50 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 800, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 15rem;
-        @media (min-width: 768px){ /* TABLET */
-            @include font($playfair, 600, 1.3em);
-            padding-top: 10rem;
-        }
-        @media (min-width: 1024px){ /* DESKTOP */
-            @include font($playfair, 600, 2rem);
-            font-style: normal;
-            text-transform: initial;
-            padding-top: 8rem;
+        padding-top: 200px; /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
+        @media (min-width: 768px){ /* TABLET/DESKTOP */
+            @include font($playfair, 600, 1.2em);
+            padding-top: 40px;
         }
     }
     h1 span{
         color: $naranja;
     }
     .index__logoEnPrincipal{/* MOBILE */
-        width: 60vw;
+        width: 250px;
+        margin-top: 40px;
         @media (min-width: 768px){ /* TABLET */
-            width: 30vw;
-            margin-top: 1rem;
-        }
-        @media (min-width: 1024px){ /* DESKTOP */
-            width: 25vw;
-            margin-top: 1rem;
+            width: 250px;
         }
     }
     h2{
         @include font($lato, 500, 1.1rem);
         color: white;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 40px;
         line-height: 1.6rem;
         @media (min-width: 768px){ /* TABLET */
             @include font($lato, 500, 1.3rem);
             line-height: 1.9rem;
         }
     }
+    .explora{
+        margin-top: 40px;
+        div{
+            width: 100px;
+            height: 25px;
+            border: solid $naranja 1px;
+            justify-content: center;
+            h3{
+                @include font($lato, 300, 1rem);
+                color: $naranja;
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
+
 
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
@@ -228,7 +234,7 @@ $playfair: 'Playfair Display', serif;
             height: auto;
             background-color: white;
             border-radius: 5px;
-            margin-left: 6vw;
+            margin-left: 8vw;
             margin-bottom: 20px;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
@@ -274,7 +280,7 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#index__recomendacionesDeLosChefs{
+#index__recomendacionesDeLosChefs{ /* MOBILE */
     grid-area: recomendacionesDeLosChefs;
     h1{
         @include font($playfair, 500, 1.9rem);
@@ -289,9 +295,67 @@ $playfair: 'Playfair Display', serif;
     .index__recomendacionesDeLosChefs--contenedor{
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap;
         overflow: auto;
+        margin-bottom: 20px;
+        width: 100vw;
+        height: auto;
+        div{
+            width: 45vw;
+            height: auto;
+            background-color: white;
+            margin-left: 12vw;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            @media (min-width: 768px) {/* TABLET */
+                width: 30vw;
+                height: auto;}
+            @media (min-width: 1024px){ /* DESKTOP */
+                width: 23vw;
+                margin-right: 3vw;
+            }
+            img{/* MOBILE */
+                width: 40vw;
+                height: auto;
+                @media (min-width: 768px){ /* TABLET */
+                    width: 30vw;
+                }
+                @media (min-width: 1024px){ /* DESKTOP */
+                    width: 23vw;
+                }
+            }
+            p{
+                @include font($playfair, 400, 1.1rem);
+                padding-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+                text-align: center;
+                color: $azul;
+                font-style: italic
+            }
+            h2{
+                @include font($lato, 500, 1.2rem);
+                color: $azul;
+                text-transform: capitalize;
+                text-align: center;
+                margin-bottom: 2px;
+            }
+            h3{
+                @include font($lato, 600, 0.8rem);
+                color: $azul;
+                text-transform: capitalize;
+                text-align: center;
+                margin-top: 10px;
+                margin-bottom: 3rem;
+            }
+        }
+        div:hover{
+            box-shadow: 6px 6px 13px rgb(218, 216, 216);
+            p{
+                color: $naranja;
+            }
+        }
     }
-
 }
 
 #index__mapa{

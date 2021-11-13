@@ -198,28 +198,17 @@
   font-size: 1em;
   color: white;
   text-transform: uppercase;
-  padding-top: 15rem;
+  padding-top: 200px;
+  /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
 }
 
 @media (min-width: 768px) {
   #index__principal h1 {
-    /* TABLET */
+    /* TABLET/DESKTOP */
     font-family: "Playfair Display", serif;
     font-weight: 600;
-    font-size: 1.3em;
-    padding-top: 10rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  #index__principal h1 {
-    /* DESKTOP */
-    font-family: "Playfair Display", serif;
-    font-weight: 600;
-    font-size: 2rem;
-    font-style: normal;
-    text-transform: initial;
-    padding-top: 8rem;
+    font-size: 1.2em;
+    padding-top: 40px;
   }
 }
 
@@ -229,22 +218,14 @@
 
 #index__principal .index__logoEnPrincipal {
   /* MOBILE */
-  width: 60vw;
+  width: 250px;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
   #index__principal .index__logoEnPrincipal {
     /* TABLET */
-    width: 30vw;
-    margin-top: 1rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  #index__principal .index__logoEnPrincipal {
-    /* DESKTOP */
-    width: 25vw;
-    margin-top: 1rem;
+    width: 250px;
   }
 }
 
@@ -254,7 +235,7 @@
   font-size: 1.1rem;
   color: white;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 40px;
   line-height: 1.6rem;
 }
 
@@ -266,6 +247,28 @@
     font-size: 1.3rem;
     line-height: 1.9rem;
   }
+}
+
+#index__principal .explora {
+  margin-top: 40px;
+}
+
+#index__principal .explora div {
+  width: 100px;
+  height: 25px;
+  border: solid #f3a544 1px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#index__principal .explora div h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #f3a544;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 #index__secundaria {
@@ -362,7 +365,7 @@
   height: auto;
   background-color: white;
   border-radius: 5px;
-  margin-left: 6vw;
+  margin-left: 8vw;
   margin-bottom: 20px;
 }
 
@@ -435,6 +438,7 @@
 }
 
 #index__recomendacionesDeLosChefs {
+  /* MOBILE */
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: recomendacionesDeLosChefs;
@@ -462,7 +466,99 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
   overflow: auto;
+  margin-bottom: 20px;
+  width: 100vw;
+  height: auto;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
+  width: 45vw;
+  height: auto;
+  background-color: white;
+  margin-left: 12vw;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+@media (min-width: 768px) {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
+    /* TABLET */
+    width: 30vw;
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
+    /* DESKTOP */
+    width: 23vw;
+    margin-right: 3vw;
+  }
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+  /* MOBILE */
+  width: 40vw;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+    /* TABLET */
+    width: 30vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+    /* DESKTOP */
+    width: 23vw;
+  }
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div p {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding-top: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  color: #01253d;
+  font-style: italic;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: #01253d;
+  text-transform: capitalize;
+  text-align: center;
+  margin-bottom: 2px;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: #01253d;
+  text-transform: capitalize;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 3rem;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover {
+  -webkit-box-shadow: 6px 6px 13px #dad8d8;
+          box-shadow: 6px 6px 13px #dad8d8;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover p {
+  color: #f3a544;
 }
 
 #index__mapa {
