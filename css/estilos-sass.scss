@@ -131,7 +131,7 @@ $playfair: 'Playfair Display', serif;
         padding-top: 200px; /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
         @media (min-width: 768px){ /* TABLET/DESKTOP */
             @include font($playfair, 600, 1.2em);
-            padding-top: 40px;
+            padding-top: 70px;
         }
     }
     h1 span{
@@ -141,7 +141,7 @@ $playfair: 'Playfair Display', serif;
         width: 250px;
         margin-top: 40px;
         @media (min-width: 768px){ /* TABLET */
-            width: 250px;
+            width: 300px;
         }
     }
     h2{
@@ -156,7 +156,10 @@ $playfair: 'Playfair Display', serif;
         }
     }
     .explora{
-        margin-top: 40px;
+        margin-top: 80px;
+        @media (min-width: 768px){ /* TABLET */
+            margin-top: 50px;
+        }
         div{
             width: 100px;
             height: 25px;
