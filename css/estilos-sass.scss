@@ -435,13 +435,13 @@ $playfair: 'Playfair Display', serif;
 #interior__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 250px auto 90vh;
+    grid-template-rows: 250px auto auto;
     grid-template-areas: 
     "header"
     "cuadricula"
     "footer";
     @media (min-width: 768px) { /* TABLET */
-        grid-template-rows: 320px auto 40vh;
+        grid-template-rows: 320px auto auto;
     }
 }
 
@@ -599,13 +599,13 @@ $playfair: 'Playfair Display', serif;
 #individual__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 150px auto 90vh;
+    grid-template-rows: 150px auto auto;
     grid-template-areas: 
     "header"
     "principal"
     "footer";
     @media (min-width: 768px) { /* TABLET */
-        grid-template-rows: 150px auto 40vh;
+        grid-template-rows: 150px auto auto;
     }
 }
 
@@ -655,6 +655,13 @@ $playfair: 'Playfair Display', serif;
             color: rgb(1, 37, 61);
         }
     }
+    div{
+        margin-top: 20px;
+        img{
+            width: 40px;
+            margin-right: 15px
+        }
+    }
     h4{
         @include font($lato, 300, 1rem);
         line-height: 1.5rem;
@@ -677,17 +684,68 @@ $playfair: 'Playfair Display', serif;
     }
     .accordion-body {
         display: flex;
-        flex-direction: row;
-        column-gap: 100px;
+        flex-direction: column;
+        column-gap: 5px;
+        div{
+            margin-bottom: 10px;
+        }
         h1{
-            @include font($playfair, 500, 1rem);
+            @include font($playfair, 900, 1.2rem);
             color: $azul;
-            font-style: normal;
+            font-style: italic;
+            margin-bottom: 25px;
         }
         h2{
-            @include font($lato, 300, 1rem);
+            @include font($lato, 400, 1.1rem);
             font-style: normal;
+            text-transform: capitalize;
+            margin-top: 20px;
+            margin-bottom: 0px;
+        }
+        h3{
+            @include font($playfair, 500, 1rem);
+            color: $azul;
             text-transform: none;
+            margin-top: 5px;
+        }
+        ul{
+            list-style-type: circle;
+        }
+        li{
+            @extend h3;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        h4{
+            @include font($lato, 400, 0.9rem);
+            color: $azul;
+            text-transform: none;
+            margin-top: 0px;
+        }
+        h5{
+            @include font($lato, 600, 0.6rem);
+            color: $naranja;
+            text-transform: uppercase;
+            margin-top: 0px;
+        }
+        img{
+            width: 100px;
+            margin-right: 30px;
+        }
+        img:hover{
+            transform: scale(1.6);
+        }
+        .individual__div--mediosDePago{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            div{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 0px;
+                margin-bottom: 0px;
+            }
         }
     }
     .accordion-button {
@@ -704,7 +762,6 @@ $playfair: 'Playfair Display', serif;
         margin-top: 50px;
         display: flex;
         flex-direction: row;
-        
         div{
             display: flex;
             flex-direction: column;
@@ -712,11 +769,11 @@ $playfair: 'Playfair Display', serif;
             margin-inline: 5px;
         }
         img{
-            width: 35px;
-            height: 35px;
+            width: 25px;
+            height: 25px;
         }
         img:hover{
-            transform: scale(1.2);
+            transform: scale(1.3);
         }
         h6{
             @include font($lato, 400, 0.65rem);
@@ -746,46 +803,48 @@ $playfair: 'Playfair Display', serif;
             margin-left: 20vw;
         }
     }
-    .formulario__div--datosPersonales div{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        margin-bottom: 20px;
-    }
-    .formulario__div--datosPersonales label{
-        @include font($lato, 500, 1em);
-        color: $azul;
-    }
-    .formulario__div--datosPersonales input{
-        border: solid 1px $naranja;
-        font-size: 0.9em;
-        width: 50vw;
-        margin-left: 10px;
-        overflow: auto;
-    }
+    .formulario__div--datosPersonales{
+        div{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+        label{
+            @include font($lato, 500, 1em);
+            color: $azul;
+        }
+        input{
+            border: solid 1px $naranja;
+            font-size: 0.9em;
+            width: 50vw;
+            margin-left: 10px;
+            overflow: auto;
+        }
+    } 
     .formulario__div--radios{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         margin-bottom: 20px;
+        h2{
+            @include font($lato, 500, 1em);
+        }
+        input {
+            border: solid 1px $naranja;
+            margin-left: 5px;
+        }
     }
-    .formulario__div--radios h2{
-        @include font($lato, 500, 1em);
-    }
-    .formulario__div--radios input {
-        border: solid 1px $naranja;
-        margin-left: 5px;
-    }
-    .formulario__div--select {
+    .formulario__div--select{
         display: flex;
         flex-direction: row;
-    }
-    .formulario__div--select h2{
-        @include font($lato, 500, 1em);
-    }
-    .formulario__div--select select {
-        border: solid 1px $naranja;
-        margin-left: 15px
+        h2{
+            @include font($lato, 500, 1em);
+        }
+        select{
+            border: solid 1px $naranja;
+            margin-left: 15px
+        }
     }
     .formulario__div--textarea { /* MOBILE */
         display: flex;
@@ -793,30 +852,30 @@ $playfair: 'Playfair Display', serif;
         @media (min-width: 768px){ /* TABLET */
             flex-direction: column;
         }
-    }
-    .formulario__div--textarea h2{
-        @include font($lato, 500, 1em);
-        margin-top: 2em;
-    }
-    textarea{ /* MOBILE */
-        width: 80vw;
-        border: solid 1px $naranja;
-        overflow: auto;
-        @media (min-width: 768px){ /* TABLET */
-            width: 60vw;
+        h2{
+            @include font($lato, 500, 1em);
+            margin-top: 2em;
+        }
+        textarea{ /* MOBILE */
+            width: 80vw;
+            border: solid 1px $naranja;
+            overflow: auto;
+            @media (min-width: 768px){ /* TABLET */
+                width: 60vw;
+            }
         }
     }
     .formulario__div--checkbox {
         display: flex;
         flex-direction: row;
-        margin-top: 20px
-    }
-    .formulario__div--checkbox h2 {
-        @include font($lato, 500, 1em);
-        margin-right: 8px;
-    }
-    .formulario__div--checkbox input {
-        border: solid 1px $naranja;
+        margin-top: 20px;
+        h2 {
+            @include font($lato, 500, 1em);
+            margin-right: 8px;
+        }
+        input {
+            border: solid 1px $naranja;
+        }
     }
     .formulario__div--buttons input {
         @include font($lato, 500, 0.9em);

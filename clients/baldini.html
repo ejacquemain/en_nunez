@@ -117,21 +117,18 @@
 
 
 
-    <main id="individual__principal">
-      <!-- ABRE SECCION PRINCIPAL -->
-
-      <div>
-        <!-- ABRE CONTENEDOR DE LA SECCION -->
+    <main id="individual__principal"> <!-- ABRE SECCION PRINCIPAL -->
+      
+      <div> <!-- ABRE CONTENEDOR DE LA SECCION -->
 
         <a href="../pages/resto-pizza.html">
-          <h5>
-            < Restó / Pizza</h5>
+          <h5>< Restó / Pizza</h5>
         </a>
         <h1>Baldini</h1>
 
-
+        <!-- INICIA CARRUSEL -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-          <!-- INICIA CARRUSEL -->
+          
           <div class="carousel-inner">
             <div class="carousel-item active">
               <img src="../images/resto-pizza-01.png" class="d-block w-100" alt="foto de baldini" />
@@ -174,11 +171,12 @@
         </div> <!-- CIERRA CARRUSEL -->
 
 
-        <h4>Amenabar 2829, Nuñez / (54 11) 4554 4398 <br>
-          Lunes a sábados de 10 a 20 hs.<br>
-          Precio promedio $00 <br>
-          Acepta MercadoPago
-        </h4>
+        <div>
+          <img src="../images/icono-efectivo.png" alt="icono de pago en efectivo"> 
+          <img src="../images/icono-tarjetacredito.png" alt="icono de pago con tarjeta de credito y débito"> 
+          <img src="../images/icono-mercadopago.png" alt="icono de pago con mercado pago">
+        </div>
+        <h4>Amenabar 2829, Nuñez<br>Precio promedio $1.000 <br></h4>
         <h3>¡-30% en delivery</h3>
         <h2>Especialidades</h2>
         <h4>Di salmone (hojas verdes, palta, lonjas de salmón)<br>
@@ -192,87 +190,237 @@
 
 
 
-      <div>
-        <!-- ABRE CONTENEDOR DE ACORDEON -->
-
-        <div class="accordion accordion-flush" id="accordionFlushExample">
-          <!-- ABRE ACORDEON -->
-
-          <div class="accordion-item">
-            <!-- ABRE ITEM 1 -->
+      <div> <!-- ABRE CONTENEDOR DE ACORDEON -->
+        
+        <div class="accordion accordion-flush" id="accordionFlushExample"> <!-- ABRE ACORDEON -->
+          
+          <div class="accordion-item"> <!-- ABRE MENÚ -->
+          
             <h2 class="accordion-header" id="flush-headingOne">
               <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
                 Menú
               </button>
             </h2>
+
             <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
               data-bs-parent="#accordionFlushExample">
+
               <div class="accordion-body">
+
                 <div>
-                  <h1>Coffee Shop</h1> 
-                  <h2>
-                    Espresso<br>Lungo <br>Cortado <br>Americano<br>Flat White <br>Capuccino <br>Latte frío <br>Espresso tonic <br>Vanilla latte 
-                </h2>
+                  <h1>Entradas</h1> 
+                  <h2>Ensalada de roastbeef ____ $ 600</h2>
+                  <h3>Lechuguitas tiernas, Roastbeef, Lascas de parmesano, Yogurt y Mostaza.</h3>
+                  <h2>Ensalada Marengo ____ $ 825</h2>
+                  <h3>Mezclum de lechugas, codorniz y setas escabechadas, cebolla encurtida y emulsión de su propio escabeche.</h3>
+                  <h2>Lasaña de verduras ____ $ 950</h2>
+                  <h3>Lasaña rota de verduras de temporada con queso Idiazabal.</h3>
+                  <h2>Timbal de Ventresca ____ $ 875</h2>
+                  <h3>Ventresca de atún, patata y pimientos asados con vinagreta de mostaza.</h3>
+                  <h2>Puntalette Fungui ____ $ 875</h2>
+                  <h3>Pasta italiana de grano duro, con setas de temporada y aroma de trufa al parmesano.</h3>
+                  <h2>Tallarines de Sepia Braseada ____ $ 875</h2>
+                  <h3>Sepia salteada con nyoquis y emulsión de ajos negros.</h3>
                 </div>
 
                 <div>
-                  <h1>Bakery</h1>
-                  <h2>
-                    Alfajor de choco y nuez <br>Alfajor de coco y DDL <br>Budín de naranja
-                    <br>Carrot cake <br>Brownie <br>Cookie de nutella <br>Cheesecake <br>Crumble de manzana
-                    <br>Scon de arándanos <br>Scon parmessano
-                  </h2>
+                  <h1>Pescados</h1> 
+                  <h2>Merluza en Tempura ____ $ 600</h2>
+                  <h3>Merluza en tempura fina de lima y alioli de guacamole.</h3>
+                  <h2>Wok de Chipirones ____ $ 825</h2>
+                  <h3>Verduras salteadas, chipirones, fideos de arroz y salsa de soja.</h3>
+                  <h2>Tataki de atún rojo ____ $ 950</h2>
+                  <h3>6 cortes de atún, con alga wakame, salsa de soja y wasabi.</h3>
                 </div>
+                  
+                <div>
+                  <h1>Carnes</h1> 
+                  <h2>Hamburguesa marengo ____ $ 600</h2>
+                  <h3>Hamburguesa de novillo, provolone, cebolla crujiente y guacamole.</h3>
+                  <h2>Pad Thai de Pollo ____ $ 825</h2>
+                  <h3>Salteado de pollo marinado con fideos de arroz y verduras.</h3>
+                  <h2>Lagarto Ibérico ____ $ 950</h2>
+                  <h3>Lomo ibérico caramelizado muy jugoso con salteado de setas y algas.</h3>
+                  <h2>Costillar Black Angus ____ $ 950</h2>
+                  <h3>Costilla de vaca confitada con salsa gochujang y patata panadera.</h3>
+                  <h2>Entrecote marengo ____ $ 950</h2>
+                  <h3>Entrecot de ternera con patatas fritas caseras y sal Maldon.</h3>
+                </div>
+                  
+                <div>
+                  <h1>Postres</h1> 
+                  <h2>Mini Gin & Mojitos ____ $ 600</h2>
+                  <h3>Medio gin & tonic aromatizado.</h3>
+                  <h2>Sorbete de Maracuyá ____ $ 825</h2>
+                  <h3>Refrescante sorbete natural de fruta de la pasión.</h3>
+                  <h2>Coulán ____ $ 950</h2>
+                  <h3>Pastel de chocolate caliente con helado de leche merengada.</h3>
+                  <h2>Crumble de Manzanas ____ $ 950</h2>
+                  <h3>Galleta artesana rota con manzana golden asada.</h3>
+                  <h2>New York Cheesecake ____ $ 950</h2>
+                  <h3>Tarta de queso natural, galleta rota, mantequilla derretida, vainilla y ralladura de limón.</h3>
+                  <h2>Tejas y Trufas ____ $ 950</h2>
+                  <h3>Trufas caseras con sal y aceite de oliva con nuestras tejas caseras.</h3>
+                  <h2>Tartas artesanas ____ $ 950</h2>
+                  <h3>A elegir entre Red velvet o Carrot Cake con helado de vainilla.</h3>
+                </div>
+
+                <div>
+                  <h1>Bebidas</h1> 
+                  <h2>Café ____ $ 600</h2>
+                  <h2>Agua mineral 1L ____ $ 600</h2>
+                  <h2>Coca-Cola, Sprite, Fanta  ____ $ 600</h2>
+                </div>
+
+                <div>
+                  <h1>Vinos Tintos</h1> 
+                  <h2>Almirez ____ $ 600</h2>
+                  <h3>Bodegas Toro</h3>
+                  <h2>Pintia ____ $ 600</h2>
+                  <h3>Bodegas Toro</h3>
+                  <h2>Aalto  ____ $ 600</h2>
+                  <h3>Bodegas Ribera del Duero</h3>
+                  <h2>Emilio Moro  ____ $ 600</h2>
+                  <h3>Bodegas Ribera del Duero</h3>
+                  <h2>Matarromera  ____ $ 600</h2>
+                  <h3>Bodegas Ribera del Duero</h3>
+                  <h2>La Planta ____ $ 600</h2>
+                  <h3>Bodegas Ribera del Duero</h3>
+                  <h2>Lalama  ____ $ 600</h2>
+                  <h3>Bodegas Ribeira Sacra</h3>
+                  <h2>Les Terrases  ____ $ 600</h2>
+                  <h3>Bodegas Priorato</h3>
+                </div>
+                  
+                <div>
+                  <h1>Vinos Blancos</h1> 
+                  <h2>Godelia Blanco ____ $ 600</h2>
+                  <h3>Bodegas Toro</h3>
+                  <h2>Martin Codax ____ $ 600</h2>
+                  <h3>Bodegas Baixas</h3>
+                  <h2>Enate Chardonnay 234 ____ $ 600</h2>
+                  <h3>Bodegas Bierzos</h3>
+                  <h2>Louro ____ $ 600</h2>
+                  <h3>Bodegas Valdehorras</h3>
+                  <h2>Granbazan Etiqueta Ambar ____ $ 600</h2>
+                  <h3>Bodegas Albariño</h3>
+                  <h2>Pluma Blanca (Ribera del Duero)  ____ $ 600</h2>
+                  <h3>Bodegas Ribera del Duero</h3>
+                  <h2>Gran Feudo Rosado ____ $ 600</h2>
+                  <h3>Bodegas Garnacha</h3>
+                  <h2>Palacio de Sada Rosado  ____ $ 600</h2>
+                  <h3>Bodegas Garnacha</h3>
+                </div>
+                  
               </div>
             </div>
-          </div> <!-- CIERRA ITEM 1 -->
 
-          <div class="accordion-item">
-            <!-- ABRE ITEM 2 -->
+          </div> <!-- CIERRA MENÚ -->
+
+          
+          <div class="accordion-item"> <!-- ABRE DESCRIPCION -->
+            
             <h2 class="accordion-header" id="flush-headingTwo">
               <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Menú Delivery
+                Descripción
               </button>
             </h2>
+
             <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
               data-bs-parent="#accordionFlushExample">
+
               <div class="accordion-body">
-                <div>
-                  <h1>Sandwiches</h1>
-                  <h2>
-                    Hot Pastrami<br>Canadiense <br>Veggie <br>Crudo <br>Tostado de lomito y queso azul <br>Pepinillos y mostaza <br>Avocado Toast
-                  </h2>
-                </div>
 
                 <div>
-                  <h1>Brusquetas</h1>
-                  <h2>
-                    Portobello<br>Crudo<br>Avocado<br>Veggie<br>Pera y rúcula<br>Lomito ahumado<br>Espinaca y nueces <br>Aceitunas y pimienta
-                  </h2>
+                  <h2>Cheff Adrián Vadja</h2>
+
+                  <h2>Horario</h2>
+                  <h3>Martes a domingos de 12 a 23 hs.</h3>
+
+                  <h2>Dirección</h2>
+                  <h3>Crisólogo Larralde 2291, Nuñez, CABA.</h3>
+
+                  <h2>Tipo de comida</h2>
+                  <h3>Vasca</h3>
+
+                  <h2>Características</h2>
+                  <ul>
+                    <li>Apto celíacos / Vegetarianos / Veganos / sin gluten.</li>
+                    <li>Reservas.</li>
+                    <li>Mesas al aire libre.</li>
+                    <li>Estacionamiento.</li>
+                    <li>Aire acondicionado.</li>
+                  </ul>
+
+                  <h2>Descripción</h2>
+                  <h3>Baldini es un restaurante que reúne todos los requisitos para convertirse en una referencia del barrio. Situado en la esquina de Crisólogo Larralde y Cabildo. Gastronomía cuidadosamente elaborada, buen ambiente y un servicio exquisito. 
+                  <br>
+                  Propuesta gastronómica de calidad basada en la cocina vasca con toques mediterráneos. Raciones de picoteo, ensaladas carnes o mariscos son los platos más destacados. El solomillo con txapella de foie, la ensaladilla negra con langostinos y mahonesa de tinta de sepia, las zamburiñas braseadas con emulsión de cítricos o los rollitos crujientes de txangurro y chipirones en su tinta, son algunas de las delicias que podréis degustar.
+                  <br>
+                  Una cocina que une el mejor producto de la tierra, junto con las recetas más creativas y actuales, hacen que Küche sea una de las opciones gastronómicas imprescindibles de Madrid.</h3>
+
+                  <h2>Medios de pago</h2>
+                  <div class="individual__div--mediosDePago">
+                    <div> <!-- EFECTIVO -->
+                      <img src="../images/icono-efectivo.png" alt="icono de pago en efectivo"> 
+                      <h5>Efectivo</h5>
+                    </div>
+
+                    <div> <!-- TARJETA CREDITO DEBITO -->
+                      <img src="../images/icono-tarjetacredito.png" alt="icono de pago con tarjeta de credito y débito"> 
+                      <h5>Visa Débito y Crédito</h5>
+                    </div>
+
+                    <div> <!-- MERCADO PAGO -->
+                      <img src="../images/icono-mercadopago.png" alt="icono de pago con mercado pago">
+                      <h5>Mercado Pago</h5>
+                    </div>
+                  </div>
+                
                 </div>
+
               </div>
             </div>
-          </div> <!-- CIERRA ITEM 2 -->
+          </div> <!-- CIERRA DESCRIPCION -->
 
-          <div class="accordion-item">
-            <!-- ABRE ITEM 3 -->
+          <div class="accordion-item"> <!-- ABRE OPINIONES -->
+          
             <h2 class="accordion-header" id="flush-headingThree">
               <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
                 data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Acerca de nosotros
+                Opiniones
               </button>
             </h2>
+
             <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
               data-bs-parent="#accordionFlushExample">
               <div class="accordion-body"> 
-                <h2>
-                  Baldini fue una idea del barista Jordi Vega. Un espacio para amigos asentado en la esquina de Quesada y Amenábar, donde preparamos las mejores cookies de nutella y los mas ricos cafés.<br>Encontranos en www.cafegorrion.com.ar<br>Y en nuestras redes sociales IG / FB gorrioncafe
-                </h2>
+
+                <div> <!-- OPINION 1 -->
+                  <h2>Excelente!</h2>
+                  <h3>Vinimos a pasar nuestro aniversario y cenamos y desayunamos en "el mercado" excelente atención de todo el personal, en especial Cristian. Muy buenas las opciones veganas!!!</h3>
+                  <h4>Maria Laura O.</h4>
+                  <h5>Noviembre 2021</h5>
+                  <img src="../images/resto-pizza-03.png" alt="foto de pizza recomendada">
+                  <img src="../images/resto-pizza-04.png" alt="foto de pizza recomendada">
+                </div>
+
+                <div> <!-- OPINION 2 -->
+                  <h2>Muy buena experiencia!</h2>
+                  <h3>Comida de muy buena calidad. Camarer@s atentos y un ambiente agradable. Muy recomendable</h3>
+                  <h4>Jorge M.</h4>
+                  <h5>Octubre 2021</h5>
+                  <img src="../images/resto-pizza-05.png" alt="foto de pizza recomendada">
+                  <img src="../images/resto-pizza-06.png" alt="foto de pizza recomendada">
+                </div>
+                
+                
               </div>
+
             </div>
-          </div> <!-- CIERRA ITEM 3 -->
+          </div> <!-- CIERRA OPINIONES -->
 
         </div> <!-- CIERRA ACORDEON -->
 
