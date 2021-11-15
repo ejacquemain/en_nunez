@@ -738,13 +738,28 @@ $playfair: 'Playfair Display', serif;
         .individual__div--mediosDePago{
             display: flex;
             flex-direction: row;
+            justify-items: center;
             align-items: center;
             div{
                 display: flex;
                 flex-direction: column;
+                justify-items: center;
                 align-items: center;
                 margin-top: 0px;
                 margin-bottom: 0px;
+                margin-right: 25px;
+                width: 100px;
+            }
+            img{
+                width: 35px;
+                margin: 0px;
+            }
+            img:hover{
+                transform: scale(1.1);
+            }
+            h5{
+                text-align: center;
+                margin-top: 5px;
             }
         }
     }
