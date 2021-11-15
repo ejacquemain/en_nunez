@@ -159,8 +159,9 @@
 }
 
 #index__principal .navbar-toggler-icon {
-  width: 1.5rem;
+  width: 2rem;
   height: 2rem;
+  color: white;
 }
 
 #index__principal .navbar-brand {
@@ -172,10 +173,18 @@
 
 #index__principal .navbar__mobile a {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
-  color: #01253d;
+  color: white;
   padding-left: 1rem;
+}
+
+#index__principal .navbar__mobile a:hover {
+  color: #f3a544;
+}
+
+#index__principal .dropdown-menu {
+  background-color: #212529;
 }
 
 #index__principal > div {
@@ -363,6 +372,7 @@
       flex-wrap: nowrap;
   overflow: auto;
   margin-bottom: 20px;
+  padding-left: 5vw;
   width: 100vw;
   height: auto;
 }
@@ -372,7 +382,7 @@
   height: auto;
   background-color: white;
   border-radius: 5px;
-  margin-left: 8vw;
+  margin-left: 30px;
   margin-bottom: 20px;
 }
 
@@ -476,6 +486,7 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: auto;
+  padding-left: 5vw;
   margin-bottom: 20px;
   width: 100vw;
   height: auto;
@@ -485,7 +496,7 @@
   width: 45vw;
   height: auto;
   background-color: white;
-  margin-left: 12vw;
+  margin-left: 40px;
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -585,7 +596,7 @@
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: footer;
-  background-image: radial-gradient(black, #01253d);
+  background-color: #212529;
 }
 
 #footer .footer__div--contenedor {
@@ -718,10 +729,18 @@
 
 #interior__header .navbar__mobile a {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.9rem;
-  color: #01253d;
+  color: white;
   padding-left: 1rem;
+}
+
+#interior__header .navbar__mobile a:hover {
+  color: #f3a544;
+}
+
+#interior__header .dropdown-menu {
+  background-color: #212529;
 }
 
 #interior__header .navbar__tabletDesktop ul {
@@ -1040,13 +1059,13 @@
 }
 
 #individual__principal div img {
-  width: 40px;
-  margin-right: 15px;
+  width: 35px;
+  margin-right: 25px;
 }
 
 #individual__principal h4 {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #01253d;
@@ -1070,6 +1089,62 @@
   font-style: italic;
   margin-top: 1.5rem;
   margin-bottom: 5px;
+}
+
+#individual__principal .individual__div--nuestroRestaurant {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: 100px;
+  width: 100vw;
+}
+
+#individual__principal .individual__div--nuestroRestaurant div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 20px;
+  justify-items: center;
+  margin-bottom: 40px;
+}
+
+#individual__principal .individual__div--nuestroRestaurant div img {
+  width: 150px;
+  border: 10px white solid;
+  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
+          box-shadow: 6px 6px 13px #ebe9e9;
+}
+
+#individual__principal .individual__div--nuestroRestaurant div div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#individual__principal .individual__div--nuestroRestaurant div div h3, #individual__principal .individual__div--nuestroRestaurant div div .accordion-body li, #individual__principal .accordion-body .individual__div--nuestroRestaurant div div li {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: #01253d;
+  margin-bottom: 15px;
+}
+
+#individual__principal .individual__div--nuestroRestaurant div div p {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 0.8rem;
 }
 
 #individual__principal .accordion-body {

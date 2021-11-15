@@ -7,7 +7,7 @@
 
 $naranja: #f3a544;
 $azul: #01253d;
-$cuadricula-border: 5px;
+$negro: #212529;
 $lato: 'Lato', sans-serif;
 $playfair: 'Playfair Display', serif;
 
@@ -105,8 +105,9 @@ $playfair: 'Playfair Display', serif;
         }
     }
     .navbar-toggler-icon{
-        width: 1.5rem;
+        width: 2rem;
         height: 2rem;
+        color: white;
     }
     .navbar-brand{
         width: 5rem;
@@ -115,9 +116,15 @@ $playfair: 'Playfair Display', serif;
         padding-top: 1rem;
     }
     .navbar__mobile a{
-        @include font($lato, 600, 0.9rem);
-        color: $azul;
+        @include font($lato, 500, 0.9rem);
+        color: white;
         padding-left: 1rem;
+    }
+    .navbar__mobile a:hover{
+        color: $naranja;
+    }
+    .dropdown-menu{
+        background-color: $negro;
     }
     >div {
         display: flex;
@@ -230,6 +237,7 @@ $playfair: 'Playfair Display', serif;
         flex-wrap: nowrap;
         overflow: auto;
         margin-bottom: 20px;
+        padding-left: 5vw;
         width: 100vw;
         height: auto;
         div{
@@ -237,7 +245,7 @@ $playfair: 'Playfair Display', serif;
             height: auto;
             background-color: white;
             border-radius: 5px;
-            margin-left: 8vw;
+            margin-left: 30px;
             margin-bottom: 20px;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
@@ -300,6 +308,7 @@ $playfair: 'Playfair Display', serif;
         flex-direction: row;
         flex-wrap: nowrap;
         overflow: auto;
+        padding-left: 5vw;
         margin-bottom: 20px;
         width: 100vw;
         height: auto;
@@ -307,7 +316,7 @@ $playfair: 'Playfair Display', serif;
             width: 45vw;
             height: auto;
             background-color: white;
-            margin-left: 12vw;
+            margin-left: 40px;
             margin-bottom: 20px;
             border-radius: 5px;
             @media (min-width: 768px) {/* TABLET */
@@ -378,7 +387,7 @@ $playfair: 'Playfair Display', serif;
 /* FOOTER DE TODO EL SITIO ------------------------------------ */
 #footer{ 
     grid-area: footer;
-    background-image: radial-gradient( rgb(0, 0, 0), rgb(1, 37, 61));
+    background-color: $negro;
     .footer__div--contenedor{ /* MOBILE */
         width: 100vw;
         padding-bottom: 5rem;
@@ -466,9 +475,15 @@ $playfair: 'Playfair Display', serif;
         padding-top: 1rem;
     }
     .navbar__mobile a{
-        @include font($lato, 600, 0.9rem);
-        color: $azul;
+        @include font($lato, 500, 0.9rem);
+        color: white;
         padding-left: 1rem;
+    }
+    .navbar__mobile a:hover{
+        color: $naranja;
+    }
+    .dropdown-menu{
+        background-color: #212529;
     }
     .navbar__tabletDesktop ul{
         display: none;
@@ -658,12 +673,12 @@ $playfair: 'Playfair Display', serif;
     div{
         margin-top: 20px;
         img{
-            width: 40px;
-            margin-right: 15px
+            width: 35px;
+            margin-right: 25px
         }
     }
     h4{
-        @include font($lato, 300, 1rem);
+        @include font($lato, 400, 1rem);
         line-height: 1.5rem;
         color: $azul;
         margin-top: 20px;
@@ -675,12 +690,44 @@ $playfair: 'Playfair Display', serif;
         color: $naranja;
         margin-bottom: 5px;
     }
+
     h2{
         @include font($playfair, 600, 1.8rem);
         text-transform: capitalize;
         font-style: italic;
         margin-top: 1.5rem;
         margin-bottom: 5px;
+    }
+    .individual__div--nuestroRestaurant{
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+        width: 100vw;
+        div{
+            display: flex;
+            flex-direction: row;
+            margin-top: 20px;
+            justify-items: center;
+            margin-bottom: 40px;
+            img{
+                width: 150px;
+                border: 10px white solid;
+                box-shadow: 6px 6px 13px rgb(235, 233, 233); 
+                
+            }
+            div{
+                display: flex;
+                flex-direction: column;
+                h3{
+                    @include font ($lato, 500, 0.9rem);
+                    color: $azul;
+                    margin-bottom: 15px;
+                }
+                p{
+                    @include font ($lato, 300, 0.8rem);
+                }
+            }
+        }
     }
     .accordion-body {
         display: flex;
@@ -773,6 +820,7 @@ $playfair: 'Playfair Display', serif;
     .accordion-button:current {
         color: $naranja;
     }
+    
     .rrss{ /* ICONOS DE REDES SOCIALES */
         margin-top: 50px;
         display: flex;
