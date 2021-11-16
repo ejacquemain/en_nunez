@@ -1225,6 +1225,10 @@
   margin-top: 5px;
 }
 
+#individual__principal .accordion-body .individual__accordion--opiniones {
+  border-bottom: 1px solid #dbdada;
+}
+
 #individual__principal .accordion-body .individual__accordion--opiniones h4 {
   /* TEXTO GRANDE */
   font-family: "Lato", sans-serif;
@@ -1232,6 +1236,7 @@
   font-size: 1.1rem;
   line-height: 1.5rem;
   color: #01253d;
+  margin-top: 0px;
 }
 
 #individual__principal .accordion-body .individual__accordion--opiniones h5, #individual__principal .accordion-body .individual__accordion--opiniones li {
@@ -1250,6 +1255,16 @@
   font-size: 0.6rem;
   color: #f3a544;
   text-transform: uppercase;
+}
+
+#individual__principal .accordion-body .individual__accordion--opiniones img {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+#individual__principal .accordion-body .individual__accordion--opiniones img:hover {
+  -webkit-transform: none;
+          transform: none;
 }
 
 #individual__principal .accordion-button {

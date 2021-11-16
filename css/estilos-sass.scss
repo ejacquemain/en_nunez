@@ -776,10 +776,12 @@ $playfair: 'Playfair Display', serif;
             }
         }
         .individual__accordion--opiniones{
+            border-bottom: 1px solid rgb(219, 218, 218);
             h4{ /* TEXTO GRANDE */
                 @include font($lato, 400, 1.1rem);
                 line-height: 1.5rem;
                 color: $azul;
+                margin-top: 0px;
             }
             h5{/* TEXTO CHICO */
                 @include font($playfair, 400, 1rem);
@@ -791,8 +793,15 @@ $playfair: 'Playfair Display', serif;
                 color: $naranja;
                 text-transform: uppercase;
             }
+            img{
+                width: 100px;
+                margin-bottom: 30px;
+            }
+            img:hover{
+                transform: none;
+            }
         }
-    }
+    }  
     .accordion-button {
         @include font($playfair, 600, 1rem);
         color: $azul;
@@ -847,9 +856,6 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#individual__section--conoceNuestroCheff{
-
-}
 #rrss{ /* ICONOS DE REDES SOCIALES */
     grid-area: rrss;
     display: flex;
@@ -1004,7 +1010,7 @@ $playfair: 'Playfair Display', serif;
 #interior__promos{
     grid-area: promos;
     justify-self: center;
-    .promo1 {
+    .promo1{
         display: flex;
         flex-direction: column;
         background-image: url(../images/promos-1.jpg);
@@ -1021,7 +1027,7 @@ $playfair: 'Playfair Display', serif;
             color: $naranja;
             text-transform: uppercase
         }
-        h1 {
+        h1{
             @include font($playfair, 400, 2rem);
             color: white;
             margin-top: 10px;
@@ -1082,7 +1088,7 @@ $playfair: 'Playfair Display', serif;
         img{
             width: 250px;
             height: auto;
-            margin-bottom: 10px
+            margin-bottom: 10px;
         }
         a{
             @include font($playfair, 700, 1.2rem);
@@ -1094,6 +1100,3 @@ $playfair: 'Playfair Display', serif;
         }
     }
 }
-
-
-  
