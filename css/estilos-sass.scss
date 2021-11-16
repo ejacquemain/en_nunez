@@ -618,9 +618,11 @@ $playfair: 'Playfair Display', serif;
     grid-template-areas: 
     "header"
     "principal"
+    "galeria"
+    "rrss"
     "footer";
     @media (min-width: 768px) { /* TABLET */
-        grid-template-rows: 150px auto auto;
+        grid-template-rows: 150px auto auto auto auto;
     }
 }
 
@@ -630,45 +632,69 @@ $playfair: 'Playfair Display', serif;
 
 #individual__principal{ /* MOBILE */
     grid-area: principal;
-    margin-bottom: 100px;
+    margin-bottom: 65px;
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
-    div{
-        width: 85vw;
-        @media (min-width: 768px) { /* TABLET */
-            width: 60vw;
+    div{ 
+        width: 85vw; /* MOBILE */
+        @media (min-width: 768px) { 
+            width: 60vw; /* TABLET */
         }
-        @media (min-width: 1024px) { /* DESKTOP */
-            width: 50vw;
+        @media (min-width: 1024px) { 
+            width: 50vw; /* DESKTOP */
         }
     }
-    a{
-        text-decoration: none;
-    }
-    h5{
-        @include font($lato, 600, 0.6rem);
-        color: $naranja;
-        text-transform: uppercase;
-    }
-    h1{
+    h1{ /* TITULO GRANDE */
         @include font($playfair, 700, 2.5rem);
         color: $azul;
         font-style: italic;
         animation-name: colorFont;
-        animation-duration: 3s;
+        animation-duration: 4s;
+        @keyframes colorFont{
+            0%{
+                color: rgb(1, 37, 61);
+            }
+            50%{
+                color: rgb(243, 165, 68);
+            }
+            10%{
+                color: rgb(1, 37, 61);
+            }
+        }
     }
-    @keyframes colorFont{
-        0%{
-            color: rgb(1, 37, 61);
-        }
-        50%{
-            color: rgb(243, 165, 68);
-        }
-        10%{
-            color: rgb(1, 37, 61);
-        }
+    h2{/* TITULO CHICO */
+        @include font($playfair, 600, 1.4rem);
+        text-transform: capitalize;
+        font-style: italic;
+        margin-top: 1.5rem;
+        margin-bottom: 5px;
+    }
+    h3{/* DESTACADO NARANJA */
+        @include font($lato, 700, 1rem);
+        text-transform: uppercase;
+        color: $naranja;
+        margin-bottom: 5px;
+    }
+    h4{ /* TEXTO GRANDE */
+        @include font($lato, 400, 1.1rem);
+        line-height: 1.5rem;
+        color: $azul;
+        margin-top: 20px;
+    }
+    h5{/* TEXTO CHICO */
+        @include font($lato, 300, 0.9rem);
+        line-height: 1.5rem;
+        color: $azul;
+    }
+    h6{/* PIE DE IMAGEN */
+        @include font($lato, 600, 0.6rem);
+        color: $naranja;
+        text-transform: uppercase;
+    }
+    a{
+        text-decoration: none;
     }
     div{
         margin-top: 20px;
@@ -677,72 +703,40 @@ $playfair: 'Playfair Display', serif;
             margin-right: 25px
         }
     }
-    h4{
-        @include font($lato, 400, 1rem);
-        line-height: 1.5rem;
-        color: $azul;
-        margin-top: 20px;
-
-    }
-    h3{
-        @include font($lato, 700, 1rem);
-        text-transform: uppercase;
-        color: $naranja;
-        margin-bottom: 5px;
-    }
-
-    h2{
-        @include font($playfair, 600, 1.8rem);
-        text-transform: capitalize;
-        font-style: italic;
-        margin-top: 1.5rem;
-        margin-bottom: 5px;
-    }
     .accordion-body {
         display: flex;
         flex-direction: column;
         column-gap: 5px;
         div{
             margin-bottom: 10px;
-        }
-        h1{
-            @include font($playfair, 900, 1.2rem);
-            color: $azul;
-            font-style: italic;
-            margin-bottom: 25px;
-        }
-        h2{
-            @include font($lato, 400, 1.1rem);
-            font-style: normal;
-            text-transform: capitalize;
-            margin-top: 20px;
-            margin-bottom: 0px;
-        }
-        h3{
-            @include font($playfair, 500, 1rem);
-            color: $azul;
-            text-transform: none;
-            margin-top: 5px;
+            h3{ /* TITULO CHICO */
+                @include font($playfair, 900, 1.2rem);
+                color: $azul;
+                text-transform: capitalize;
+                font-style: italic;
+                margin-bottom: 25px;
+            }
+            h4{ /* TEXTO FUERTE */
+                @include font($lato, 400, 1rem);
+                font-style: normal;
+                text-transform: capitalize;
+                margin-top: 20px;
+                margin-bottom: 0px;
+            }
+            h5{ /* TEXTO DEBIL */
+                @include font($playfair, 400, 1rem);
+                color: $azul;
+                text-transform: none;
+                padding-right: 20px;
+            }
         }
         ul{
             list-style-type: circle;
         }
         li{
-            @extend h3;
+            @extend h5;
             margin-top: 0px;
             margin-bottom: 0px;
-        }
-        h4{
-            @include font($lato, 400, 0.9rem);
-            color: $azul;
-            text-transform: none;
-            margin-top: 0px;
-        }
-        h5{
-            @include font($lato, 600, 0.6rem);
-            color: $naranja;
-            text-transform: uppercase;
-            margin-top: 0px;
         }
         img{
             width: 100px;
@@ -751,7 +745,7 @@ $playfair: 'Playfair Display', serif;
         img:hover{
             transform: scale(1.6);
         }
-        .individual__div--mediosDePago{
+        .individual__accordion--mediosDePago{
             display: flex;
             flex-direction: row;
             justify-items: center;
@@ -773,9 +767,29 @@ $playfair: 'Playfair Display', serif;
             img:hover{ 
                 transform: scale(1.1);
             }
-            h5{
+            h6{
+                @include font($lato, 600, 0.6rem);
+                color: $naranja;
+                text-transform: uppercase;
                 text-align: center;
                 margin-top: 5px;
+            }
+        }
+        .individual__accordion--opiniones{
+            h4{ /* TEXTO GRANDE */
+                @include font($lato, 400, 1.1rem);
+                line-height: 1.5rem;
+                color: $azul;
+            }
+            h5{/* TEXTO CHICO */
+                @include font($playfair, 400, 1rem);
+                line-height: 1.5rem;
+                color: $azul;
+            }
+            h6{/* PIE DE IMAGEN */
+                @include font($lato, 600, 0.6rem);
+                color: $naranja;
+                text-transform: uppercase;
             }
         }
     }
@@ -789,32 +803,80 @@ $playfair: 'Playfair Display', serif;
     .accordion-button:current {
         color: $naranja;
     }
-    
-    .rrss{ /* ICONOS DE REDES SOCIALES */
-        margin-top: 50px;
+}
+
+#individual__section--galeria{ /* SECCION GALERIA */
+    grid-area: galeria;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: $negro;
+        width: 100vw;
+        height: auto;
+        margin-bottom: 65px;
+    }
+    h2{
+        @include font($playfair, 600, 1.4rem);
+        color: white;
+        font-style: italic;
+        text-transform: capitalize;
+        text-align: center;
+        padding-top: 40px;
+        margin-bottom: 0px;
+    }
+    div div{
         display: flex;
         flex-direction: row;
-        div{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-inline: 5px;
-        }
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 85vw;
+        row-gap: 10px;
+        column-gap: 10px;
+        margin-top: 40px;
         img{
-            width: 25px;
-            height: 25px;
+            width: 25vw;
+            height: auto;
         }
         img:hover{
             transform: scale(1.3);
-        }
-        h6{
-            @include font($lato, 400, 0.65rem);
-            color: $naranja;
-            text-align: center;
-            margin-top: 10px;
+            @media (min-width: 768px){
+                transform: scale(1.2);
+            }
         }
     }
 }
+
+#individual__section--conoceNuestroCheff{
+
+}
+#rrss{ /* ICONOS DE REDES SOCIALES */
+    grid-area: rrss;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 60px;
+    div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 20px;
+    }
+    img{
+        width: 25px;
+        height: 25px;
+    }
+    img:hover{
+        transform: scale(1.3);
+    }
+    h6{
+        @include font($lato, 400, 0.65rem);
+        color: $naranja;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
 
 
 
