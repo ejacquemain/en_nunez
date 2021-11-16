@@ -174,29 +174,44 @@
           Caesar classica (clásica Caesar ́s Salad con pollo)
         </h5>
 
-      </div> <!-- CIERRA CONTENEDOR DE SECCION PRINCIPAL -->
+      </div> 
 
 
-      <div> <!-- ABRE CONTENEDOR DE ACORDEON -->
+      <div class="individual__div--nuestroRestaurant">
+
+       <div>
+        <img src="../images/coffee-07.png" alt="foto de nuestro restaurant">
+          <div>
+            <h4>Nuestro restaurant</h4>
+            <p>Ambiente moderno y distendido. Ideal para reunirse con amigos y familia.</p>
+          </div>
+        </div>
+
+        <div>
+          <img src="../images/resto-veggie-04.png" alt="foto de nuestro restaurant">
+            <div>
+              <h4>Recetas exclusivas</h4>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi atque quaerat magni totam fugiat illum commodi ipsam laborum.</p>
+            </div>
+          </div>
         
-        <div class="accordion accordion-flush" id="accordionFlushExample"> <!-- ABRE ACORDEON -->
-          
-          <div class="accordion-item"> <!-- ABRE MENÚ -->
-          
+        
+      </div>
+
+
+      <div> <!-- ABRE ACORDEON -->
+        <h2>Nuestro menú</h2>
+        
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+          <div class="accordion-item">
             <h2 class="accordion-header" id="flush-headingOne">
-              <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-                Menú
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                Entradas
               </button>
             </h2>
-
-            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
-              data-bs-parent="#accordionFlushExample">
-
+            <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
               <div class="accordion-body">
-
                 <div>
-                  <h3>Entradas</h3> 
                   <h4>Ensalada de roastbeef ____ $ 600</h4>
                   <h5>Lechuguitas tiernas, Roastbeef, Lascas de parmesano, Yogurt y Mostaza.</h5>
                   <h4>Ensalada Marengo ____ $ 825</h4>
@@ -210,7 +225,17 @@
                   <h4>Tallarines de Sepia Braseada ____ $ 875</h4>
                   <h5>Sepia salteada con nyoquis y emulsión de ajos negros.</h5>
                 </div>
-
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                Platos principales
+              </button>
+            </h2>
+            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
                 <div>
                   <h3>Pescados</h3> 
                   <h4>Merluza en Tempura ____ $ 600</h4>
@@ -234,32 +259,17 @@
                   <h4>Entrecote marengo ____ $ 950</h4>
                   <h5>Entrecot de ternera con patatas fritas caseras y sal Maldon.</h5>
                 </div>
-                  
-                <div>
-                  <h3>Postres</h3> 
-                  <h4>Mini Gin & Mojitos ____ $ 600</h4>
-                  <h5>Medio gin & tonic aromatizado.</h5>
-                  <h4>Sorbete de Maracuyá ____ $ 825</h4>
-                  <h5>Refrescante sorbete natural de fruta de la pasión.</h5>
-                  <h4>Coulán ____ $ 950</h4>
-                  <h5>Pastel de chocolate caliente con helado de leche merengada.</h5>
-                  <h4>Crumble de Manzanas ____ $ 950</h4>
-                  <h5>Galleta artesana rota con manzana golden asada.</h5>
-                  <h4>New York Cheesecake ____ $ 950</h4>
-                  <h5>Tarta de queso natural, galleta rota, mantequilla derretida, vainilla y ralladura de limón.</h5>
-                  <h4>Tejas y Trufas ____ $ 950</h4>
-                  <h5>Trufas caseras con sal y aceite de oliva con nuestras tejas caseras.</h5>
-                  <h4>Tartas artesanas ____ $ 950</h4>
-                  <h5>A elegir entre Red velvet o Carrot Cake con helado de vainilla.</h5>
-                </div>
-
-                <div>
-                  <h3>Bebidas</h3> 
-                  <h4>Café ____ $ 600</h4>
-                  <h4>Agua mineral 1L ____ $ 600</h4>
-                  <h4>Coca-Cola, Sprite, Fanta  ____ $ 600</h4>
-                </div>
-
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="flush-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                Bebidas
+              </button>
+            </h2>
+            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+              <div class="accordion-body">
                 <div>
                   <h3>Vinos Tintos</h3> 
                   <h4>Almirez ____ $ 600</h4>
@@ -299,128 +309,19 @@
                   <h4>Palacio de Sada Rosado  ____ $ 600</h4>
                   <h5>Bodegas Garnacha</h5>
                 </div>
-                  
               </div>
             </div>
-
-          </div> <!-- CIERRA MENÚ -->
-
-          
-          <div class="accordion-item"> <!-- ABRE DESCRIPCION -->
-            
-            <h2 class="accordion-header" id="flush-headingTwo">
-              <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-                Descripción
-              </button>
-            </h2>
-
-            <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
-              data-bs-parent="#accordionFlushExample">
-
-              <div class="accordion-body">
-
-                <div>
-                  <h4>Cheff Adrián Vadja</h4>
-
-                  <h4>Horario</h4>
-                  <h5>Martes a domingos de 12 a 23 hs.</h5>
-
-                  <h4>Dirección</h4>
-                  <h5>Crisólogo Larralde 2291, Nuñez, CABA.</h5>
-
-                  <h4>Tipo de comida</h4>
-                  <h5>Vasca</h5>
-
-                  <h4>Características</h4>
-                  <ul>
-                    <li>Apto celíacos / Vegetarianos / Veganos / sin gluten.</li>
-                    <li>Reservas.</li>
-                    <li>Mesas al aire libre.</li>
-                    <li>Estacionamiento.</li>
-                    <li>Aire acondicionado.</li>
-                  </ul>
-
-                  <h4>Descripción</h4>
-                  <h5>Baldini es un restaurante que reúne todos los requisitos para convertirse en una referencia del barrio. Situado en la esquina de Crisólogo Larralde y Cabildo. Gastronomía cuidadosamente elaborada, buen ambiente y un servicio exquisito. 
-                  <br>
-                  Propuesta gastronómica de calidad basada en la cocina vasca con toques mediterráneos. Raciones de picoteo, ensaladas carnes o mariscos son los platos más destacados. El solomillo con txapella de foie, la ensaladilla negra con langostinos y mahonesa de tinta de sepia, las zamburiñas braseadas con emulsión de cítricos o los rollitos crujientes de txangurro y chipirones en su tinta, son algunas de las delicias que podréis degustar.
-                  <br>
-                  Una cocina que une el mejor producto de la tierra, junto con las recetas más creativas y actuales, hacen que Küche sea una de las opciones gastronómicas imprescindibles de Madrid.</h5>
-
-
-                  <h4>Medios de pago</h4> <!-- ABRE MEDIOS DE PAGO -->
-                  <div class="individual__accordion--mediosDePago"> 
-                    <div> <!-- EFECTIVO -->
-                      <img src="../images/icono-efectivo.png" alt="icono de pago en efectivo"> 
-                      <h6>Efectivo</h6>
-                    </div>
-
-                    <div> <!-- TARJETA CREDITO DEBITO -->
-                      <img src="../images/icono-tarjetacredito.png" alt="icono de pago con tarjeta de credito y débito"> 
-                      <h6>Débito y Crédito</h6>
-                    </div>
-
-                    <div> <!-- MERCADO PAGO -->
-                      <img src="../images/icono-mercadopago.png" alt="icono de pago con mercado pago">
-                      <h6>Mercado Pago</h6>
-                    </div>
-
-                  </div> <!-- CIERRA MEDIOS DE PAGO -->
-                
-                </div> 
-
-              </div>
-            </div>
-          </div> <!-- CIERRA DESCRIPCION -->
-
-          <div class="accordion-item"> <!-- ABRE OPINIONES -->
-          
-            <h2 class="accordion-header" id="flush-headingThree">
-              <button class="accordion-button collapsed bg-body" type="button" data-bs-toggle="collapse"
-                data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-                Opiniones
-              </button>
-            </h2>
-
-            <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
-              data-bs-parent="#accordionFlushExample">
-              <div class="accordion-body"> 
-
-                <div class="individual__accordion--opiniones"> <!-- OPINION 1 -->
-                  <h4>Muy buena experiencia!</h4>
-                  <h5>Comida de muy buena calidad. Camarer@s atentos y un ambiente agradable. Muy recomendable</h5>
-                  <h6>Ana M. / octubre 2021</h6>
-                  <img src="../images/resto-pizza-05.png" alt="foto de comida tomada por un cliente">
-                  <img src="../images/resto-parrilla-03.png" alt="foto de comida tomada por un cliente">
-                </div>
-
-                <div class="individual__accordion--opiniones"> <!-- OPINION 2 -->
-                  <h4>Nos encantó. Volveremos!</h4>
-                  <h5>Tiene muchas opciones vegetarianas y el pelotero está cerca de las mesas, por lo que pudimos cenar tranquilos mientras mirábamos a nuestros hijos.</h5>
-                  <h6>Manuel J. / octubre 2021</h6>
-                  <img src="../images/resto-veggie-01.png" alt="foto de comida tomada por un cliente">
-                  <img src="../images/resto-veggie-05.png" alt="foto de comida tomada por un cliente">
-                </div>
-
-
-                
-              </div>
-
-            </div>
-          </div> <!-- CIERRA OPINIONES -->
-
-        </div> <!-- CIERRA ACORDEON -->
-
-      </div> 
+          </div>
+        </div>
+        
+      </div>  <!-- CIERRA ACORDEON -->
 
     </main> <!-- CIERRA SECCION PRINCIPAL -->
 
 
 
 
-
-    <section id="individual__section--galeria"><!-- ABRE GALERIA -->
+    <section id="individual__section--galeria"> <!-- ABRE GALERIA -->
 
       <div>
         <h2>Galería</h2>
@@ -440,10 +341,113 @@
     </section> <!-- CIERRA GALERIA -->
 
 
-    <section id="individual__section--conoceNuestroCheff">
 
-    </section>
 
+    <section id="individual__section--caracteristicas"> <!-- ABRE CARACTERISTICAS -->
+      <div>
+        <h2>Sobre nosotros</h2>
+        <h5>Baldini es un restaurante que reúne todos los requisitos para convertirse en una referencia del barrio. Situado en la esquina de Crisólogo Larralde y Cabildo. Gastronomía cuidadosamente elaborada, buen ambiente y un servicio exquisito. 
+          <br>
+          Propuesta gastronómica de calidad basada en la cocina vasca con toques mediterráneos. Raciones de picoteo, ensaladas carnes o mariscos son los platos más destacados. El solomillo con txapella de foie, la ensaladilla negra con langostinos y mahonesa de tinta de sepia, las zamburiñas braseadas con emulsión de cítricos o los rollitos crujientes de txangurro y chipirones en su tinta, son algunas de las delicias que podréis degustar.
+          <br>
+          Una cocina que une el mejor producto de la tierra, junto con las recetas más creativas y actuales, hacen que Küche sea una de las opciones gastronómicas imprescindibles de Madrid.
+        </h5>
+
+        <h4>Características</h4>
+        <ul>
+          <li>Apto celíacos, vegetarianos y sin gluten.</li>
+          <li>Reservas.</li>
+          <li>Mesas al aire libre.</li>
+          <li>Estacionamiento.</li>
+          <li>Aire acondicionado.</li>
+        </ul>
+
+        <h4>Horario</h4>
+        <h5 class="centrado">Martes a domingos de 12 a 23 hs.</h5>
+
+        <h4>Medios de pago</h4> 
+        <div class="individual__div--mediosDePago"> 
+          <div> <!-- EFECTIVO -->
+            <img src="../images/icono-efectivo.png" alt="icono de pago en efectivo"> 
+            <h6>Efectivo</h6>
+          </div>
+
+          <div> <!-- TARJETA CREDITO DEBITO -->
+            <img src="../images/icono-tarjetacredito.png" alt="icono de pago con tarjeta de credito y débito"> 
+            <h6>Débito y Crédito</h6>
+          </div>
+
+          <div> <!-- MERCADO PAGO -->
+            <img src="../images/icono-mercadopago.png" alt="icono de pago con mercado pago">
+            <h6>Mercado Pago</h6>
+          </div>
+
+        </div> 
+      
+      </div> 
+
+    </section> <!-- CIERRA CARACTERISTICAS --> 
+
+
+
+    <section id="individual__section--conoceNuestroCheff"> <!-- ABRE CONOCE A NUESTROS CHEFFS L. 836 -->
+
+      <div> <!-- CONTENEDOR GRAL -->
+
+        <h2>Conocé a nuestros Cheffs</h2>
+        <h4>Los profesionales detrás de cada plato</h4>
+
+        <div> <!-- CONTENEDOR ROW -->
+        
+          <div><!-- CHEFF 1 -->
+            <img src="../images/cheff-hombre-1.jpg" alt="cheff pedro estevez">
+            <h5>Pedro Estevez</h5>
+            <h6>Sous Cheff</h6>
+          </div>
+
+          <div><!-- CHEFF 2 -->
+            <img src="../images/cheff-mujer-2.jpg" alt="cheff cinthia diaz">
+            <h5>Cinthia Díaz</h5>
+            <h6>Cheff</h6>
+          </div>
+
+          <div><!-- CHEFF 3 -->
+            <img src="../images/cheff-hombre-2.jpg" alt="cheff antonio suarez">
+            <h5>Antonio Suarez</h5>
+            <h6>Sous Cheff</h6>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+    </section> <!-- CIERRA CONOCE A NUESTROS CHEFFS -->
+
+
+
+    <section id="individual__section--opiniones"> <!-- ABRE OPINIONES -->
+
+      <h2>Opiniones</h2>
+
+      <div> <!-- OPINION 1 -->
+        <h4>Muy buena experiencia!</h4>
+        <h5>Comida de muy buena calidad. Camarer@s atentos y un ambiente agradable. Muy recomendable</h5>
+        <h6>Ana M. / octubre 2021</h6>
+        <img src="../images/resto-pizza-05.png" alt="foto de comida tomada por un cliente">
+        <img src="../images/resto-parrilla-03.png" alt="foto de comida tomada por un cliente">
+      </div>
+
+      <div> <!-- OPINION 2 -->
+        <h4>Nos encantó. Volveremos!</h4>
+        <h5>Tiene muchas opciones vegetarianas y el pelotero está cerca de las mesas, por lo que pudimos cenar tranquilos mientras mirábamos a nuestros hijos.</h5>
+        <h6>Manuel J. / octubre 2021</h6>
+        <img src="../images/resto-veggie-01.png" alt="foto de comida tomada por un cliente">
+        <img src="../images/resto-veggie-05.png" alt="foto de comida tomada por un cliente">
+      </div>
+
+    </section> <!-- CIERRA OPINIONES -->
 
 
 
@@ -467,8 +471,6 @@
       </div>
       
     </div> <!-- CIERRA RRSS --> 
-
-
 
 
 
