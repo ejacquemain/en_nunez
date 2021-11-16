@@ -698,37 +698,6 @@ $playfair: 'Playfair Display', serif;
         margin-top: 1.5rem;
         margin-bottom: 5px;
     }
-    .individual__div--nuestroRestaurant{
-        display: flex;
-        flex-direction: column;
-        margin-top: 100px;
-        width: 100vw;
-        div{
-            display: flex;
-            flex-direction: row;
-            margin-top: 20px;
-            justify-items: center;
-            margin-bottom: 40px;
-            img{
-                width: 150px;
-                border: 10px white solid;
-                box-shadow: 6px 6px 13px rgb(235, 233, 233); 
-                
-            }
-            div{
-                display: flex;
-                flex-direction: column;
-                h3{
-                    @include font ($lato, 500, 0.9rem);
-                    color: $azul;
-                    margin-bottom: 15px;
-                }
-                p{
-                    @include font ($lato, 300, 0.8rem);
-                }
-            }
-        }
-    }
     .accordion-body {
         display: flex;
         flex-direction: column;
@@ -801,7 +770,7 @@ $playfair: 'Playfair Display', serif;
                 width: 35px;
                 margin: 0px;
             }
-            img:hover{
+            img:hover{ 
                 transform: scale(1.1);
             }
             h5{
