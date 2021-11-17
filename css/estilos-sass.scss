@@ -8,6 +8,7 @@
 $naranja: #f3a544;
 $azul: #01253d;
 $negro: #212529;
+$gris-claro: #d4d2d2;
 $lato: 'Lato', sans-serif;
 $playfair: 'Playfair Display', serif;
 
@@ -668,14 +669,14 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 600, 1.4rem);
         text-transform: capitalize;
         font-style: italic;
-        margin-top: 1.5rem;
+        margin-top: 2rem;
         margin-bottom: 5px;
     }
     h3{/* DESTACADO NARANJA */
-        @include font($lato, 700, 1rem);
+        @include font($lato, 800, 1rem);
         text-transform: uppercase;
         color: $naranja;
-        margin-bottom: 5px;
+        margin-top: 20px;
     }
     h4{ /* TEXTO GRANDE */
         @include font($lato, 400, 1.1rem);
@@ -705,7 +706,7 @@ $playfair: 'Playfair Display', serif;
     }
     .individual__div--nuestroRestaurant{ /* NUESTRO RESTAURANT */
         margin-bottom: 80px;
-        margin-top: 50px;
+        margin-top: 30px;
         div{
             margin-top: 50px;
             display: flex;
@@ -715,23 +716,20 @@ $playfair: 'Playfair Display', serif;
                 height: 180px;
                 border: 9px solid white;
                 box-shadow: 6px 6px 13px rgb(235, 233, 233); 
-                margin-right: 40px;
+                margin-right: 30px;
             }
             div{
                 display: flex;
                 flex-direction: column;
                 margin-top: 0px;
-                border-left: $negro 1px solid;
+                border-left: $gris-claro 1px solid;
                 padding-left: 30px;
             }
             h4{
                 @include font($lato, 400, 1.1rem);
                 color: $azul;
                 text-align: left;
-                margin-left: 20px;
-                padding-right: 20px;
                 margin-top: 0px;
-                
             }
             p{
                 @include font($lato, 300, 0.9rem);
@@ -739,8 +737,16 @@ $playfair: 'Playfair Display', serif;
                 color: $azul;
                 margin-top: 10px;
                 text-align: left;
-                margin-left: 20px;
-                padding-right: 20px;
+            }
+            .individual__div--alineaDerecha{
+                border-left: none;
+                border-right: $gris-claro 1px solid;
+                padding-left: 0px;
+                padding-right: 30px;
+                margin-right: 20px;
+                h4, p{
+                    text-align: right;
+                }
             }
         } 
     } 
@@ -833,15 +839,122 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
+#individual__section--caracteristicas{ /* SECCION CARACTERISTICAS */
+    grid-area: caracteristicas;
+    background-image: url(../images/individual-pizza-background-01.jpg);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: 100vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    div{ 
+        width: 85vw; /* MOBILE */
+        @media (min-width: 768px) { 
+            width: 60vw; /* TABLET */
+        }
+        @media (min-width: 1024px) { 
+            width: 50vw; /* DESKTOP */
+        }
+        h2{/* TITULO CHICO */
+            @include font($playfair, 500, 1.4rem);
+            text-transform: capitalize;
+            font-style: italic;
+            margin-top: 0px;
+            margin-bottom: 5px;
+            text-align: center;
+        }
+        ul{
+            list-style: none;
+            margin-left: 60px;
+            margin-right: 60px;
+            border-left: 1px solid $gris-claro;
+            border-right: 1px solid $gris-claro;
+        }
+        li{
+            @include font($lato, 400, 1rem);
+            color: $negro;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        img{
+            width: 100px;
+            margin-right: 30px;
+        }
+        img:hover{
+            transform: scale(1.6);
+        }
+        h4{ /* titulo 3 */
+            @include font($lato, 600, 1rem);
+            line-height: 1.5rem;
+            color: $negro;
+            margin-top: 40px;
+            margin-bottom: 0px;
+            text-align: center;
+        }
+        p{
+            @include font($lato, 400, 0.9rem);
+            line-height: 1.5rem;
+            color: $negro;
+            margin-top: 0px;
+            text-align: justify;
+        }
+        h5{/* TEXTO CHICO */
+            @include font($lato, 400, 0.9rem);
+            line-height: 1.5rem;
+            color: $negro;
+            margin-top: 0px;
+            text-align: justify;
+        }
+        .centrado{
+            @include font($lato, 400, 0.9rem);
+            color: $negro;
+            margin-top: 0px;
+            text-align: center;
+        }
+        .individual__div--mediosDePago{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-content: center;
+            div{
+                display: flex;
+                flex-direction: column;
+                justify-items: center;
+                align-items: center;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                width: 100px;
+            }
+            img{
+                width: 35px;
+                margin: 0px;
+            }
+            img:hover{ 
+                transform: scale(1.1);
+            }
+            h6{
+                @include font($lato, 900, 0.7rem);
+                color: $negro;
+                text-transform: uppercase;
+                text-align: center;
+                margin-top: 5px;
+                margin-bottom: 100px;
+            }
+        }
+    }
+}
+
 #individual__section--conoceNuestroCheff{ /* SECCION CONOCE A NUESTRO CHEFF */
     grid-area: conoceNuestroCheff;
-    margin-top: 50px;
     div{ /* contenedor general */
         width: 100vw;
         display: flex;
         flex-direction: column;
         background-color: $negro;
-        align-items: center;
+        align-items: top;
         h2{
             @include font($playfair, 600, 1.4rem);
             color: white;
@@ -860,10 +973,11 @@ $playfair: 'Playfair Display', serif;
         div{ /* contenedor row */
             display: flex;
             flex-direction: row;
-            margin-left: 0px;
             column-gap: 30px;
-            width: 85vw;
+            align-self: center;
+            margin-left: 0px;
             padding-top: 20px;
+            width: 85vw;
             @media (min-width: 768px){
                 width: 65vw;
             }
@@ -892,114 +1006,13 @@ $playfair: 'Playfair Display', serif;
                 }
                 h6{
                     @include font($lato, 300, 0.8rem);
-                    line-height: 1.5rem;
-                    color: white;
+                    color: $gris-claro;
                     text-align: center;
                     padding-bottom: 50px;
                 }
             }
         }
     }
-}
-
-#individual__section--caracteristicas{ /* SECCION CARACTERISTICAS */
-    grid-area: caracteristicas;
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 50px;
-    div{ 
-        width: 85vw; /* MOBILE */
-        @media (min-width: 768px) { 
-            width: 60vw; /* TABLET */
-        }
-        @media (min-width: 1024px) { 
-            width: 50vw; /* DESKTOP */
-        }
-        h2{/* TITULO CHICO */
-            @include font($playfair, 600, 1.4rem);
-            text-transform: capitalize;
-            font-style: italic;
-            margin-top: 1.5rem;
-            margin-bottom: 5px;
-            text-align: center;
-        }
-        ul{
-            list-style-type: circle;
-            padding-left: 60px;
-        }
-        li{
-            @include font($lato, 300, 1rem);
-            color: $azul;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-        img{
-            width: 100px;
-            margin-right: 30px;
-        }
-        img:hover{
-            transform: scale(1.6);
-        }
-        h4{ /* TEXTO GRANDE */
-            @include font($lato, 400, 1rem);
-            line-height: 1.5rem;
-            color: $azul;
-            margin-top: 20px;
-            margin-bottom: 0px;
-            text-align: center;
-        }
-        h5{/* TEXTO CHICO */
-            @include font($lato, 300, 0.9rem);
-            line-height: 1.5rem;
-            color: $azul;
-            margin-top: 0px;
-            text-align: justify;
-        }
-        
-        h6{/* PIE DE IMAGEN */
-            @include font($lato, 600, 0.6rem);
-            color: $naranja;
-            text-transform: uppercase;
-        }
-        .centrado{
-            @include font($lato, 300, 0.9rem);
-            color: $azul;
-           margin-top: 0px;
-          text-align: center;
-        }
-        .individual__div--mediosDePago{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-            align-content: center;
-            div{
-                display: flex;
-                flex-direction: column;
-                justify-items: center;
-                align-items: center;
-                margin-top: 10px;
-                margin-bottom: 0px;
-                width: 100px;
-            }
-            img{
-                width: 35px;
-                margin: 0px;
-            }
-            img:hover{ 
-                transform: scale(1.1);
-            }
-            h6{
-                @include font($lato, 600, 0.6rem);
-                color: $naranja;
-                text-transform: uppercase;
-                text-align: center;
-                margin-top: 5px;
-            }
-        }
-    }
-    
 }
 
 #individual__section--opiniones{ /* SECCION OPINIONES */
@@ -1019,7 +1032,7 @@ $playfair: 'Playfair Display', serif;
         padding-right: 20rem;
     }
     div{
-        border-bottom: 1px solid rgb(219, 218, 218);
+        border-bottom: 1px solid $gris-claro;
         margin-bottom: 20px;
         align-items: center;
     }
@@ -1027,7 +1040,6 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 600, 1.4rem);
         text-transform: capitalize;
         font-style: italic;
-        margin-top: 1.5rem;
         margin-bottom: 50px;
     }
     h4{ /* TEXTO GRANDE */
@@ -1048,10 +1060,10 @@ $playfair: 'Playfair Display', serif;
     }
     img{
         width: 100px;
-        margin-bottom: 30px;
+        margin: 10px 10px 30px 10px;
     }
     img:hover{
-        transform: none;
+        transform: scale(1.4);
     }
 }
 
@@ -1061,16 +1073,26 @@ $playfair: 'Playfair Display', serif;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 60px;
-    div{
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    h2{/* TITULO CHICO */
+        @include font($playfair, 600, 1.4rem);
+        text-transform: capitalize;
+        font-style: italic;
+        text-align: center;
+    }
+    div{ 
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: center;
         align-items: center;
-        margin-inline: 20px;
+        margin-top: 10px;
+        margin-inline: 30px;
     }
     img{
-        width: 25px;
-        height: 25px;
+        width: 30px;
+        height: 30px;
     }
     img:hover{
         transform: scale(1.3);
