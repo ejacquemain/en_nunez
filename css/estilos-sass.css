@@ -1100,12 +1100,12 @@
 
 #individual__principal .individual__div--nuestroRestaurant {
   /* NUESTRO RESTAURANT */
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   margin-top: 30px;
 }
 
 #individual__principal .individual__div--nuestroRestaurant div {
-  margin-top: 50px;
+  padding: 20px 20px 0px 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1625,7 +1625,6 @@
   padding-top: 50px;
   padding-left: 4rem;
   padding-right: 4rem;
-  margin-bottom: 50px;
 }
 
 @media (min-width: 768px) {
@@ -1728,6 +1727,7 @@
   text-transform: capitalize;
   font-style: italic;
   text-align: center;
+  margin-top: 50px;
 }
 
 #rrss div {
