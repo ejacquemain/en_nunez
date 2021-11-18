@@ -64,7 +64,8 @@
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: principal;
-  background-color: white;
+  height: 100vh;
+  background-color: #212529;
   background-image: url(../images/index-background-mobile.jpg);
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -207,7 +208,7 @@
   font-size: 1em;
   color: white;
   text-transform: uppercase;
-  padding-top: 200px;
+  padding-top: 170px;
   /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
 }
 
@@ -215,7 +216,7 @@
   #index__principal h1 {
     /* TABLET/DESKTOP */
     font-family: "Playfair Display", serif;
-    font-weight: 600;
+    font-weight: 800;
     font-size: 1.2em;
     padding-top: 70px;
   }
@@ -240,8 +241,8 @@
 
 #index__principal h2 {
   font-family: "Lato", sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
+  font-weight: 400;
+  font-size: 1rem;
   color: white;
   text-align: center;
   margin-top: 40px;
@@ -252,39 +253,34 @@
   #index__principal h2 {
     /* TABLET */
     font-family: "Lato", sans-serif;
-    font-weight: 500;
-    font-size: 1.3rem;
+    font-weight: 400;
+    font-size: 1.1rem;
     line-height: 1.9rem;
   }
 }
 
 #index__principal .explora {
-  margin-top: 80px;
+  /* FLECHA DEL EXPLORA */
+}
+
+#index__principal .explora a {
+  -webkit-transition: all 3s;
+  transition: all 3s;
+}
+
+#index__principal .explora a img {
+  margin-top: 150px;
+  width: 25px;
+  height: auto;
+  -webkit-transition: all 3s;
+  transition: all 3s;
 }
 
 @media (min-width: 768px) {
-  #index__principal .explora {
+  #index__principal .explora a img {
     /* TABLET */
-    margin-top: 50px;
+    margin-top: 80px;
   }
-}
-
-#index__principal .explora div {
-  width: 100px;
-  height: 25px;
-  border: solid #f3a544 1px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-#index__principal .explora div h3 {
-  font-family: "Lato", sans-serif;
-  font-weight: 300;
-  font-size: 1rem;
-  color: #f3a544;
-  text-align: center;
-  text-transform: uppercase;
 }
 
 #index__secundaria {
@@ -294,13 +290,23 @@
   grid-area: secundaria;
 }
 
+#index__secundaria #tope1 {
+  /* TOPE PARA SCROLL DOWN */
+  margin-bottom: 120px;
+}
+
+@media (min-width: 768px) {
+  #index__secundaria #tope1 {
+    margin-bottom: 50px;
+  }
+}
+
 #index__secundaria h1 {
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 1.8rem;
   color: #01253d;
   text-align: center;
-  margin-top: 3rem;
   margin-bottom: 2rem;
 }
 
@@ -320,23 +326,6 @@
     width: 70vw;
     margin-left: 15vw;
   }
-}
-
-#index__secundaria h2 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.2rem;
-  color: #01253d;
-  text-transform: initial;
-  text-align: center;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-
-#index__secundaria h2 span {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  font-style: italic;
 }
 
 #index__loNuevo {
@@ -384,6 +373,8 @@
   border-radius: 5px;
   margin-left: 30px;
   margin-bottom: 20px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (min-width: 768px) {
@@ -467,7 +458,7 @@
   font-size: 1.9rem;
   color: #01253d;
   text-align: center;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
@@ -499,6 +490,8 @@
   margin-left: 40px;
   margin-bottom: 20px;
   border-radius: 5px;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (min-width: 768px) {
@@ -519,39 +512,39 @@
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
   /* MOBILE */
-  width: 40vw;
+  width: 35vw;
   height: auto;
+  padding: 20px;
 }
 
 @media (min-width: 768px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
     /* TABLET */
-    width: 30vw;
+    width: 25vw;
   }
 }
 
 @media (min-width: 1024px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
     /* DESKTOP */
-    width: 23vw;
+    width: 20vw;
   }
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div p {
-  font-family: "Playfair Display", serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 1.1rem;
-  padding-top: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 0.9rem;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
   text-align: center;
   color: #01253d;
-  font-style: italic;
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h2 {
-  font-family: "Lato", sans-serif;
-  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
   font-size: 1.2rem;
   color: #01253d;
   text-transform: capitalize;
@@ -562,9 +555,9 @@
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h3 {
   font-family: "Lato", sans-serif;
   font-weight: 600;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: #01253d;
-  text-transform: capitalize;
+  text-transform: uppercase;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 3rem;
@@ -575,7 +568,7 @@
           box-shadow: 6px 6px 13px #dad8d8;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover p {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover h2 {
   color: #f3a544;
 }
 
@@ -670,12 +663,14 @@
 }
 
 #footer .footer__div--contenedor img {
+  -webkit-transition: all 1s;
+  transition: all 1s;
   width: 6rem;
 }
 
 #footer .footer__div--contenedor img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  -webkit-transform: rotateZ(20deg);
+          transform: rotateZ(20deg);
 }
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
@@ -803,6 +798,8 @@
   /* TABLET */
   height: 60px;
   width: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 #interior__header .navbar__tabletDesktop li img:hover {
@@ -843,6 +840,13 @@
   height: 7vh;
   width: auto;
   margin-top: 120px;
+  -webkit-animation-name: trasladar-mobile;
+          animation-name: trasladar-mobile;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  position: relative;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
 }
 
 @media (min-width: 768px) {
@@ -851,7 +855,44 @@
     height: 6rem;
     width: auto;
     margin-top: 40px;
-    margin-bottom: 40px;
+    -webkit-animation-name: trasladar-tablet;
+            animation-name: trasladar-tablet;
+  }
+}
+
+@-webkit-keyframes trasladar-mobile {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 120px;
+  }
+}
+
+@keyframes trasladar-mobile {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 120px;
+  }
+}
+
+@-webkit-keyframes trasladar-tablet {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 40px;
+  }
+}
+
+@keyframes trasladar-tablet {
+  0% {
+    margin-top: 0px;
+  }
+  100% {
+    margin-top: 40px;
   }
 }
 
@@ -916,7 +957,7 @@
 
 #interior__cuadricula h3 {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 0.6rem;
   color: #01253d;
   text-transform: uppercase;
@@ -937,7 +978,7 @@
 
 #interior__cuadricula h2 {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1rem;
   padding-left: 1rem;
 }
@@ -1004,35 +1045,29 @@
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 2.5rem;
-  color: #01253d;
+  color: #212529;
   font-style: italic;
   -webkit-animation-name: colorFont;
           animation-name: colorFont;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
+  -webkit-animation-duration: 3s;
+          animation-duration: 3s;
 }
 
 @-webkit-keyframes colorFont {
   0% {
-    color: #01253d;
+    color: white;
   }
-  50% {
-    color: #f3a544;
-  }
-  10% {
-    color: #01253d;
+  100% {
+    color: #212529;
   }
 }
 
 @keyframes colorFont {
   0% {
-    color: #01253d;
+    color: white;
   }
-  50% {
-    color: #f3a544;
-  }
-  10% {
-    color: #01253d;
+  100% {
+    color: #212529;
   }
 }
 
@@ -1089,13 +1124,26 @@
   text-decoration: none;
 }
 
-#individual__principal div {
-  margin-top: 20px;
+#individual__principal .index__div--comoLlegar img {
+  width: 20px;
+  margin-top: 5px;
+  margin-right: 10px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
-#individual__principal div img {
-  width: 35px;
-  margin-right: 25px;
+#individual__principal .index__div--comoLlegar img:hover {
+  -webkit-transform: translate(10px);
+          transform: translate(10px);
+}
+
+#individual__principal .index__div--comoLlegar a {
+  text-decoration: none;
+  font-family: "Lato", sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  color: #212529;
+  text-transform: uppercase;
 }
 
 #individual__principal .individual__div--nuestroRestaurant {
@@ -1291,6 +1339,8 @@
 #individual__section--galeria div div img {
   width: 25vw;
   height: auto;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 @media (min-width: 768px) {
@@ -1308,8 +1358,8 @@
 }
 
 #individual__section--galeria div div img:hover {
-  -webkit-transform: scale(1.3);
-          transform: scale(1.3);
+  -webkit-transform: scale(1.9);
+          transform: scale(1.9);
 }
 
 @media (min-width: 768px) {
@@ -1319,12 +1369,12 @@
   }
 }
 
-#individual__section--caracteristicas {
-  /* SECCION CARACTERISTICAS */
+#individual__section--sobreNosotros {
+  /* SECCION SOBRE NOSOTROS */
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: caracteristicas;
-  background-image: url(../images/individual-pizza-background-01.jpg);
+  background-image: url(../images/individual-pizza-background-02.jpg);
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 100vw;
@@ -1341,26 +1391,26 @@
       align-content: center;
 }
 
-#individual__section--caracteristicas div {
+#individual__section--sobreNosotros div {
   width: 85vw;
   /* MOBILE */
 }
 
 @media (min-width: 768px) {
-  #individual__section--caracteristicas div {
+  #individual__section--sobreNosotros div {
     width: 60vw;
     /* TABLET */
   }
 }
 
 @media (min-width: 1024px) {
-  #individual__section--caracteristicas div {
+  #individual__section--sobreNosotros div {
     width: 50vw;
     /* DESKTOP */
   }
 }
 
-#individual__section--caracteristicas div h2 {
+#individual__section--sobreNosotros div h2 {
   /* TITULO CHICO */
   font-family: "Playfair Display", serif;
   font-weight: 500;
@@ -1372,7 +1422,7 @@
   text-align: center;
 }
 
-#individual__section--caracteristicas div ul {
+#individual__section--sobreNosotros div ul {
   list-style: none;
   margin-left: 60px;
   margin-right: 60px;
@@ -1380,7 +1430,7 @@
   border-right: 1px solid #d4d2d2;
 }
 
-#individual__section--caracteristicas div li {
+#individual__section--sobreNosotros div li {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1rem;
@@ -1390,17 +1440,17 @@
   text-align: center;
 }
 
-#individual__section--caracteristicas div img {
+#individual__section--sobreNosotros div img {
   width: 100px;
   margin-right: 30px;
 }
 
-#individual__section--caracteristicas div img:hover {
+#individual__section--sobreNosotros div img:hover {
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
 }
 
-#individual__section--caracteristicas div h4 {
+#individual__section--sobreNosotros div h4 {
   /* titulo 3 */
   font-family: "Lato", sans-serif;
   font-weight: 600;
@@ -1412,7 +1462,7 @@
   text-align: center;
 }
 
-#individual__section--caracteristicas div p {
+#individual__section--sobreNosotros div p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -1422,7 +1472,7 @@
   text-align: justify;
 }
 
-#individual__section--caracteristicas div h5 {
+#individual__section--sobreNosotros div h5 {
   /* TEXTO CHICO */
   font-family: "Lato", sans-serif;
   font-weight: 400;
@@ -1433,7 +1483,7 @@
   text-align: justify;
 }
 
-#individual__section--caracteristicas div .centrado {
+#individual__section--sobreNosotros div .centrado {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -1442,7 +1492,7 @@
   text-align: center;
 }
 
-#individual__section--caracteristicas div .individual__div--mediosDePago {
+#individual__section--sobreNosotros div .individual__div--mediosDePago {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1457,7 +1507,7 @@
       align-content: center;
 }
 
-#individual__section--caracteristicas div .individual__div--mediosDePago div {
+#individual__section--sobreNosotros div .individual__div--mediosDePago div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1474,17 +1524,17 @@
   width: 100px;
 }
 
-#individual__section--caracteristicas div .individual__div--mediosDePago img {
+#individual__section--sobreNosotros div .individual__div--mediosDePago img {
   width: 35px;
   margin: 0px;
 }
 
-#individual__section--caracteristicas div .individual__div--mediosDePago img:hover {
+#individual__section--sobreNosotros div .individual__div--mediosDePago img:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
 }
 
-#individual__section--caracteristicas div .individual__div--mediosDePago h6 {
+#individual__section--sobreNosotros div .individual__div--mediosDePago h6 {
   font-family: "Lato", sans-serif;
   font-weight: 900;
   font-size: 0.7rem;

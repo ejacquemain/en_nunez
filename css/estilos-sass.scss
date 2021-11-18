@@ -43,7 +43,8 @@ $playfair: 'Playfair Display', serif;
 
 #index__principal{ /* MOBILE */
     grid-area: principal;
-    background-color: white;
+    height: 100vh;
+    background-color: $negro;
     background-image: url(../images/index-background-mobile.jpg);
     @media (min-width: 768px){ /* TABLET */
         background-image: url(../images/index-background-768.jpg);
@@ -136,9 +137,9 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 800, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 200px; /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
+        padding-top: 170px; /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
         @media (min-width: 768px){ /* TABLET/DESKTOP */
-            @include font($playfair, 600, 1.2em);
+            @include font($playfair, 800, 1.2em);
             padding-top: 70px;
         }
     }
@@ -153,31 +154,28 @@ $playfair: 'Playfair Display', serif;
         }
     }
     h2{
-        @include font($lato, 500, 1.1rem);
+        @include font($lato, 400, 1rem);
         color: white;
         text-align: center;
         margin-top: 40px;
         line-height: 1.6rem;
         @media (min-width: 768px){ /* TABLET */
-            @include font($lato, 500, 1.3rem);
+            @include font($lato, 400, 1.1rem);
             line-height: 1.9rem;
         }
     }
-    .explora{
-        margin-top: 80px;
-        @media (min-width: 768px){ /* TABLET */
-            margin-top: 50px;
-        }
-        div{
-            width: 100px;
-            height: 25px;
-            border: solid $naranja 1px;
-            justify-content: center;
-            h3{
-                @include font($lato, 300, 1rem);
-                color: $naranja;
-                text-align: center;
-                text-transform: uppercase;
+    .explora{ /* FLECHA DEL EXPLORA */
+        a{
+            transition: all 3s;
+            img{
+                margin-top: 150px;
+                width: 25px;
+                height: auto;
+
+                transition: all 3s;
+                @media (min-width: 768px){ /* TABLET */
+                    margin-top: 80px;
+                }
             }
         }
     }
@@ -186,11 +184,16 @@ $playfair: 'Playfair Display', serif;
 
 #index__secundaria{ /* MOBILE */
     grid-area: secundaria;
+    #tope1{ /* TOPE PARA SCROLL DOWN */
+        margin-bottom: 120px;
+        @media (min-width: 768px){
+            margin-bottom: 50px;
+        }
+    }
     h1{
         @include font($playfair, 500, 1.8rem);
         color: $azul;
         text-align: center;
-        margin-top: 3rem;
         margin-bottom: 2rem;
         span{
             font-style: italic;
@@ -203,19 +206,6 @@ $playfair: 'Playfair Display', serif;
         @media (min-width: 768px){ /* TABLET */
             width: 70vw;
             margin-left: 15vw;
-        }
-    }
-    h2{
-        @include font($lato, 400, 1.2rem);
-        color: $azul;
-        text-transform: initial;
-        text-align: center;
-        margin-top: 1rem;
-        margin-bottom: 2rem;
-        span{
-            font-family: $playfair;
-            font-weight: 600;
-            font-style: italic;
         }
     }
 }
@@ -248,6 +238,7 @@ $playfair: 'Playfair Display', serif;
             border-radius: 5px;
             margin-left: 30px;
             margin-bottom: 20px;
+            transition: all 1s;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
                 height: auto;}
@@ -298,7 +289,7 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 500, 1.9rem);
         color: $azul;
         text-align: center;
-        margin-top: 3rem;
+        margin-top: 2rem;
         margin-bottom: 2rem;
     }
     span{
@@ -320,6 +311,7 @@ $playfair: 'Playfair Display', serif;
             margin-left: 40px;
             margin-bottom: 20px;
             border-radius: 5px;
+            transition: all 1s;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
                 height: auto;}
@@ -328,35 +320,35 @@ $playfair: 'Playfair Display', serif;
                 margin-right: 3vw;
             }
             img{/* MOBILE */
-                width: 40vw;
+                width: 35vw;
                 height: auto;
+                padding: 20px;;
                 @media (min-width: 768px){ /* TABLET */
-                    width: 30vw;
+                    width: 25vw;
                 }
                 @media (min-width: 1024px){ /* DESKTOP */
-                    width: 23vw;
+                    width: 20vw;
                 }
             }
             p{
-                @include font($playfair, 400, 1.1rem);
-                padding-top: 20px;
-                padding-left: 10px;
-                padding-right: 10px;
+                @include font($lato, 400, 0.9rem);
+                padding-top: 10px;
+                padding-left: 20px;
+                padding-right: 20px;
                 text-align: center;
                 color: $azul;
-                font-style: italic
             }
             h2{
-                @include font($lato, 500, 1.2rem);
+                @include font($playfair, 600, 1.2rem);
                 color: $azul;
                 text-transform: capitalize;
                 text-align: center;
                 margin-bottom: 2px;
             }
             h3{
-                @include font($lato, 600, 0.8rem);
+                @include font($lato, 600, 0.7rem);
                 color: $azul;
-                text-transform: capitalize;
+                text-transform: uppercase;
                 text-align: center;
                 margin-top: 10px;
                 margin-bottom: 3rem;
@@ -364,7 +356,7 @@ $playfair: 'Playfair Display', serif;
         }
         div:hover{
             box-shadow: 6px 6px 13px rgb(218, 216, 216);
-            p{
+            h2{
                 color: $naranja;
             }
         }
@@ -431,10 +423,12 @@ $playfair: 'Playfair Display', serif;
             }
         }
         img{ 
+            
+            transition: all 1s;
             width: 6rem;
         }
         img:hover{ 
-            transform: scale(1.2);
+            transform: rotateZ(20deg);
         }
     }
 }
@@ -521,6 +515,7 @@ $playfair: 'Playfair Display', serif;
     .navbar__tabletDesktop li img{ /* TABLET */
         height: 60px;
         width: auto;
+        transition: all 1s;
     }
     .navbar__tabletDesktop li img:hover{ /* TABLET */
         transform: scale(1.2);
@@ -545,11 +540,31 @@ $playfair: 'Playfair Display', serif;
         height: 7vh;
         width: auto;
         margin-top: 120px;
+        animation-name: trasladar-mobile;
+        animation-duration: 1s;
+        position: relative;
+        animation-direction: normal;
         @media (min-width: 768px){ /* TABLET */
             height: 6rem;
             width: auto;
             margin-top: 40px;
-            margin-bottom: 40px;
+            animation-name: trasladar-tablet;
+        }
+    }
+    @keyframes trasladar-mobile{
+        0%{
+            margin-top: 0px;
+        }
+        100%{
+            margin-top: 120px;
+        }
+    }
+    @keyframes trasladar-tablet{
+        0%{
+            margin-top: 0px;
+        }
+        100%{
+            margin-top: 40px;
         }
     }
 }
@@ -588,7 +603,7 @@ $playfair: 'Playfair Display', serif;
         }
     }
     h3{
-        @include font($lato, 300, 0.6rem);
+        @include font($lato, 400, 0.6rem);
         color: $azul;
         text-transform: uppercase;
         padding-top: 1rem;
@@ -603,7 +618,7 @@ $playfair: 'Playfair Display', serif;
         padding-left: 1rem;
     }
     h2{
-        @include font($lato, 300, 1rem);
+        @include font($lato, 400, 1rem);
         padding-left: 1rem;
     }
     
@@ -649,19 +664,16 @@ $playfair: 'Playfair Display', serif;
     }
     h1{ /* TITULO GRANDE */
         @include font($playfair, 700, 2.5rem);
-        color: $azul;
+        color: $negro;
         font-style: italic;
         animation-name: colorFont;
-        animation-duration: 4s;
+        animation-duration: 3s;
         @keyframes colorFont{
             0%{
-                color: rgb(1, 37, 61);
+                color: white;
             }
-            50%{
-                color: rgb(243, 165, 68);
-            }
-            10%{
-                color: rgb(1, 37, 61);
+            100%{
+                color: $negro;
             }
         }
     }
@@ -697,13 +709,25 @@ $playfair: 'Playfair Display', serif;
     a{
         text-decoration: none;
     }
-    div{
-        margin-top: 20px;
+    .index__div--comoLlegar{
         img{
-            width: 35px;
-            margin-right: 25px
+            width: 20px;
+            margin-top: 5px;
+            margin-right: 10px;
+            transition: 0.5s;
+        }
+        img:hover{
+            transform: translate(10px);
+        }
+        a{
+            text-decoration: none;
+            @include font($lato, 600, 0.6rem);
+            color: $negro;
+            text-transform: uppercase;
         }
     }
+    
+    
     .individual__div--nuestroRestaurant{ /* NUESTRO RESTAURANT */
         margin-bottom: 50px;
         margin-top: 30px;
@@ -823,6 +847,7 @@ $playfair: 'Playfair Display', serif;
         img{
             width: 25vw;
             height: auto;
+            transition: all 1s;
             @media(min-width: 768px){ /* TABLET */
                 width: 22vw;
             }
@@ -831,7 +856,7 @@ $playfair: 'Playfair Display', serif;
             }
         }
         img:hover{
-            transform: scale(1.3);
+            transform: scale(1.9);
             @media (min-width: 768px){
                 transform: scale(1.2);
             }
@@ -839,9 +864,9 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#individual__section--caracteristicas{ /* SECCION CARACTERISTICAS */
+#individual__section--sobreNosotros{ /* SECCION SOBRE NOSOTROS */
     grid-area: caracteristicas;
-    background-image: url(../images/individual-pizza-background-01.jpg);
+    background-image: url(../images/individual-pizza-background-02.jpg);
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100vw;
