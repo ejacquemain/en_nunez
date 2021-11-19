@@ -165,17 +165,13 @@ $playfair: 'Playfair Display', serif;
         }
     }
     .explora{ /* FLECHA DEL EXPLORA */
-        a{
-            transition: all 3s;
-            img{
-                margin-top: 150px;
-                width: 25px;
-                height: auto;
-
-                transition: all 3s;
-                @media (min-width: 768px){ /* TABLET */
-                    margin-top: 80px;
-                }
+        img{
+            margin-top: 130px;
+            width: 25px;
+            height: auto;
+            transition: 3s;
+            @media (min-width: 768px){ /* TABLET */
+                margin-top: 80px;
             }
         }
     }
@@ -728,7 +724,7 @@ $playfair: 'Playfair Display', serif;
     }
     
     
-    .individual__div--nuestroRestaurant{ /* NUESTRO RESTAURANT */
+    .individual__div--nuestroRestaurant{ /* NUESTRO RESTAURANT/BAR/CAFÉ */
         margin-bottom: 50px;
         margin-top: 30px;
         div{
@@ -781,21 +777,21 @@ $playfair: 'Playfair Display', serif;
         column-gap: 5px;
         div{
             margin-bottom: 10px;
-            h3{ /* TITULO CHICO */
+            h3{ 
                 @include font($playfair, 900, 1.2rem);
                 color: $azul;
                 text-transform: capitalize;
                 font-style: italic;
                 margin-bottom: 25px;
             }
-            h4{ /* TEXTO FUERTE */
+            h4{ 
                 @include font($lato, 400, 1rem);
                 font-style: normal;
                 text-transform: capitalize;
                 margin-top: 20px;
                 margin-bottom: 0px;
             }
-            h5{ /* TEXTO DEBIL */
+            h5{ 
                 @include font($playfair, 400, 1rem);
                 color: $azul;
                 text-transform: none;
@@ -866,10 +862,6 @@ $playfair: 'Playfair Display', serif;
 
 #individual__section--sobreNosotros{ /* SECCION SOBRE NOSOTROS */
     grid-area: caracteristicas;
-    background-image: url(../images/individual-pizza-background-02.jpg);
-    background-position: bottom;
-    background-repeat: no-repeat;
-    background-size: 100vw;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -898,7 +890,7 @@ $playfair: 'Playfair Display', serif;
             border-right: 1px solid $gris-claro;
         }
         li{
-            @include font($lato, 400, 1rem);
+            @include font($lato, 300, 1rem);
             color: $negro;
             margin-top: 0px;
             margin-bottom: 0px;
@@ -920,21 +912,21 @@ $playfair: 'Playfair Display', serif;
             text-align: center;
         }
         p{
-            @include font($lato, 400, 0.9rem);
+            @include font($lato, 300, 0.9rem);
             line-height: 1.5rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
         }
-        h5{/* TEXTO CHICO */
-            @include font($lato, 400, 0.9rem);
+        h5{
+            @include font($lato, 300, 0.9rem);
             line-height: 1.5rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
         }
         .centrado{
-            @include font($lato, 400, 0.9rem);
+            @include font($lato, 300, 0.9rem);
             color: $negro;
             margin-top: 0px;
             text-align: center;
@@ -961,7 +953,7 @@ $playfair: 'Playfair Display', serif;
                 transform: scale(1.1);
             }
             h6{
-                @include font($lato, 900, 0.7rem);
+                @include font($lato, 600, 0.7rem);
                 color: $negro;
                 text-transform: uppercase;
                 text-align: center;
@@ -972,7 +964,7 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#individual__section--conoceNuestroCheff{ /* SECCION CONOCE A NUESTRO CHEFF */
+#individual__section--conoceNuestroCheff{ /* SECCION CONOCE A NUESTRO CHEFF/BARTENDER/BARISTA */
     grid-area: conoceNuestroCheff;
     div{ /* contenedor general */
         width: 100vw;
