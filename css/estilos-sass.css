@@ -480,20 +480,20 @@
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
-  width: 45vw;
+  width: 50vw;
   height: auto;
   background-color: white;
   margin-left: 40px;
   margin-bottom: 20px;
   border-radius: 5px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-box-shadow: 6px 6px 13px #dad8d8;
+          box-shadow: 6px 6px 13px #dad8d8;
 }
 
 @media (min-width: 768px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
     /* TABLET */
-    width: 30vw;
+    width: 40vw;
     height: auto;
   }
 }
@@ -501,14 +501,14 @@
 @media (min-width: 1024px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
     /* DESKTOP */
-    width: 23vw;
+    width: 30vw;
     margin-right: 3vw;
   }
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
   /* MOBILE */
-  width: 35vw;
+  width: 45vw;
   height: auto;
   padding: 20px;
 }
@@ -516,14 +516,14 @@
 @media (min-width: 768px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
     /* TABLET */
-    width: 25vw;
+    width: 35vw;
   }
 }
 
 @media (min-width: 1024px) {
   #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
     /* DESKTOP */
-    width: 20vw;
+    width: 28vw;
   }
 }
 
@@ -559,12 +559,7 @@
   margin-bottom: 3rem;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover {
-  -webkit-box-shadow: 6px 6px 13px #dad8d8;
-          box-shadow: 6px 6px 13px #dad8d8;
-}
-
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover h2 {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover h2, #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover p {
   color: #f3a544;
 }
 
@@ -988,7 +983,7 @@
       grid-template-columns: 100vw;
   -ms-grid-rows: 150px auto auto auto auto auto auto auto;
       grid-template-rows: 150px auto auto auto auto auto auto auto;
-      grid-template-areas: "header" "principal" "galeria" "caracteristicas" "conoceNuestroCheff" "opiniones" "rrss" "footer";
+      grid-template-areas: "header" "principal" "galeria" "sobrenosotros" "conoceNuestroCheff" "opiniones" "rrss" "footer";
 }
 
 #interior__header {
@@ -1161,7 +1156,7 @@
 
 #individual__principal .individual__div--nuestroRestaurant div img {
   width: 150px;
-  height: 180px;
+  height: auto;
   border: 9px solid white;
   -webkit-box-shadow: 6px 6px 13px #ebe9e9;
           box-shadow: 6px 6px 13px #ebe9e9;
@@ -1366,7 +1361,7 @@
   /* SECCION SOBRE NOSOTROS */
   -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: caracteristicas;
+  grid-area: sobrenosotros;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1404,6 +1399,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 500;
   font-size: 1.4rem;
+  color: #f3a544;
   text-transform: capitalize;
   font-style: italic;
   margin-top: 0px;
@@ -1442,10 +1438,10 @@
 #individual__section--sobreNosotros div h4 {
   /* titulo 3 */
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1rem;
   line-height: 1.5rem;
-  color: #212529;
+  color: #f3a544;
   margin-top: 40px;
   margin-bottom: 0px;
   text-align: center;
@@ -1524,7 +1520,7 @@
 
 #individual__section--sobreNosotros div .individual__div--mediosDePago h6 {
   font-family: "Lato", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
   font-size: 0.7rem;
   color: #212529;
   text-transform: uppercase;
@@ -1786,23 +1782,20 @@
   margin-inline: 30px;
 }
 
-#rrss img {
+#rrss div div {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#rrss div div img {
   width: 30px;
   height: 30px;
 }
 
-#rrss img:hover {
+#rrss div div img:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-}
-
-#rrss h6 {
-  font-family: "Lato", sans-serif;
-  font-weight: 400;
-  font-size: 0.65rem;
-  color: #f3a544;
-  text-align: center;
-  margin-top: 10px;
 }
 
 /* PAGINA FORMULARIO DE CONTACTO ------------------- */
