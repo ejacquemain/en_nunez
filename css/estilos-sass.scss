@@ -656,19 +656,24 @@ $playfair: 'Playfair Display', serif;
         @media (min-width: 1024px) { 
             width: 50vw; /* DESKTOP */
         }
-    }
-    h1{ /* TITULO GRANDE */
-        @include font($playfair, 700, 2.5rem);
-        color: $negro;
-        font-style: italic;
-        animation-name: colorFont;
-        animation-duration: 3s;
-        @keyframes colorFont{
-            0%{
-                color: white;
-            }
-            100%{
-                color: $negro;
+        a{
+            @include font($lato, 500, 0.8rem);
+            color: $naranja;
+            text-transform: uppercase;
+        }
+        h1{ /* TITULO GRANDE */
+            @include font($playfair, 700, 2.5rem);
+            color: $negro;
+            font-style: italic;
+            animation-name: colorFont;
+            animation-duration: 3s;
+            @keyframes colorFont{
+                0%{
+                    color: white;
+                }
+                100%{
+                    color: $negro;
+                }
             }
         }
     }

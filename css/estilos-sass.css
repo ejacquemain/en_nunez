@@ -1031,7 +1031,15 @@
   }
 }
 
-#individual__principal h1 {
+#individual__principal div a {
+  font-family: "Lato", sans-serif;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: #f3a544;
+  text-transform: uppercase;
+}
+
+#individual__principal div h1 {
   /* TITULO GRANDE */
   font-family: "Playfair Display", serif;
   font-weight: 700;
