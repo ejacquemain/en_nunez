@@ -1116,11 +1116,18 @@ $playfair: 'Playfair Display', serif;
             img{
                 width: 30px;
                 height: 30px;
+                margin-bottom: 50px;
             }
             img:hover{
                 transform: scale(1.3);
             }
         }
+    }
+    a{
+        @include font($lato, 500, 0.8rem);
+        color: $naranja;
+        text-transform: uppercase;
+        text-align: center;
     }
 }
 
