@@ -128,13 +128,10 @@
 }
 
 #index__principal .navbar__tabletDesktop li img {
+  /* LOGO EN LA NAVBAR DESKTOP */
   height: 60px;
   width: auto;
-}
-
-#index__principal .navbar__tabletDesktop li img:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
+  display: none;
 }
 
 #index__principal .navbar__tabletDesktop ul ul {
@@ -265,18 +262,10 @@
 }
 
 #index__principal .explora img {
-  margin-top: 130px;
   width: 25px;
   height: auto;
-  -webkit-transition: 3s;
-  transition: 3s;
-}
-
-@media (min-width: 768px) {
-  #index__principal .explora img {
-    /* TABLET */
-    margin-top: 80px;
-  }
+  -webkit-transition: 2s;
+  transition: 2s;
 }
 
 #index__secundaria {
@@ -293,17 +282,25 @@
 
 @media (min-width: 768px) {
   #index__secundaria #tope1 {
+    /* TABLET */
     margin-bottom: 50px;
   }
 }
 
 #index__secundaria h1 {
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.8rem;
   color: #01253d;
   text-align: center;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #index__secundaria h1 {
+    /* DESKTOP */
+    font-size: 2rem;
+  }
 }
 
 #index__secundaria h1 span {
@@ -312,15 +309,15 @@
 }
 
 #index__secundaria video {
-  width: 90vw;
-  margin-left: 5vw;
+  width: 85vw;
+  margin-left: 7.5vw;
 }
 
 @media (min-width: 768px) {
   #index__secundaria video {
     /* TABLET */
-    width: 70vw;
-    margin-left: 15vw;
+    width: 50vw;
+    margin-left: 25vw;
   }
 }
 
@@ -333,12 +330,19 @@
 
 #index__loNuevo h1 {
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.9rem;
   color: #01253d;
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #index__loNuevo h1 {
+    /* DESKTOP */
+    font-size: 2rem;
+  }
 }
 
 #index__loNuevo span {
@@ -356,7 +360,7 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   overflow: auto;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   padding-left: 5vw;
   width: 100vw;
   height: auto;
@@ -367,25 +371,24 @@
   height: auto;
   background-color: white;
   border-radius: 5px;
-  margin-left: 30px;
-  margin-bottom: 20px;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  margin-left: 20px;
+  margin-bottom: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (min-width: 768px) {
   #index__loNuevo .index__loNuevo--contenedor div {
     /* TABLET */
     width: 30vw;
-    height: auto;
   }
 }
 
 @media (min-width: 1024px) {
   #index__loNuevo .index__loNuevo--contenedor div {
     /* DESKTOP */
-    width: 23vw;
-    margin-right: 3vw;
+    width: 19vw;
+    margin-right: 10px;
   }
 }
 
@@ -406,7 +409,7 @@
 @media (min-width: 1024px) {
   #index__loNuevo .index__loNuevo--contenedor div img {
     /* DESKTOP */
-    width: 23vw;
+    width: 19vw;
   }
 }
 
@@ -414,7 +417,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.6rem;
-  color: #01253d;
+  color: #f3a544;
   text-transform: uppercase;
   text-align: center;
   margin-top: 0.5rem;
@@ -450,12 +453,19 @@
 
 #index__recomendacionesDeLosChefs h1 {
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1.9rem;
   color: #01253d;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #index__recomendacionesDeLosChefs h1 {
+    /* DESKTOP */
+    font-size: 2rem;
+  }
 }
 
 #index__recomendacionesDeLosChefs span {
@@ -474,56 +484,63 @@
       flex-wrap: nowrap;
   overflow: auto;
   padding-left: 5vw;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
   width: 100vw;
   height: auto;
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
-  width: 50vw;
+  /* MOBILE */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40vw;
   height: auto;
   background-color: white;
-  margin-left: 40px;
+  margin-top: 5px;
+  margin-left: 30px;
   margin-bottom: 20px;
   border-radius: 5px;
   -webkit-box-shadow: 6px 6px 13px #dad8d8;
           box-shadow: 6px 6px 13px #dad8d8;
 }
 
-@media (min-width: 768px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
-    /* TABLET */
-    width: 40vw;
-    height: auto;
-  }
-}
-
-@media (min-width: 1024px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
-    /* DESKTOP */
-    width: 30vw;
-    margin-right: 3vw;
-  }
-}
-
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
   /* MOBILE */
-  width: 45vw;
+  width: 40vw;
   height: auto;
-  padding: 20px;
 }
 
 @media (min-width: 768px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
     /* TABLET */
-    width: 35vw;
+  }
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div {
+    width: 27vw;
+    height: auto;
+  }
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div img {
+    width: 27vw;
   }
 }
 
 @media (min-width: 1024px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
     /* DESKTOP */
-    width: 28vw;
+  }
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div {
+    width: 5vw;
+    margin-right: 10px;
+  }
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div img {
+    width: 10vw;
   }
 }
 
@@ -552,7 +569,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.7rem;
-  color: #01253d;
+  color: #f3a544;
   text-transform: uppercase;
   text-align: center;
   margin-top: 10px;
