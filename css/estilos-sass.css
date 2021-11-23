@@ -291,7 +291,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.8rem;
-  color: #01253d;
+  color: #212529;
   text-align: center;
   margin-bottom: 2rem;
 }
@@ -332,7 +332,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.9rem;
-  color: #01253d;
+  color: #212529;
   text-align: center;
   margin-top: 3rem;
   margin-bottom: 2rem;
@@ -373,8 +373,8 @@
   border-radius: 5px;
   margin-left: 20px;
   margin-bottom: 30px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 @media (min-width: 768px) {
@@ -428,7 +428,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.3rem;
-  color: #01253d;
+  color: #212529;
   text-transform: capitalize;
   text-align: center;
   margin-top: 10px;
@@ -455,7 +455,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.9rem;
-  color: #01253d;
+  color: #212529;
   text-align: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
@@ -501,50 +501,42 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 40vw;
+  width: 35vw;
   height: auto;
   background-color: white;
   margin-top: 5px;
-  margin-left: 30px;
+  margin-left: 45px;
   margin-bottom: 20px;
   border-radius: 5px;
-  -webkit-box-shadow: 6px 6px 13px #dad8d8;
-          box-shadow: 6px 6px 13px #dad8d8;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div img {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor img {
   /* MOBILE */
-  width: 40vw;
+  width: 35vw;
   height: auto;
 }
 
 @media (min-width: 768px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor {
     /* TABLET */
   }
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div {
-    width: 27vw;
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div, #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor img {
+    width: 23vw;
     height: auto;
-  }
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div img {
-    width: 27vw;
   }
 }
 
 @media (min-width: 1024px) {
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor {
     /* DESKTOP */
   }
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div {
-    width: 5vw;
-    margin-right: 10px;
-  }
-  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div div img {
-    width: 10vw;
+  #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div, #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor img {
+    width: 18vw;
+    height: auto;
   }
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div p {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor p {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.9rem;
@@ -552,20 +544,20 @@
   padding-left: 20px;
   padding-right: 20px;
   text-align: center;
-  color: #01253d;
+  color: #212529;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h2 {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor h2 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.2rem;
-  color: #01253d;
+  color: #212529;
   text-transform: capitalize;
   text-align: center;
   margin-bottom: 2px;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div h3 {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor h3 {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.7rem;
@@ -576,7 +568,14 @@
   margin-bottom: 3rem;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover h2, #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover p {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover {
+  -webkit-box-shadow: 6px 6px 13px #dad8d8;
+          box-shadow: 6px 6px 13px #dad8d8;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div:hover h2 {
   color: #f3a544;
 }
 
@@ -819,7 +818,7 @@
 #interior__header .navbar__tabletDesktop a {
   /* TABLET */
   text-decoration: none;
-  color: #01253d;
+  color: #212529;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -946,7 +945,7 @@
 }
 
 #interior__cuadricula div:hover h1 {
-  color: #01253d;
+  color: #212529;
 }
 
 #interior__cuadricula img {
@@ -967,7 +966,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.6rem;
-  color: #01253d;
+  color: #212529;
   text-transform: uppercase;
   padding-top: 1rem;
   padding-left: 1rem;
@@ -1090,7 +1089,7 @@
 #individual__principal h2 {
   /* TITULO CHICO */
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.4rem;
   text-transform: capitalize;
   font-style: italic;
@@ -1114,7 +1113,7 @@
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.5rem;
-  color: #01253d;
+  color: #212529;
   margin-top: 20px;
 }
 
@@ -1122,9 +1121,9 @@
   /* TEXTO CHICO */
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
-  color: #01253d;
+  color: #212529;
 }
 
 #individual__principal h6 {
@@ -1138,6 +1137,12 @@
 
 #individual__principal a {
   text-decoration: none;
+}
+
+#individual__principal .carousel-control-prev-icon, #individual__principal .carousel-control-next-icon {
+  border-radius: 5px;
+  background-color: #212529;
+  opacity: 100%;
 }
 
 #individual__principal .index__div--comoLlegar img {
@@ -1205,7 +1210,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 1.1rem;
-  color: #01253d;
+  color: #212529;
   text-align: left;
   margin-top: 0px;
 }
@@ -1213,9 +1218,9 @@
 #individual__principal .individual__div--nuestroRestaurant div p {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.9rem;
-  line-height: 1.2rem;
-  color: #01253d;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  color: #212529;
   margin-top: 10px;
   text-align: left;
 }
@@ -1253,7 +1258,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 900;
   font-size: 1.2rem;
-  color: #01253d;
+  color: #212529;
   text-transform: capitalize;
   font-style: italic;
   margin-bottom: 25px;
@@ -1273,16 +1278,16 @@
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 1rem;
-  color: #01253d;
+  color: #212529;
   text-transform: none;
   padding-right: 20px;
 }
 
 #individual__principal .accordion-button {
   font-family: "Lato", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 1.1rem;
-  color: #01253d;
+  color: #212529;
 }
 
 #individual__principal .accordion-button:hover {
@@ -1319,7 +1324,7 @@
 
 #individual__section--galeria h2 {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.4rem;
   color: white;
   font-style: italic;
@@ -1352,8 +1357,8 @@
 #individual__section--galeria div div img {
   width: 25vw;
   height: auto;
-  -webkit-transition: all 1s;
-  transition: all 1s;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (min-width: 768px) {
@@ -1422,7 +1427,7 @@
 #individual__section--sobreNosotros div h2 {
   /* TITULO CHICO */
   font-family: "Playfair Display", serif;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 1.4rem;
   color: #f3a544;
   text-transform: capitalize;
@@ -1443,7 +1448,7 @@
 #individual__section--sobreNosotros div li {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: #212529;
   margin-top: 0px;
   margin-bottom: 0px;
@@ -1463,7 +1468,7 @@
 #individual__section--sobreNosotros div h4 {
   /* titulo 3 */
   font-family: "Lato", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 1rem;
   line-height: 1.5rem;
   color: #f3a544;
@@ -1475,8 +1480,8 @@
 #individual__section--sobreNosotros div p {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.9rem;
-  line-height: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7rem;
   color: #212529;
   margin-top: 0px;
   text-align: justify;
@@ -1485,7 +1490,7 @@
 #individual__section--sobreNosotros div h5 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   line-height: 1.5rem;
   color: #212529;
   margin-top: 0px;
@@ -1495,7 +1500,7 @@
 #individual__section--sobreNosotros div .centrado {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   color: #212529;
   margin-top: 0px;
   text-align: center;
@@ -1579,7 +1584,7 @@
 
 #individual__section--conoceNuestroCheff div h2 {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.4rem;
   color: white;
   text-transform: none;
@@ -1592,9 +1597,9 @@
 #individual__section--conoceNuestroCheff div h4 {
   font-family: "Lato", sans-serif;
   font-weight: 300;
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: white;
-  margin-top: 10px;
+  margin-top: 5px;
   text-align: center;
 }
 
@@ -1623,7 +1628,6 @@
 }
 
 #individual__section--conoceNuestroCheff div div div {
-  /* contenedor individual */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1712,7 +1716,7 @@
 
 #individual__section--opiniones h2 {
   font-family: "Playfair Display", serif;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.4rem;
   text-transform: capitalize;
   font-style: italic;
@@ -1725,17 +1729,17 @@
   font-weight: 400;
   font-size: 1.1rem;
   line-height: 1.5rem;
-  color: #01253d;
+  color: #212529;
   margin-top: 0px;
 }
 
 #individual__section--opiniones h5 {
   /* TEXTO CHICO */
-  font-family: "Playfair Display", serif;
-  font-weight: 400;
-  font-size: 1rem;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 1.1rem;
   line-height: 1.5rem;
-  color: #01253d;
+  color: #212529;
 }
 
 #individual__section--opiniones h6 {
@@ -1843,7 +1847,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 1em;
-  color: #01253d;
+  color: #212529;
   width: 80vw;
   margin-left: 10vw;
   margin-bottom: 5vh;
@@ -1875,7 +1879,7 @@
   font-family: "Lato", sans-serif;
   font-weight: 500;
   font-size: 1em;
-  color: #01253d;
+  color: #212529;
 }
 
 #formularioContacto .formulario__div--datosPersonales input {
@@ -2146,7 +2150,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 400;
   font-size: 2rem;
-  color: #01253d;
+  color: #212529;
   margin-top: 10px;
   margin-bottom: 10px;
   padding-left: 1.5rem;
@@ -2162,7 +2166,7 @@
   font-family: "Playfair Display", serif;
   font-weight: 700;
   font-size: 1.2rem;
-  color: #01253d;
+  color: #212529;
   text-decoration: none;
 }
 

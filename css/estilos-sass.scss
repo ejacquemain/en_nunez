@@ -182,7 +182,7 @@ $playfair: 'Playfair Display', serif;
     }
     h1{
         @include font($playfair, 600, 1.8rem);
-        color: $azul;
+        color: $negro;
         text-align: center;
         margin-bottom: 2rem;
         @media (min-width: 1024px){ /* DESKTOP */
@@ -207,7 +207,7 @@ $playfair: 'Playfair Display', serif;
     grid-area: lonuevo;
     h1{
         @include font($playfair, 600, 1.9rem);
-        color: $azul;
+        color: $negro;
         text-align: center;
         margin-top: 3rem;
         margin-bottom: 2rem;
@@ -234,7 +234,7 @@ $playfair: 'Playfair Display', serif;
             border-radius: 5px;
             margin-left: 20px;
             margin-bottom: 30px;
-            transition: 0.5s;
+            transition: 0.3s;
             @media (min-width: 768px) {/* TABLET */
                 width: 30vw;
             }
@@ -263,7 +263,7 @@ $playfair: 'Playfair Display', serif;
             }
             h3{
                 @include font($playfair, 600, 1.3rem);
-                color: $azul;
+                color: $negro;
                 text-transform: capitalize;
                 text-align: center;
                 margin-top: 10px;
@@ -283,7 +283,7 @@ $playfair: 'Playfair Display', serif;
     grid-area: recomendacionesDeLosChefs;
     h1{
         @include font($playfair, 600, 1.9rem);
-        color: $azul;
+        color: $negro;
         text-align: center;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -311,32 +311,24 @@ $playfair: 'Playfair Display', serif;
             height: auto;
             background-color: white;
             margin-top: 5px;
-            margin-left: 30px;
+            margin-left: 45px;
             margin-bottom: 20px;
             border-radius: 5px;
-            box-shadow: 6px 6px 13px rgb(218, 216, 216);
         } 
         img{/* MOBILE */
             width: 35vw;
             height: auto;
         }
         @media (min-width: 768px) {/* TABLET */
-            div{
-                width: 27vw;
+            div, img{
+                width: 23vw;
                 height: auto;
             }
-            img{
-                width: 27vw;
-            }
-            
         }
         @media (min-width: 1024px){ /* DESKTOP */
-            div{
-                width: 5vw;
-                margin-right: 10px;
-            }
-            img{
-                width: 10vw;
+            div, img{
+                width: 18vw;
+                height: auto;
             }
         }
         p{
@@ -345,11 +337,11 @@ $playfair: 'Playfair Display', serif;
             padding-left: 20px;
             padding-right: 20px;
             text-align: center;
-            color: $azul;
+            color: $negro;
         }
         h2{
             @include font($playfair, 600, 1.2rem);
-            color: $azul;
+            color: $negro;
             text-transform: capitalize;
             text-align: center;
             margin-bottom: 2px;
@@ -362,14 +354,16 @@ $playfair: 'Playfair Display', serif;
             margin-top: 10px;
             margin-bottom: 3rem;
         }
-        }
         div:hover{
-            h2, p{
+            box-shadow: 6px 6px 13px rgb(218, 216, 216);
+            transition: 0.3s;
+            h2{
                 color: $naranja;
             }
         }
     }
 }
+
 
 #index__mapa{
     grid-area: mapa;
@@ -530,7 +524,7 @@ $playfair: 'Playfair Display', serif;
     }
     .navbar__tabletDesktop a{ /* TABLET */
         text-decoration: none;
-        color: $azul;
+        color: $negro;
         font-family: 'Raleway', sans-serif;
         text-transform: uppercase;
         font-size: 0.8em;
@@ -598,7 +592,7 @@ $playfair: 'Playfair Display', serif;
     div:hover{
         box-shadow: 6px 6px 13px rgb(235, 233, 233);
         h1{
-            color: $azul;
+            color: $negro;
         }
     }
     img{
@@ -612,7 +606,7 @@ $playfair: 'Playfair Display', serif;
     }
     h3{
         @include font($lato, 400, 0.6rem);
-        color: $azul;
+        color: $negro;
         text-transform: uppercase;
         padding-top: 1rem;
         padding-left: 1rem;
@@ -691,7 +685,7 @@ $playfair: 'Playfair Display', serif;
         }
     }
     h2{/* TITULO CHICO */
-        @include font($playfair, 600, 1.4rem);
+        @include font($playfair, 700, 1.4rem);
         text-transform: capitalize;
         font-style: italic;
         margin-top: 2rem;
@@ -706,13 +700,13 @@ $playfair: 'Playfair Display', serif;
     h4{ /* TEXTO GRANDE */
         @include font($lato, 400, 1.1rem);
         line-height: 1.5rem;
-        color: $azul;
+        color: $negro;
         margin-top: 20px;
     }
     h5{/* TEXTO CHICO */
-        @include font($lato, 300, 0.9rem);
+        @include font($lato, 300, 1.1rem);
         line-height: 1.5rem;
-        color: $azul;
+        color: $negro;
     }
     h6{/* PIE DE IMAGEN */
         @include font($lato, 600, 0.6rem);
@@ -721,6 +715,11 @@ $playfair: 'Playfair Display', serif;
     }
     a{
         text-decoration: none;
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon{
+        border-radius: 5px;
+        background-color: $negro;
+        opacity: 100%;
     }
     .index__div--comoLlegar{
         img{
@@ -764,14 +763,14 @@ $playfair: 'Playfair Display', serif;
             }
             h4{
                 @include font($lato, 400, 1.1rem);
-                color: $azul;
+                color: $negro;
                 text-align: left;
                 margin-top: 0px;
             }
             p{
-                @include font($lato, 300, 0.9rem);
-                line-height: 1.2rem;
-                color: $azul;
+                @include font($lato, 300, 1.1rem);
+                line-height: 1.5rem;
+                color: $negro;
                 margin-top: 10px;
                 text-align: left;
             }
@@ -796,7 +795,7 @@ $playfair: 'Playfair Display', serif;
             margin-bottom: 10px;
             h3{ 
                 @include font($playfair, 900, 1.2rem);
-                color: $azul;
+                color: $negro;
                 text-transform: capitalize;
                 font-style: italic;
                 margin-bottom: 25px;
@@ -810,15 +809,15 @@ $playfair: 'Playfair Display', serif;
             }
             h5{ 
                 @include font($playfair, 400, 1rem);
-                color: $azul;
+                color: $negro;
                 text-transform: none;
                 padding-right: 20px;
             }
         }
     }  
     .accordion-button {
-        @include font($lato, 300, 1.1rem);
-        color: $azul;
+        @include font($lato, 400, 1.1rem);
+        color: $negro;
     }
     .accordion-button:hover {
         color: $naranja;
@@ -840,7 +839,7 @@ $playfair: 'Playfair Display', serif;
         margin-bottom: 65px;
     }
     h2{
-        @include font($playfair, 600, 1.4rem);
+        @include font($playfair, 700, 1.4rem);
         color: white;
         font-style: italic;
         text-transform: capitalize;
@@ -860,7 +859,7 @@ $playfair: 'Playfair Display', serif;
         img{
             width: 25vw;
             height: auto;
-            transition: all 1s;
+            transition: 0.5s;
             @media(min-width: 768px){ /* TABLET */
                 width: 22vw;
             }
@@ -892,7 +891,7 @@ $playfair: 'Playfair Display', serif;
             width: 50vw; /* DESKTOP */
         }
         h2{/* TITULO CHICO */
-            @include font($playfair, 500, 1.4rem);
+            @include font($playfair, 700, 1.4rem);
             color: $naranja;
             text-transform: capitalize;
             font-style: italic;
@@ -908,7 +907,7 @@ $playfair: 'Playfair Display', serif;
             border-right: 1px solid $gris-claro;
         }
         li{
-            @include font($lato, 300, 1rem);
+            @include font($lato, 300, 1.1rem);
             color: $negro;
             margin-top: 0px;
             margin-bottom: 0px;
@@ -922,7 +921,7 @@ $playfair: 'Playfair Display', serif;
             transform: scale(1.6);
         }
         h4{ /* titulo 3 */
-            @include font($lato, 500, 1rem);
+            @include font($lato, 600, 1rem);
             line-height: 1.5rem;
             color: $naranja;
             margin-top: 40px;
@@ -930,21 +929,21 @@ $playfair: 'Playfair Display', serif;
             text-align: center;
         }
         p{
-            @include font($lato, 300, 0.9rem);
-            line-height: 1.5rem;
+            @include font($lato, 300, 1.1rem);
+            line-height: 1.7rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
         }
         h5{
-            @include font($lato, 300, 0.9rem);
+            @include font($lato, 300, 1.1rem);
             line-height: 1.5rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
         }
         .centrado{
-            @include font($lato, 300, 0.9rem);
+            @include font($lato, 300, 1.1rem);
             color: $negro;
             margin-top: 0px;
             text-align: center;
@@ -991,7 +990,7 @@ $playfair: 'Playfair Display', serif;
         background-color: $negro;
         align-items: top;
         h2{
-            @include font($playfair, 600, 1.4rem);
+            @include font($playfair, 700, 1.4rem);
             color: white;
             text-transform: none;
             font-style: italic;
@@ -1000,9 +999,9 @@ $playfair: 'Playfair Display', serif;
             padding-top: 50px;
         }
         h4{
-            @include font($lato, 300, 0.8rem);
+            @include font($lato, 300, 1rem);
             color: white;
-            margin-top: 10px;
+            margin-top: 5px;
             text-align: center;
         }
         div{ /* contenedor row */
@@ -1016,7 +1015,7 @@ $playfair: 'Playfair Display', serif;
             @media (min-width: 768px){
                 width: 65vw;
             }
-            div{ /* contenedor individual */
+            div{
                 display:flex;
                 flex-direction: column;
                 align-items: center;
@@ -1071,7 +1070,7 @@ $playfair: 'Playfair Display', serif;
         align-items: center;
     }
     h2{
-        @include font($playfair, 600, 1.4rem);
+        @include font($playfair, 700, 1.4rem);
         text-transform: capitalize;
         font-style: italic;
         margin-bottom: 50px;
@@ -1079,13 +1078,13 @@ $playfair: 'Playfair Display', serif;
     h4{ /* TEXTO GRANDE */
         @include font($lato, 400, 1.1rem);
         line-height: 1.5rem;
-        color: $azul;
+        color: $negro;
         margin-top: 0px;
     }
     h5{/* TEXTO CHICO */
-        @include font($playfair, 400, 1rem);
+        @include font($lato, 300, 1.1rem);
         line-height: 1.5rem;
-        color: $azul;
+        color: $negro;
     }
     h6{/* PIE DE IMAGEN */
         @include font($lato, 600, 0.6rem);
@@ -1155,7 +1154,7 @@ $playfair: 'Playfair Display', serif;
 #formularioContacto{
     fieldset{ /* MOBILE */
         @include font($lato, 600, 1em);
-        color: $azul;
+        color: $negro;
         width: 80vw;
         margin-left: 10vw;
         margin-bottom: 5vh;
@@ -1173,7 +1172,7 @@ $playfair: 'Playfair Display', serif;
         }
         label{
             @include font($lato, 500, 1em);
-            color: $azul;
+            color: $negro;
         }
         input{
             border: solid 1px $naranja;
@@ -1341,7 +1340,7 @@ $playfair: 'Playfair Display', serif;
         }
         h1{
             @include font($playfair, 400, 2rem);
-            color: $azul;
+            color: $negro;
             margin-top: 10px;
             margin-bottom: 10px;
             padding-left: 1.5rem;
@@ -1353,7 +1352,7 @@ $playfair: 'Playfair Display', serif;
         }
         a{
             @include font($playfair, 700, 1.2rem);
-            color: $azul;
+            color: $negro;
             text-decoration: none;
         }
         a:hover{
