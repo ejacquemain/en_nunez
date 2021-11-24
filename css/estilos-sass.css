@@ -1439,8 +1439,7 @@
 
 #individual__section--sobreNosotros div ul {
   list-style: none;
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-right: 30px;
   border-left: 1px solid #d4d2d2;
   border-right: 1px solid #d4d2d2;
 }
