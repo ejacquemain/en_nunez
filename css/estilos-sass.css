@@ -50,18 +50,16 @@
 
 /* INDEX  ----------------------------------------*/
 #index__contenedor {
-  /* MOBILE */
   display: -ms-grid;
   display: grid;
-      grid-template-areas: "principal" "secundaria" "lonuevo" "recomendacionesDeLosChefs" "mapa" "footer";
+      grid-template-areas: "principal" "secundaria" "lonuevo" "recomendacionesDeLosChefs" "agenda" "mapa" "footer";
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 100vh auto auto auto auto auto;
-      grid-template-rows: 100vh auto auto auto auto auto;
+  -ms-grid-rows: 100vh auto auto auto auto auto auto;
+      grid-template-rows: 100vh auto auto auto auto auto auto;
 }
 
 #index__principal {
-  /* MOBILE */
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: principal;
@@ -207,7 +205,6 @@
   color: white;
   text-transform: uppercase;
   padding-top: 170px;
-  /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
 }
 
 @media (min-width: 768px) {
@@ -225,7 +222,6 @@
 }
 
 #index__principal .index__logoEnPrincipal {
-  /* MOBILE */
   width: 250px;
   margin-top: 40px;
 }
@@ -269,7 +265,6 @@
 }
 
 #index__secundaria {
-  /* MOBILE */
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: secundaria;
@@ -424,7 +419,7 @@
   margin-bottom: 2px;
 }
 
-#index__loNuevo .index__loNuevo--contenedor div h3 {
+#index__loNuevo .index__loNuevo--contenedor div h3, #index__loNuevo .index__loNuevo--contenedor #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor #index__loNuevo .index__loNuevo--contenedor div h2 {
   font-family: "Playfair Display", serif;
   font-weight: 600;
   font-size: 1.3rem;
@@ -440,12 +435,11 @@
           box-shadow: 6px 6px 13px #dad8d8;
 }
 
-#index__loNuevo .index__loNuevo--contenedor div:hover h3 {
+#index__loNuevo .index__loNuevo--contenedor div:hover h3, #index__loNuevo .index__loNuevo--contenedor #index__agenda .index__agenda--contenedor div:hover h2, #index__agenda .index__agenda--contenedor #index__loNuevo .index__loNuevo--contenedor div:hover h2 {
   color: #f3a544;
 }
 
 #index__recomendacionesDeLosChefs {
-  /* MOBILE */
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: recomendacionesDeLosChefs;
@@ -490,7 +484,6 @@
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor div {
-  /* MOBILE */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -511,7 +504,6 @@
 }
 
 #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor img {
-  /* MOBILE */
   width: 35vw;
   height: auto;
 }
@@ -557,7 +549,7 @@
   margin-bottom: 2px;
 }
 
-#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor h3 {
+#index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor h3, #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor div #index__recomendacionesDeLosChefs .index__recomendacionesDeLosChefs--contenedor h2 {
   font-family: "Lato", sans-serif;
   font-weight: 600;
   font-size: 0.7rem;
@@ -579,8 +571,127 @@
   color: #f3a544;
 }
 
-#index__mapa {
+#index__agenda {
   -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: agenda;
+}
+
+#index__agenda h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  font-size: 1.9rem;
+  color: #212529;
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 1024px) {
+  #index__agenda h1 {
+    /* DESKTOP */
+    font-size: 2rem;
+  }
+}
+
+#index__agenda .index__agenda--contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  overflow: auto;
+  padding-left: 5vw;
+  padding-bottom: 20px;
+  width: 100vw;
+  height: auto;
+}
+
+#index__agenda .index__agenda--contenedor div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  height: 300px;
+  background-color: #fdf1e1;
+  margin-top: 5px;
+  margin-left: 45px;
+  margin-bottom: 20px;
+  padding-top: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+}
+
+#index__agenda .index__agenda--contenedor div h3, #index__agenda .index__agenda--contenedor div h2 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #f3a544;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+#index__agenda .index__agenda--contenedor div h2 {
+  font-size: 2.5rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#index__agenda .index__agenda--contenedor div h4 {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  text-transform: capitalize;
+  line-height: 1.5rem;
+  color: #f3a544;
+  margin-top: 30px;
+  border-top: solid 1px #f3a544;
+  border-bottom: solid 1px #f3a544;
+}
+
+#index__agenda .index__agenda--contenedor div a {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  color: #212529;
+  text-decoration: none;
+  text-transform: uppercase;
+  margin-top: 30px;
+  display: none;
+}
+
+#index__agenda .index__agenda--contenedor div:hover {
+  -webkit-box-shadow: 6px 6px 13px #dad8d8;
+          box-shadow: 6px 6px 13px #dad8d8;
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
+}
+
+#index__agenda .index__agenda--contenedor div:hover h2 {
+  color: #212529;
+}
+
+#index__agenda .index__agenda--contenedor div:hover a {
+  display: inline;
+}
+
+#index__mapa {
+  -ms-grid-row: 6;
   -ms-grid-column: 1;
   grid-area: mapa;
   background-image: url(../images/mapa-nunez.jpg);
@@ -600,7 +711,6 @@
 }
 
 #footer .footer__div--contenedor {
-  /* MOBILE */
   width: 100vw;
   padding-bottom: 5rem;
 }
@@ -623,7 +733,6 @@
 }
 
 #footer .footer__div--contenedor div {
-  /* MOBILE */
   width: 85vw;
   margin-top: 3rem;
   padding-left: 2.5rem;
@@ -682,7 +791,6 @@
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
 #interior__contenedor {
-  /* MOBILE */
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 100vw;
@@ -701,7 +809,6 @@
 }
 
 #interior__header {
-  /* MOBILE */
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: header;
@@ -962,7 +1069,7 @@
   }
 }
 
-#interior__cuadricula h3 {
+#interior__cuadricula h3, #interior__cuadricula #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor div #interior__cuadricula h2 {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   font-size: 0.6rem;
@@ -1097,7 +1204,7 @@
   margin-bottom: 5px;
 }
 
-#individual__principal h3 {
+#individual__principal h3, #individual__principal #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor div #individual__principal h2 {
   /* DESTACADO NARANJA */
   font-family: "Lato", sans-serif;
   font-weight: 800;
@@ -1252,7 +1359,7 @@
   margin-bottom: 10px;
 }
 
-#individual__principal .accordion-body div h3 {
+#individual__principal .accordion-body div h3, #individual__principal .accordion-body #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor #individual__principal .accordion-body div h2 {
   font-family: "Playfair Display", serif;
   font-weight: 900;
   font-size: 1.2rem;
@@ -2062,7 +2169,7 @@
   height: 350px;
 }
 
-#interior__promos .promo1 h3 {
+#interior__promos .promo1 h3, #interior__promos .promo1 #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor div #interior__promos .promo1 h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1rem;
@@ -2133,7 +2240,7 @@
           box-shadow: 6px 6px 13px #ebe9e9;
 }
 
-#interior__promos .promosAgrupadas h3 {
+#interior__promos .promosAgrupadas h3, #interior__promos .promosAgrupadas #index__agenda .index__agenda--contenedor div h2, #index__agenda .index__agenda--contenedor div #interior__promos .promosAgrupadas h2 {
   font-family: "Lato", sans-serif;
   font-weight: 700;
   font-size: 1rem;

@@ -28,20 +28,21 @@ $playfair: 'Playfair Display', serif;
 
 /* INDEX  ----------------------------------------*/
 
-#index__contenedor{ /* MOBILE */
+#index__contenedor{ 
     display: grid;
     grid-template-areas: 
     "principal"
     "secundaria"
     "lonuevo"
     "recomendacionesDeLosChefs"
+    "agenda"
     "mapa"
     "footer";
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto auto auto auto auto;
+    grid-template-rows: 100vh auto auto auto auto auto auto;
 }
 
-#index__principal{ /* MOBILE */
+#index__principal{ 
     grid-area: principal;
     height: 100vh;
     background-color: $negro;
@@ -135,7 +136,7 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 800, 1em);
         color: white;
         text-transform: uppercase;
-        padding-top: 170px; /* AJUSTAR ALTURA DEL BLOQUE DESDE ACA */
+        padding-top: 170px; 
         @media (min-width: 768px){ /* TABLET/DESKTOP */
             @include font($playfair, 800, 1.2em);
             padding-top: 70px;
@@ -144,7 +145,7 @@ $playfair: 'Playfair Display', serif;
     h1 span{
         color: $naranja;
     }
-    .index__logoEnPrincipal{/* MOBILE */
+    .index__logoEnPrincipal{
         width: 250px;
         margin-top: 40px;
         @media (min-width: 768px){ /* TABLET */
@@ -172,7 +173,7 @@ $playfair: 'Playfair Display', serif;
 }
 
 
-#index__secundaria{ /* MOBILE */
+#index__secundaria{ 
     grid-area: secundaria;
     #tope1{ /* TOPE PARA SCROLL DOWN */
         margin-bottom: 120px;
@@ -279,7 +280,7 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#index__recomendacionesDeLosChefs{ /* MOBILE */
+#index__recomendacionesDeLosChefs{ 
     grid-area: recomendacionesDeLosChefs;
     h1{
         @include font($playfair, 600, 1.9rem);
@@ -303,7 +304,7 @@ $playfair: 'Playfair Display', serif;
         padding-bottom: 20px;
         width: 100vw;
         height: auto;
-        div{/* MOBILE */
+        div{
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -315,7 +316,7 @@ $playfair: 'Playfair Display', serif;
             margin-bottom: 20px;
             border-radius: 5px;
         } 
-        img{/* MOBILE */
+        img{
             width: 35vw;
             height: auto;
         }
@@ -365,6 +366,88 @@ $playfair: 'Playfair Display', serif;
 }
 
 
+#index__agenda{
+    grid-area: agenda;
+    h1{
+        @include font($playfair, 600, 1.9rem);
+        color: $negro;
+        text-align: center;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        @media (min-width: 1024px){ /* DESKTOP */
+            font-size: 2rem;
+        }
+    }
+    .index__agenda--contenedor{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow: auto;
+        padding-left: 5vw;
+        padding-bottom: 20px;
+        width: 100vw;
+        height: auto;
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 200px;
+            height: 300px;
+            background-color: #fdf1e1;
+            margin-top: 5px;
+            margin-left: 45px;
+            margin-bottom: 20px;
+            padding-top: 50px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 5px;
+            h3{
+                @include font($lato, 700, 0.7rem);
+                text-transform: uppercase;
+                letter-spacing: 0.2em;
+                color: $naranja;
+                text-align: center;
+                margin-bottom: 5px;
+            }
+            h2{
+                @extend h3;
+                font-size: 2.5rem;
+                margin-top: 20px;
+                margin-bottom: 20px;
+            }
+            h4{
+                @include font($lato, 700, 0.8rem);
+                text-transform: capitalize;
+                line-height: 1.5rem;
+                color: $naranja;
+                margin-top: 30px;
+                border-top: solid 1px $naranja;
+                border-bottom: solid 1px $naranja;
+            }
+            a{
+                @include font($lato, 700, 0.8rem);
+                line-height: 1.5rem;
+                color: $negro;
+                text-decoration: none;
+                text-transform: uppercase;
+                margin-top: 30px;
+                display: none;
+            }
+        }
+        div:hover{
+            box-shadow: 6px 6px 13px rgb(218, 216, 216);
+            transition: 0.7s;
+            h2{
+                color: $negro;
+            }
+            a{
+                display: inline;
+            }
+        }
+    }
+}
+
+
 #index__mapa{
     grid-area: mapa;
     background-image: url(../images/mapa-nunez.jpg);
@@ -383,7 +466,7 @@ $playfair: 'Playfair Display', serif;
 #footer{ 
     grid-area: footer;
     background-color: $negro;
-    .footer__div--contenedor{ /* MOBILE */
+    .footer__div--contenedor{ 
         width: 100vw;
         padding-bottom: 5rem;
         @media (min-width: 768px){ /* TABLET/DESKTOP */
@@ -392,7 +475,7 @@ $playfair: 'Playfair Display', serif;
             justify-content: space-evenly;
             padding-top: 1rem;
         }
-        div{ /* MOBILE */
+        div{ 
             width: 85vw;
             margin-top: 3rem;
             padding-left: 2.5rem;
@@ -438,7 +521,7 @@ $playfair: 'Playfair Display', serif;
 
 
 /* PAGINAS CUADRICULA DEL INTERIOR --------------------------- */
-#interior__contenedor{ /* MOBILE */
+#interior__contenedor{ 
     display: grid;
     grid-template-columns: 100vw;
     grid-template-rows: 250px auto auto;
@@ -451,7 +534,7 @@ $playfair: 'Playfair Display', serif;
     }
 }
 
-#interior__header{ /* MOBILE */
+#interior__header{ 
     grid-area: header;
     width: 100vw;
     height: 220px;
