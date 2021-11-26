@@ -2103,16 +2103,16 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 250px auto 90vh;
-      grid-template-rows: 250px auto 90vh;
+  -ms-grid-rows: 250px auto auto;
+      grid-template-rows: 250px auto auto;
       grid-template-areas: "header" "promos" "footer";
 }
 
 @media (min-width: 768px) {
   #promos__contenedor {
     /* TABLET */
-    -ms-grid-rows: 320px auto 40vh;
-        grid-template-rows: 320px auto 40vh;
+    -ms-grid-rows: 320px auto auto;
+        grid-template-rows: 320px auto auto;
   }
 }
 
@@ -2206,7 +2206,7 @@
   margin-bottom: 50px;
 }
 
-#interior__promos .promosAgrupadas > div {
+#interior__promos .promosAgrupadas div {
   width: 250px;
   height: auto;
   border-radius: 5px;
@@ -2216,9 +2216,8 @@
   text-align: center;
 }
 
-#interior__promos .promosAgrupadas div:hover {
-  -webkit-box-shadow: 6px 6px 13px #ebe9e9;
-          box-shadow: 6px 6px 13px #ebe9e9;
+#interior__promos .promosAgrupadas div:hover a {
+  color: #f3a544;
 }
 
 #interior__promos .promosAgrupadas h3 {
@@ -2253,9 +2252,5 @@
   font-size: 1.2rem;
   color: #212529;
   text-decoration: none;
-}
-
-#interior__promos .promosAgrupadas a:hover {
-  color: #f3a544;
 }
 /*# sourceMappingURL=estilos-sass.css.map */

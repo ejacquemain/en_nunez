@@ -1317,13 +1317,13 @@ $playfair: 'Playfair Display', serif;
 #promos__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 250px auto 90vh;
+    grid-template-rows: 250px auto auto;
     grid-template-areas: 
     "header"
     "promos"
     "footer";
     @media (min-width: 768px) { /* TABLET */
-        grid-template-rows: 320px auto 40vh;
+        grid-template-rows: 320px auto auto;
     }
 }
 
@@ -1383,7 +1383,7 @@ $playfair: 'Playfair Display', serif;
         width: 95vw;
         overflow: auto;
         margin-bottom: 50px;
-        >div{
+        div{
             width: 250px;
             height: auto;
             border-radius: 5px;
@@ -1393,7 +1393,9 @@ $playfair: 'Playfair Display', serif;
             text-align: center;
         }
         div:hover{
-            box-shadow: 6px 6px 13px rgb(235, 233, 233); 
+            a{
+                color: $naranja;
+            } 
         }
         h3{
             @include font($lato, 700, 1rem);
@@ -1418,9 +1420,6 @@ $playfair: 'Playfair Display', serif;
             @include font($playfair, 700, 1.2rem);
             color: $negro;
             text-decoration: none;
-        }
-        a:hover{
-            color: $naranja;
         }
     }
 }
