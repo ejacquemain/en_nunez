@@ -286,7 +286,7 @@ $playfair: 'Playfair Display', serif;
         @include font($playfair, 600, 1.9rem);
         color: $negro;
         text-align: center;
-        margin-top: 2rem;
+        margin-top: 1.5rem;
         margin-bottom: 2rem;
         @media (min-width: 1024px){ /* DESKTOP */
             font-size: 2rem;
@@ -333,7 +333,7 @@ $playfair: 'Playfair Display', serif;
             }
         }
         p{
-            @include font($lato, 400, 0.9rem);
+            @include font($lato, 400, 1rem);
             padding-top: 10px;
             padding-left: 20px;
             padding-right: 20px;
@@ -395,7 +395,7 @@ $playfair: 'Playfair Display', serif;
             height: 300px;
             background-color: #fdf1e1;
             margin-top: 5px;
-            margin-left: 45px;
+            margin-right: 30px;
             margin-bottom: 20px;
             padding-top: 50px;
             padding-left: 20px;
@@ -416,9 +416,10 @@ $playfair: 'Playfair Display', serif;
                 margin-bottom: 20px;
             }
             h4{
-                @include font($lato, 700, 0.8rem);
+                @include font($lato, 700, 0.9rem);
                 text-transform: capitalize;
-                line-height: 1.5rem;
+                text-align: center;
+                line-height: 1.1rem;
                 color: $naranja;
                 margin-top: 30px;
                 border-top: solid 1px $naranja;
@@ -498,22 +499,20 @@ $playfair: 'Playfair Display', serif;
                 font-weight: 800;
             }
             img{
-                width: 20px;
+                width: 30px;
                 margin-left: 10px;
+            }
+            img:hover{ 
+                transform: rotateZ(20deg);
             }
         }
         .footer__div--logo{
+            img{
+                width: 6rem;
+            }
             @media (min-width: 768px){
                 text-align: center;
             }
-        }
-        img{ 
-            
-            transition: all 1s;
-            width: 6rem;
-        }
-        img:hover{ 
-            transform: rotateZ(20deg);
         }
     }
 }
@@ -987,7 +986,7 @@ $playfair: 'Playfair Display', serif;
             border-right: 1px solid $gris-claro;
         }
         li{
-            @include font($lato, 300, 1.1rem);
+            @include font($lato, 300, 1.2rem);
             color: $negro;
             margin-top: 0px;
             margin-bottom: 0px;
@@ -1009,15 +1008,15 @@ $playfair: 'Playfair Display', serif;
             text-align: center;
         }
         p{
-            @include font($lato, 300, 1.1rem);
-            line-height: 1.7rem;
+            @include font($lato, 300, 1.2rem);
+            line-height: 1.8rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
         }
         h5{
-            @include font($lato, 300, 1.1rem);
-            line-height: 1.5rem;
+            @include font($lato, 300, 1.2rem);
+            line-height: 1.8rem;
             color: $negro;
             margin-top: 0px;
             text-align: justify;
@@ -1100,15 +1099,13 @@ $playfair: 'Playfair Display', serif;
                 flex-direction: column;
                 align-items: center;
                 img{
-                    width: 20vw;
+                    width: 25vw;
                     height: auto;
                     @media (min-width: 768px){
                         width: 200px;
-                        height: 290px;
                     }
                     @media (min-width: 1024px){
                         width: 200px;
-                        height: 300px;
                     }
                 }
                 h5{
@@ -1145,8 +1142,8 @@ $playfair: 'Playfair Display', serif;
         padding-right: 20rem;
     }
     div{
-        border-bottom: 1px solid $gris-claro;
-        margin-bottom: 20px;
+        border-top: 1px solid $gris-claro;
+        padding-top: 20px;
         align-items: center;
     }
     h2{
@@ -1155,28 +1152,29 @@ $playfair: 'Playfair Display', serif;
         font-style: italic;
         margin-bottom: 50px;
     }
-    h4{ /* TEXTO GRANDE */
+    h4{ 
         @include font($lato, 400, 1.1rem);
         line-height: 1.5rem;
         color: $negro;
         margin-top: 0px;
     }
-    h5{/* TEXTO CHICO */
+    h5{
         @include font($lato, 300, 1.1rem);
         line-height: 1.5rem;
         color: $negro;
     }
-    h6{/* PIE DE IMAGEN */
-        @include font($lato, 600, 0.6rem);
+    h6{
+        @include font($lato, 600, 0.7rem);
         color: $naranja;
         text-transform: uppercase;
     }
     img{
-        width: 100px;
-        margin: 10px 10px 30px 10px;
+        width: 150px;
+        margin: 10px 30px 40px 0px;
     }
     img:hover{
-        transform: scale(1.4);
+        transform: scale(1.3);
+        transition: 0.5s;
     }
 }
 
