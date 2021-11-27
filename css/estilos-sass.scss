@@ -827,7 +827,7 @@ $playfair: 'Playfair Display', serif;
                 display: flex;
                 flex-direction: column;
                 margin-top: 0px;
-                padding-left: 20px;
+                padding-left: 0px;
             }
             h4{
                 @include font($lato, 400, 1.1rem);
@@ -844,7 +844,7 @@ $playfair: 'Playfair Display', serif;
             }
             .individual__div--alineaDerecha{
                 padding-left: 0px;
-                padding-right: 30px;
+                padding-right: 0px;
                 margin-right: 20px;
                 h4, p{
                     text-align: right;
