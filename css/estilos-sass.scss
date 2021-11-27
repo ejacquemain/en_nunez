@@ -39,7 +39,10 @@ $playfair: 'Playfair Display', serif;
     "mapa"
     "footer";
     grid-template-columns: 100vw;
-    grid-template-rows: 100vh auto auto auto auto auto auto;
+    grid-template-rows: 100vh auto auto auto auto auto 100vh;
+    @media (min-width: 768px){ /* TABLET */
+        grid-template-rows: 100vh auto auto auto auto auto auto;
+    }
 }
 
 #index__principal{ 
@@ -455,7 +458,8 @@ $playfair: 'Playfair Display', serif;
     background-color: $negro;
     .footer__div--contenedor{ 
         width: 100vw;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 1rem;
         @media (min-width: 768px){ /* TABLET/DESKTOP */
             display: flex;
             flex-direction: row;
@@ -509,7 +513,7 @@ $playfair: 'Playfair Display', serif;
 #interior__contenedor{ 
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 250px auto auto;
+    grid-template-rows: 250px auto 100vh;
     grid-template-areas: 
     "header"
     "cuadricula"
@@ -700,7 +704,7 @@ $playfair: 'Playfair Display', serif;
 #individual__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 150px auto auto auto auto auto auto auto;
+    grid-template-rows: 150px auto auto auto auto auto auto 100vh;
     grid-template-areas: 
     "header"
     "principal"
@@ -710,7 +714,11 @@ $playfair: 'Playfair Display', serif;
     "opiniones"
     "rrss"
     "footer";
+    @media (min-width: 768px){ /* TABLET */
+        grid-template-rows: 150px auto auto auto auto auto auto auto;
+    }
 }
+
 
 #interior__header{ /* repite ID del interior porque son las mismas NAVS*/
     grid-area: header;
@@ -1317,7 +1325,7 @@ $playfair: 'Playfair Display', serif;
 #promos__contenedor{ /* MOBILE */
     display: grid;
     grid-template-columns: 100vw;
-    grid-template-rows: 250px auto auto;
+    grid-template-rows: 250px auto 100vh;
     grid-template-areas: 
     "header"
     "promos"

@@ -55,8 +55,16 @@
       grid-template-areas: "principal" "secundaria" "lonuevo" "recomendacionesDeLosChefs" "agenda" "mapa" "footer";
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 100vh auto auto auto auto auto auto;
-      grid-template-rows: 100vh auto auto auto auto auto auto;
+  -ms-grid-rows: 100vh auto auto auto auto auto 100vh;
+      grid-template-rows: 100vh auto auto auto auto auto 100vh;
+}
+
+@media (min-width: 768px) {
+  #index__contenedor {
+    /* TABLET */
+    -ms-grid-rows: 100vh auto auto auto auto auto auto;
+        grid-template-rows: 100vh auto auto auto auto auto auto;
+  }
 }
 
 #index__principal {
@@ -698,7 +706,8 @@
 
 #footer .footer__div--contenedor {
   width: 100vw;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
@@ -779,8 +788,8 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 250px auto auto;
-      grid-template-rows: 250px auto auto;
+  -ms-grid-rows: 250px auto 100vh;
+      grid-template-rows: 250px auto 100vh;
       grid-template-areas: "header" "cuadricula" "footer";
 }
 
@@ -1088,9 +1097,17 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 150px auto auto auto auto auto auto auto;
-      grid-template-rows: 150px auto auto auto auto auto auto auto;
+  -ms-grid-rows: 150px auto auto auto auto auto auto 100vh;
+      grid-template-rows: 150px auto auto auto auto auto auto 100vh;
       grid-template-areas: "header" "principal" "galeria" "sobrenosotros" "conoceNuestroCheff" "opiniones" "rrss" "footer";
+}
+
+@media (min-width: 768px) {
+  #individual__contenedor {
+    /* TABLET */
+    -ms-grid-rows: 150px auto auto auto auto auto auto auto;
+        grid-template-rows: 150px auto auto auto auto auto auto auto;
+  }
 }
 
 #interior__header {
@@ -2103,8 +2120,8 @@
   display: grid;
   -ms-grid-columns: 100vw;
       grid-template-columns: 100vw;
-  -ms-grid-rows: 250px auto auto;
-      grid-template-rows: 250px auto auto;
+  -ms-grid-rows: 250px auto 100vh;
+      grid-template-rows: 250px auto 100vh;
       grid-template-areas: "header" "promos" "footer";
 }
 
